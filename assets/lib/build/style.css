@@ -396,6 +396,15 @@ a.projects-viewall:hover {
   padding-left: 5%;
 }
 
+.card-title a {
+  color: #393939;
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  color: #ff00ff;
+}
+
 .card-description {
   font-family: gotham-light;
   font-size: 12px;
