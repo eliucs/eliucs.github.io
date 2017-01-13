@@ -304,6 +304,53 @@ h1, h2, h3, h4, h5, h6, p {
   color: #393939;
 }
 
+.projects-title {
+  font-family: gotham-bold;
+  font-size: 60px;
+  padding-top: 3%;
+  padding-left: 30%;
+  color: #393939;
+}
+
+.projects-description {
+  font-family: gotham-light;
+  font-size: 18px;
+  padding-top: 5px;
+  padding-left: 25%;
+  color: #393939;
+}
+
+.twitter-title {
+  font-family: gotham-bold;
+  font-size: 60px;
+  padding-top: 3%;
+  padding-left: 30%;
+  color: #393939;
+}
+
+.twitter-description {
+  font-family: gotham-light;
+  font-size: 18px;
+  padding-top: 5px;
+  padding-left: 25%;
+  color: #393939;
+}
+
+.twitter-description a {
+  color: #6600ff;
+  text-decoration: none;
+}
+
+.twitter-description a:hover {
+  color: #ff00ff;
+}
+
+.twitter-feed {
+  padding-top: 20px;
+  padding-left: 23%;
+  padding-right: 23%;
+}
+
 .intro-contact {
   font-family: gotham-bold;
   font-size: 60px;
@@ -415,6 +462,10 @@ a.intro-text-link:hover {
   background-color: #ffffff;
 }
 
+.sec-3 {
+  height: 110%;
+}
+
 .section-contact {
   height: 100%;
   width: 100%;
@@ -441,17 +492,25 @@ a.intro-text-link:hover {
 
 .sec-2 {
   /* background-image: url("../img/image2.png"); */
+  border-top-style: solid;
+  border-top-color: #000000;
+
   background-size: 100%;
-  background-color: #d3d3d3;
+  background-color: #ffffff;
   /* background-repeat: no-repeat; */
 }
 
 .sec-3 {
   /* background-image: url("../img/image3.png"); */
+  border-top-style: solid;
+  border-top-color: #000000;
+
   background-size: 100%;
-  background-color: #d8d8d8;
+  background-color: #ffffff;
   /* background-repeat: no-repeat; */
 }
+
+
 
 .bottomnav, .bottomnav a, .bottomnav span {
   font-family: gotham-light;
