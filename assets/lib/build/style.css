@@ -304,10 +304,35 @@ h1, h2, h3, h4, h5, h6, p {
   color: #393939;
 }
 
+.intro-contact {
+  font-family: gotham-bold;
+  font-size: 60px;
+  word-spacing: -5px;
+  padding-top: 12%;
+  padding-left: 20%;
+  padding-right: 20%;
+  color: #ffffff;
+}
+
+.intro-contact span {
+  font-family: gotham-light;
+  font-size: 60px;
+  padding-top: 10%;
+  color: #ffffff;
+}
+
+.intro-text {
+  font-family: gotham-light;
+  font-size: 25px;
+  padding-left: 55%;
+  padding-right: 12%;
+  color: #393939;
+}
+
 .projects-title {
   font-family: gotham-bold;
   font-size: 60px;
-  padding-top: 3%;
+  padding-top: 8%;
   padding-left: 30%;
   color: #393939;
 }
@@ -318,6 +343,82 @@ h1, h2, h3, h4, h5, h6, p {
   padding-top: 5px;
   padding-left: 25%;
   color: #393939;
+}
+
+.projects-container {
+  padding-top: 30px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 40px;
+  height: 40%;
+}
+
+.projects-viewall {
+  font-family: gotham-light;
+  font-size: 25px;
+  padding-left: 22%;
+  color: #393939;
+}
+
+a.projects-viewall {
+  color: #393939;
+  text-decoration: none;
+}
+
+a.projects-viewall:hover {
+  color: #ff00ff;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  display: inline-block;
+  height: 90%;
+  width: 29%;
+  margin: 1rem;
+  position: relative;
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-title {
+  font-family: gotham-bold;
+  font-size: 24px;
+  color: #393939;
+  padding-top: 50%;
+  padding-left: 5%;
+}
+
+.card-description {
+  font-family: gotham-light;
+  font-size: 12px;
+  color: #393939;
+  padding-top: 10px;
+  padding-left: 5%;
+}
+
+.card-view {
+  font-family: gotham-light;
+  font-size: 12px;
+  color: #393939;
+  padding-top: 10px;
+  padding-left: 5%;
+}
+
+.card-view a {
+  color: #393939;
+  text-decoration: none;
+}
+
+.card-view a:hover {
+  color: #ff00ff;
 }
 
 .twitter-title {
@@ -349,31 +450,6 @@ h1, h2, h3, h4, h5, h6, p {
   padding-top: 20px;
   padding-left: 23%;
   padding-right: 23%;
-}
-
-.intro-contact {
-  font-family: gotham-bold;
-  font-size: 60px;
-  word-spacing: -5px;
-  padding-top: 12%;
-  padding-left: 20%;
-  padding-right: 20%;
-  color: #ffffff;
-}
-
-.intro-contact span {
-  font-family: gotham-light;
-  font-size: 60px;
-  padding-top: 10%;
-  color: #ffffff;
-}
-
-.intro-text {
-  font-family: gotham-light;
-  font-size: 25px;
-  padding-left: 55%;
-  padding-right: 12%;
-  color: #393939;
 }
 
 .contact-container {
