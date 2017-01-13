@@ -545,6 +545,8 @@ a.intro-text-link:hover {
   height: 100%;
   width: 100%;
   background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.75),
+              0 10px 20px rgba(0,0,0,0.75);
 }
 
 .sec-3 {
@@ -576,9 +578,9 @@ a.intro-text-link:hover {
 }
 
 .sec-2 {
-  /* background-image: url("../img/image2.png"); */
+  /* background-image: url("../img/image2.png");
   border-top-style: solid;
-  border-top-color: #000000;
+  border-top-color: #000000;*/
 
   background-size: 100%;
   background-color: #ffffff;
@@ -586,9 +588,9 @@ a.intro-text-link:hover {
 }
 
 .sec-3 {
-  /* background-image: url("../img/image3.png"); */
+  /* background-image: url("../img/image3.png");
   border-top-style: solid;
-  border-top-color: #000000;
+  border-top-color: #000000;*/
 
   background-size: 100%;
   background-color: #ffffff;
