@@ -23,6 +23,11 @@ body.homepage {
   padding: 0;
 }
 
+body.contactpage {
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
   height: 100%;
 }
@@ -51,6 +56,19 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: bold;
   font-size: 28pt;
   color: #393939;
+  top: 30px;
+  left: 30px;
+  text-decoration: none;
+  z-index: 99;
+}
+
+.logo-contact {
+  position: fixed;
+  font-family: gotham-bold;
+  word-spacing: -2px;
+  font-weight: bold;
+  font-size: 28pt;
+  color: #ffffff;
   top: 30px;
   left: 30px;
   text-decoration: none;
@@ -207,12 +225,100 @@ h1, h2, h3, h4, h5, h6, p {
   color: #ffffff;
 }
 
+/* Nav Icon Contact*/
+#nav-icon-contact {
+  width: 30px;
+  height: 30px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon-contact span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 0px;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-icon-contact span:nth-child(1) {
+  top: 20px;
+}
+
+#nav-icon-contact span:nth-child(2),#nav-icon-contact span:nth-child(3) {
+  top: 30px;
+}
+
+#nav-icon-contact span:nth-child(4) {
+  top: 40px;
+}
+
+#nav-icon-contact.open span:nth-child(1) {
+  top: 10px;
+  width: 0%;
+  left: 50%;
+}
+
+#nav-icon-contact.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#nav-icon-contact.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#nav-icon-contact.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
 .intro {
   font-family: gotham-bold;
   font-size: 40px;
   padding-top: 20%;
   padding-left: 55%;
   color: #393939;
+}
+
+.intro-contact {
+  font-family: gotham-bold;
+  font-size: 60px;
+  word-spacing: -5px;
+  padding-top: 12%;
+  padding-left: 20%;
+  padding-right: 20%;
+  color: #ffffff;
+}
+
+.intro-contact span {
+  font-family: gotham-light;
+  font-size: 60px;
+  padding-top: 10%;
+  color: #ffffff;
 }
 
 .intro-text {
@@ -222,6 +328,69 @@ h1, h2, h3, h4, h5, h6, p {
   padding-right: 12%;
   color: #393939;
 }
+
+.contact-container {
+  font-family: gotham-light;
+  font-size: 25px;
+  padding-top: 80px;
+  padding-left: 15%;
+  padding-right: 10%;
+  color: #ffffff;
+}
+
+.contact-container .contact:nth-child(1) {
+  display: inline-block;
+  padding-left: 0%;
+  padding-right: 7%;
+}
+
+.contact-container .contact:nth-child(2) {
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #cccccc;
+  display: inline-block;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.contact-container .contact:nth-child(3) {
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #cccccc;
+  display: inline-block;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.contact-container .contact:nth-child(4) {
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: #cccccc;
+  display: inline-block;
+  padding-left: 7%;
+}
+
+.contact .contact-title {
+  font-family: gotham-bold;
+  padding-bottom: 15px;
+}
+
+.contact .contact-text {
+  font-family: gotham-light;
+  font-size: 12px;
+  padding-bottom: 30px;
+}
+
+.contact a {
+  font-size: 18px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: #ff00ff;
+}
+
 
 div.intro-text-link {
   font-family: gotham-light;
@@ -244,6 +413,12 @@ a.intro-text-link:hover {
   height: 100%;
   width: 100%;
   background-color: #ffffff;
+}
+
+.section-contact {
+  height: 100%;
+  width: 100%;
+  background-color: #202020;
 }
 
 .subsection {
