@@ -724,7 +724,10 @@ a.intro-text-link:hover {
 }
 
 .sec-1 {
+  background-image: url("../img/home.jpg");
   background-size: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .sec-2 {
