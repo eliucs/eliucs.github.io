@@ -730,6 +730,12 @@ a.intro-text-link:hover {
   background-repeat: no-repeat;
 }
 
+.sec-contact {
+  background-color: #151515;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .sec-2 {
   background-size: 100%;
   background-color: #ffffff;
