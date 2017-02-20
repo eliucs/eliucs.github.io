@@ -61,6 +61,11 @@ html, body {
   background-color: #1f1f1f;
 }
 
+.section-auto {
+  height: auto;
+  width: 100%;
+}
+
 #background {
   height: 100%;
   width: 100%;
@@ -319,6 +324,51 @@ html, body {
   color: #fff;
 }
 
+/* Contact Styles */
+.contact-container {
+  text-align: center;
+  font-family: 'Roboto';
+  font-weight: 300;
+  margin-top: -7em;
+  margin-bottom: 4em;
+  color: #fff;
+}
+
+.contact-container .contact {
+  display: inline-block;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.contact .contact-title,
+.contact .contact-text {
+  font-family: 'Roboto';
+  font-weight: 100;
+  font-style: normal;
+	font-variant: normal;
+}
+
+.contact .contact-title {
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+  font-size: 2em;
+}
+
+.contact .contact-text {
+  padding-bottom: 2em;
+  font-size: 1em;
+}
+
+.contact a {
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: #ff00ff;
+}
+
 /* Footer Style */
 footer.page {
   height: 12em;
@@ -378,124 +428,27 @@ footer.page {
   padding-top: 2em;
 }
 
-/* Contact Styles */
-.contact-container {
-  text-align: center;
-  font-family: 'Roboto';
-  font-weight: 300;
-  margin-top: -5em;
-  margin-bottom: 1em;
-  color: #fff;
-}
-
-.contact-container .contact {
-  display: inline-block;
-  padding-left: 3%;
-  padding-right: 3%;
-}
-
-.contact .contact-title,
-.contact .contact-text {
-  font-family: 'Roboto';
-  font-weight: 100;
-  font-style: normal;
-	font-variant: normal;
-}
-
-.contact .contact-title {
-  padding-top: 1em;
-  padding-bottom: 0.5em;
-  font-size: 2em;
-}
-
-.contact .contact-text {
-  padding-bottom: 2em;
-  font-size: 1em;
-}
-
-.contact a {
-  font-size: 1em;
-  color: #fff;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  color: #ff00ff;
-}
-
-
-
-
-
-
-
-
-
-
-.projects-title {
-  font-family: Raleway;
-  font-weight: bold;
-  font-style: normal;
-	font-variant: normal;
-  font-size: 60px;
-  padding-top: 8%;
-  padding-left: 30%;
-  color: #393939;
-}
-
-.projects-title-page {
-  font-family: Raleway;
-  font-weight: bold;
-  font-style: normal;
-	font-variant: normal;
-  font-size: 60px;
-  padding-top: 8%;
-  padding-left: 35%;
-  color: #393939;
-}
-
-.projects-description {
-  font-family: Raleway;
-  font-weight: normal;
-  font-style: normal;
-	font-variant: normal;
-  font-size: 18px;
-  padding-top: 5px;
-  padding-left: 25%;
-  color: #393939;
-}
-
+/* Projects Styles */
 .projects-container {
-  padding-left: 10%;
-  padding-right: 10%;
   height: 100%;
+  text-align: center;
 }
 
-.projects-container-home {
-  padding-left: 10%;
-  padding-right: 10%;
-  height: 45%;
+.card {
+  background: #fff;
+  border-radius: 8px;
+  display: inline-block;
+  height: 10em;
+  width: 10em;
+  margin: 1em;
 }
 
-.projects-viewall {
-  font-family: Raleway;
-  font-weight: normal;
-  font-style: normal;
-	font-variant: normal;
-  font-size: 25px;
-  padding-top: 50px;
-  padding-left: 22%;
-  color: #393939;
-}
 
-a.projects-viewall {
-  color: #393939;
-  text-decoration: none;
-}
 
-a.projects-viewall:hover {
-  color: #ff00ff;
-}
+
+
+
+
 
 .projects-container span {
   padding-right: 5px;
@@ -510,14 +463,7 @@ a.projects-viewall:hover {
   color: #393939;
 }
 
-.card {
-  background: #fff;
-  border-radius: 8px;
-  display: inline-block;
-  height: 90%;
-  width: 29%;
-  margin: 1rem;
-}
+
 
 .card-1 {
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
