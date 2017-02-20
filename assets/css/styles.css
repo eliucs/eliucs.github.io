@@ -81,7 +81,7 @@ html, body {
   list-style-type: none;
 }
 
-.option-1, .option-2, .option-3 {
+.option-1, .option-2, .option-3, .option-4 {
   z-index: 99;
   display: none;
   padding-top: 0.25em;
@@ -94,7 +94,7 @@ html, body {
   text-decoration: none;
 }
 
-.option-1:hover, .option-2:hover, .option-3:hover {
+.option-1:hover, .option-2:hover, .option-3:hover, .option-4:hover {
   z-index: 99;
   background-color: #fff;
   color: #000;
@@ -102,7 +102,7 @@ html, body {
   transition: 0.5s;
 }
 
-#option-1.open, #option-2.open, #option-3.open {
+#option-1.open, #option-2.open, #option-3.open, #option-4.open {
   margin: 0;
   display: block;
 }

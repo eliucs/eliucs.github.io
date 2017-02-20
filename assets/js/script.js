@@ -11,6 +11,7 @@ $(document).ready(function(){
 		$('#option-1').toggleClass('open');
 		$('#option-2').toggleClass('open');
 		$('#option-3').toggleClass('open');
+		$('#option-4').toggleClass('open');
 	});
 
 });
