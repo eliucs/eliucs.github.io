@@ -1,35 +1,16 @@
-body.homepage {
-  margin: 0;
-  padding: 0;
-}
-
-body.aboutpage {
-  margin: 0;
-  padding: 0;
-}
-
-body.projectspage {
-  margin: 0;
-  padding: 0;
-}
-
-body.contactpage {
-  margin: 0;
-  padding: 0;
-}
-
 html, body {
+  margin: 0;
+  padding: 0;
   height: 100%;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  margin-bottom: 20px;
+  width: 100%;
 }
 
 .topnav {
   position: fixed;
   width: 100%;
-  height: 80px;
+  height: 6em;
+
+  z-index: 99;
 }
 
 #topnav.open {
@@ -48,7 +29,7 @@ h1, h2, h3, h4, h5, h6, p {
 	font-variant: normal;
   word-spacing: -2px;
   font-size: 28pt;
-  color: #393939;
+  color: #ffffff;
   top: 30px;
   left: 30px;
   text-decoration: none;
@@ -295,6 +276,19 @@ h1, h2, h3, h4, h5, h6, p {
   top: 18px;
   width: 0%;
   left: 50%;
+}
+
+.section {
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.75),
+              0 10px 20px rgba(0,0,0,0.75);
+}
+
+#background {
+  height: 100%;
+  width: 100%;
 }
 
 .intro {
@@ -691,14 +685,6 @@ a.intro-text-link {
 
 a.intro-text-link:hover {
   color: #ff00ff;
-}
-
-.section {
-  height: 100%;
-  width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.75),
-              0 10px 20px rgba(0,0,0,0.75);
 }
 
 .sec-3 {

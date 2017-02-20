@@ -15,5 +15,5 @@ $(document).ready(function(){
 		$('#opt2').toggleClass('open');
 		$('#opt3').toggleClass('open');
 	});
-	
+
 });
