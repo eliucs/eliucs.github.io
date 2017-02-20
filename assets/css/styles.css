@@ -250,17 +250,19 @@ html, body {
   text-decoration: none;
 }
 
-/* About, Project Styles */
+/* About, Project, Contact Styles */
 .title-container {
   width: 100%;
-  margin-top: 6em;
-  margin-bottom: 6em;
+  padding-top: 6em;
+  padding-bottom: 6em;
   text-align: center;
+  z-index: -1;
 }
 
 .title-container hgroup h1,
 .title-container hgroup h2,
 .title-container hgroup p {
+  margin-top: 0;
   font-family: 'Roboto';
   font-style: normal;
 	font-variant: normal;
@@ -273,6 +275,8 @@ html, body {
 }
 
 .title-container hgroup h2 {
+  margin-left: 20%;
+  margin-right: 20%;
   font-weight: 100;
   font-size: 1.2em;
   margin-bottom: 3em;
@@ -304,59 +308,62 @@ html, body {
 }
 
 /* Footer Style */
-footer {
+footer.page {
   height: 12em;
   width: 100%;
-  background-color: #000;
+  background-color: #1f1f1f;
 }
 
-.bottomnav a {
+.bottomnav {
+  padding-top: 2.5em;
+  text-align: center;
+}
+
+.bottomnav a, .bottomnav span {
+  text-decoration: none;
   font-family: 'Roboto';
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 	font-variant: normal;
-  font-size: 18px;
-
+  color: #ccc;
+  font-size: 1.2em;
 }
 
 .bottomnav a:hover {
   color: #ff00ff;
 }
 
-.bottomnav, .bottomnav a, .bottomnav span {
-
-  color: #cccccc;
-  text-decoration: none;
-  padding-top: 50px;
-  padding-left: 20px;
+.bottomnav span {
+  padding-left: 0.75em;
+  padding-right: 0.75em;
 }
 
-.bottomnav {
-  padding-left: 35%;
-}
-
-
-
-.footer-text {
-  font-family: Raleway;
-  font-weight: normal;
+.footer-text, .footer-copyright {
+  font-family: 'Roboto';
+  font-weight: 300;
   font-style: normal;
 	font-variant: normal;
-  font-size: 18px;
-  color: #cccccc;
-  padding-top: 50px;
-  padding-left: 40%;
+  color: #ccc;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 1.2em;
+  padding-top: 2em;
+}
+
+.footer-text a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-text a:hover {
+  color: #ff00ff;
 }
 
 .footer-copyright {
-  font-family: Raleway;
-  font-weight: normal;
-  font-style: normal;
-	font-variant: normal;
-  font-size: 10px;
-  color: #cccccc;
-  padding-top: 15px;
-  padding-left: 43%;
+  font-size: 0.5em;
+  padding-top: 2em;
 }
 
 
