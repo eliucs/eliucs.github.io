@@ -3,39 +3,38 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Web and Android Developer who loves learning, scalability and algorithms. An algorithm a day keeps the O(n^2) time complexity away." />
+    <meta name="description" content="Web and Software Developer who loves learning, scalability and algorithms. An algorithm a day keeps the O(n^2) time complexity away." />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta property="og:site_name" content="Eric Liu" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Eric Liu" />
-    <meta property="og:description" content="Web and Android Developer who loves learning, scalability and algorithms. An algorithm a day keeps the O(n^2) time complexity away." />
+    <meta property="og:description" content="Web and Software Developer who loves learning, scalability and algorithms. An algorithm a day keeps the O(n^2) time complexity away." />
     <meta property="og:url" content="http://ericliu.ca/" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Eric Liu" />
-    <meta name="twitter:description" content="Web and Android Developer who loves learning, scalability and algorithms. An algorithm a day keeps the O(n^2) time complexity away." />
+    <meta name="twitter:description" content="Web and Software Developer who loves learning, scalability and algorithms. An algorithm a day keeps the O(n^2) time complexity away." />
     <meta name="twitter:url" content="http://ericliu.ca/" />
 
-    <link href="assets/lib/build/style.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/favicon/favicon.ico" rel="shortcut icon">
     <link href="assets/favicon/favicon-16x16.png" rel="icon" type='text/png'>
     <link href="assets/favicon/favicon-32x32.png" rel="icon" type='text/png'>
     <link href="assets/favicon/favicon-96x96.png" rel="icon" type='text/png'>
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.0.js"></script>
-    <script src="menu-contact.js"></script>
+    <script src="assets/js/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
 
-    <title>Eric Liu | Contact</title>
+    <title>Eric Liu | Contact Me</title>
   </head>
 
   <body class="contactpage">
     <nav class="topnav" id="topnav">
-      <a href="/" class="logo-contact" id="logo">ERIC LIU</a>
+      <a href="/" class="logo" id="logo">ERIC LIU</a>
       <a class="menu" id="menu">
-        <div class="nav-icon-contact" id="nav-icon-contact">
+        <div id="nav-icon">
           <span id="menu-1"></span>
           <span id="menu-2"></span>
           <span id="menu-3"></span>
@@ -43,15 +42,24 @@
         </div>
       </a>
 
-      <a href="about" class="opt1" id="opt1">About.</a>
-      <a href="projects" class="opt2" id="opt2">Projects.</a>
-      <a href="#" class="opt3" id="opt3">Contact.</a>
+      <div class="option-container">
+        <ul>
+          <li><a href="about" class="option-1" id="option-1">About.</a></li>
+          <li><a href="projects" class="option-2" id="option-2">Projects.</a></li>
+          <li><a href="contact" class="option-3" id="option-3">Contact.</a></li>
+        </ul>
+      </div>
     </nav>
 
-    <div class="section-contact sec-contact">
-      <div class="intro-contact">
-        Hello there. <span>Lets get to know each other.</span>
+    <div class="section section-dark">
+      <div class="title-container">
+        <hgroup>
+          <h1 class="light">Hello there. Lets get to know each other.</h1>
+
+          <h2 class="light">I would love to get in touch with you.</h2>
+        </hgroup>
       </div>
+
       <div class="contact-container">
         <div class="contact">
           <div class="contact-title">Email.</div>
@@ -62,37 +70,39 @@
         <div class="contact">
           <div class="contact-title">LinkedIn.</div>
           <div class="contact-text">Hire me!</div>
-          <a href="http://linkedin.com/in/eliucs">/eliucs</a>
+          <a href="https://linkedin.com/in/eliucs">/eliucs</a>
         </div>
 
         <div class="contact">
           <div class="contact-title">GitHub.</div>
           <div class="contact-text">Fork my repos!</div>
-          <a href="http://github.com/eliucs">/eliucs</a>
+          <a href="https://github.com/eliucs">/eliucs</a>
         </div>
 
         <div class="contact">
           <div class="contact-title">Twitter.</div>
           <div class="contact-text">Follow me!</div>
-          <a href="http://twitter.com/ericliucs">@ericliucs</a>
+          <a href="https://twitter.com/ericliucs">@ericliucs</a>
         </div>
-      </div>
     </div>
 
-    <div class="footer">
+    <!--
+    <footer class="page">
       <nav class="bottomnav">
-        <a href="about">About</a>
+        <a href="#">About</a>
         <span>/</span>
         <a href="projects">Projects</a>
         <span>/</span>
-        <a href="#">Contact</a>
+        <a href="contact">Contact</a>
       </nav>
+
       <div class="footer-text">
-        Made by Eric Liu with <i class="em em-heart"></i>
+        Made with <i class="em em-heart"></i> by <a href="https://github.com/eliucs">Eric Liu</a>.
       </div>
       <div class="footer-copyright">
         &copy; 2017. All Rights Reserved.</i>
       </div>
-    </div>
+    </footer>
+-->
   </body>
 </html>

@@ -55,6 +55,10 @@ html, body {
   width: 100%;
 }
 
+.section-dark {
+  background-color: #1f1f1f;
+}
+
 #background {
   height: 100%;
   width: 100%;
@@ -253,7 +257,7 @@ html, body {
 /* About, Project, Contact Styles */
 .title-container {
   width: 100%;
-  padding-top: 6em;
+  padding-top: 8em;
   padding-bottom: 6em;
   text-align: center;
   z-index: -1;
@@ -269,6 +273,8 @@ html, body {
 }
 
 .title-container hgroup h1 {
+  margin-left: 15%;
+  margin-right: 15%;
   font-weight: 800;
   font-size: 3em;
   margin-bottom: 0.1em;
@@ -305,6 +311,10 @@ html, body {
 
 .title-container hgroup p a:hover {
   color: #ff00ff;
+}
+
+.light {
+  color: #fff;
 }
 
 /* Footer Style */
@@ -366,99 +376,55 @@ footer.page {
   padding-top: 2em;
 }
 
+/* Contact Styles */
+.contact-container {
+  text-align: center;
+  font-family: 'Roboto';
+  font-weight: 300;
+  margin-top: -5em;
+  color: #fff;
+}
 
+.contact-container .contact {
+  display: inline-block;
+  padding-left: 2%;
+  padding-right: 2%;
+}
 
-
-
-
-
-
-
-.logo-contact {
-  position: fixed;
-  font-family: Raleway;
-  font-weight: bold;
+.contact .contact-title,
+.contact .contact-text {
+  font-family: 'Roboto';
+  font-weight: 100;
   font-style: normal;
 	font-variant: normal;
-  word-spacing: -2px;
-  font-size: 28pt;
-  color: #ffffff;
-  top: 30px;
-  left: 30px;
+}
+
+.contact .contact-title {
+  font-size: 2em;
+  padding-bottom: 15px;
+}
+
+.contact .contact-text {
+  font-size: 1em;
+  padding-bottom: 30px;
+}
+
+.contact a {
+  font-size: 1em;
+  color: #fff;
   text-decoration: none;
-  z-index: 99;
 }
 
-/* Nav Icon Contact*/
-#nav-icon-contact {
-  width: 30px;
-  height: 30px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .5s ease-in-out;
-  -moz-transition: .5s ease-in-out;
-  -o-transition: .5s ease-in-out;
-  transition: .5s ease-in-out;
-  cursor: pointer;
+.contact a:hover {
+  color: #ff00ff;
 }
 
-#nav-icon-contact span {
-  display: block;
-  position: absolute;
-  height: 5px;
-  width: 100%;
-  background: #ffffff;
-  border-radius: 0px;
-  left: 0;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: .25s ease-in-out;
-  -moz-transition: .25s ease-in-out;
-  -o-transition: .25s ease-in-out;
-  transition: .25s ease-in-out;
-}
 
-#nav-icon-contact span:nth-child(1) {
-  top: 20px;
-}
 
-#nav-icon-contact span:nth-child(2),#nav-icon-contact span:nth-child(3) {
-  top: 30px;
-}
 
-#nav-icon-contact span:nth-child(4) {
-  top: 40px;
-}
 
-#nav-icon-contact.open span:nth-child(1) {
-  top: 10px;
-  width: 0%;
-  left: 50%;
-}
 
-#nav-icon-contact.open span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
 
-#nav-icon-contact.open span:nth-child(3) {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
-#nav-icon-contact.open span:nth-child(4) {
-  top: 18px;
-  width: 0%;
-  left: 50%;
-}
 
 
 
@@ -484,8 +450,6 @@ footer.page {
   color: #393939;
 }
 
-
-
 .projects-description {
   font-family: Raleway;
   font-weight: normal;
@@ -494,49 +458,6 @@ footer.page {
   font-size: 18px;
   padding-top: 5px;
   padding-left: 25%;
-  color: #393939;
-}
-
-.about-description {
-  font-family: Raleway;
-  font-weight: normal;
-  font-style: normal;
-	font-variant: normal;
-  font-size: 18px;
-  padding-top: 5px;
-  padding-left: 27%;
-  color: #393939;
-}
-
-.about-paragraph {
-  font-family: Raleway;
-  font-weight: normal;
-  font-style: normal;
-	font-variant: normal;
-  font-size: 18px;
-  padding-top: 40px;
-  padding-left: 20%;
-  padding-right: 20%;
-  color: #393939;
-}
-
-.about-paragraph span {
-  font-family: Raleway;
-  font-weight: bold;
-  font-style: normal;
-	font-variant: normal;
-}
-
-.about-quote {
-  font-family: Raleway;
-  font-weight: bold;
-  font-style: italic;;
-	font-variant: normal;
-  font-size: 60px;
-  text-align: right;
-  padding-top: 40px;
-  padding-left: 20%;
-  padding-right: 20%;
   color: #393939;
 }
 
@@ -675,134 +596,11 @@ a.projects-viewall:hover {
   color: #ff00ff;
 }
 
-.twitter-title {
-  font-family: Raleway;
-  font-weight: bold;
-  font-style: normal;
-	font-variant: normal;
-  font-size: 60px;
-  padding-top: 3%;
-  padding-left: 30%;
-  color: #393939;
-}
-
-.twitter-description {
-  font-family: Raleway;
-  font-weight: normal;
-  font-style: normal;
-	font-variant: normal;
-  font-size: 18px;
-  padding-top: 5px;
-  padding-left: 25%;
-  color: #393939;
-}
-
-.twitter-description a {
-  color: #6600ff;
-  text-decoration: none;
-}
-
-.twitter-description a:hover {
-  color: #ff00ff;
-}
-
-.twitter-feed {
-  padding-top: 20px;
-  padding-left: 23%;
-  padding-right: 23%;
-}
-
-.contact-container {
-  font-family: Raleway;
-  font-weight: normal;
-  font-style: normal;
-	font-variant: normal;
-  font-size: 25px;
-  padding-top: 80px;
-  padding-left: 15%;
-  padding-right: 10%;
-  color: #ffffff;
-}
-
-.contact-container .contact:nth-child(1) {
-  display: inline-block;
-  padding-left: 0%;
-  padding-right: 7%;
-}
-
-.contact-container .contact:nth-child(2) {
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: #cccccc;
-  display: inline-block;
-  padding-left: 7%;
-  padding-right: 7%;
-}
-
-.contact-container .contact:nth-child(3) {
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: #cccccc;
-  display: inline-block;
-  padding-left: 7%;
-  padding-right: 7%;
-}
-
-.contact-container .contact:nth-child(4) {
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: #cccccc;
-  display: inline-block;
-  padding-left: 7%;
-}
-
-.contact .contact-title {
-  font-family: Raleway;
-  font-weight: bold;
-  font-style: normal;
-	font-variant: normal;
-  padding-bottom: 15px;
-}
-
-.contact .contact-text {
-  font-family: Raleway;
-  font-weight: normal;
-  font-style: normal;
-	font-variant: normal;
-  font-size: 12px;
-  padding-bottom: 30px;
-}
-
-.contact a {
-  font-size: 18px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  color: #ff00ff;
-}
-
-
-.section-contact {
-  height: 100%;
-  width: 100%;
-  background-color: #202020;
-}
-
 .subsection {
   height: 60%;
   width: 100%;
   background-color: #d3d3d3;
 }
-
-
-.sec-contact {
-  background-color: #151515;
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
 
 .sec-projects {
   height: auto;
