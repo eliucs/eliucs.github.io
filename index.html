@@ -22,11 +22,10 @@
     <link href="assets/favicon/favicon-32x32.png" rel="icon" type='text/png'>
     <link href="assets/favicon/favicon-96x96.png" rel="icon" type='text/png'>
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <script src="assets/js/jquery-3.1.1.min.js"></script>
-    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/script.js"></script>
 
     <title>Eric Liu</title>
   </head>
@@ -43,23 +42,42 @@
         </div>
       </a>
 
-      <a href="about" class="opt1" id="opt1">About.</a>
-      <a href="projects" class="opt2" id="opt2">Projects.</a>
-      <a href="contact" class="opt3" id="opt3">Contact.</a>
+      <div class="option-container">
+        <ul>
+          <li><a href="about" class="option-1" id="option-1">About.</a></li>
+          <li><a href="projects" class="option-2" id="option-2">Projects.</a></li>
+          <li><a href="contact" class="option-3" id="option-3">Contact.</a></li>
+        </ul>
+      </div>
     </nav>
 
     <div class="section">
+      <div class="home-text-container">
+        <div class="home-title">Hello there!</div>
+
+        <div class="home-text">
+          My name is Eric Liu, and I am a Computer Science and Business student at the University of Waterloo.
+        </div>
+
+        <div class="home-text-link">
+          <a href="about" class="intro-text-link">View My Projects &rarr;</a>
+        </div>
+      </div>
       <div id="background">
         <script src="assets/js/background.js"></script>
       </div>
     </div>
+
+    <footer>
+
+    </footer>
 
 
 
     <!--
     <div class="section sec-1">
       <div class="intro">
-        Hello there!
+
       </div>
       <div class="intro-text">
         My name is Eric Liu, and I am a Computer Science and Business student at the University of Waterloo.
@@ -127,5 +145,6 @@
         &copy; 2017. All Rights Reserved.</i>
       </div>
     </div>
+
   </body>
 </html>
