@@ -13,10 +13,10 @@ html, body {
 
 #topnav.open {
   height: 100%;
-  z-index: 99;
+  z-index: 999;
   background-color: #000;
   transition: 0.5s;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .logo {
@@ -87,7 +87,7 @@ html, body {
 .menu {
   position: fixed;
   top: 25px;
-  right: 2%;
+  right: 2em;
   z-index: 99;
   color: #fff;
   text-decoration: none;
@@ -171,25 +171,74 @@ html, body {
 
 /* Homepage Styles */
 .home-text-container {
-  margin-left: 20%;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  right: 20%;
+  z-index: 99;
 }
 
-
 .home-title, .home-text, .home-text-link {
-  z-index: 99;
   font-family: 'Roboto';
   color: #fff;
+  font-weight: 300;
 }
 
 .home-title {
-  font-weight: 100;
   font-size: 3em;
+  margin-bottom: 0.25em;
 }
 
 .home-text {
-  font-weight: 100;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.home-text-link {
   font-size: 1em;
 }
+
+.home-text-link a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-text-link a:hover {
+  color: #ff00ff;
+}
+
+/* Home Footer Styles */
+.home-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 2em;
+  z-index: 99;
+}
+
+.footer-content {
+  font-family: 'Roboto';
+  color: #fff;
+  font-weight: 100;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.footer-content a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  color: #ff00ff;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
 
 
 
