@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$('#nav-icon').click(function(){
+	$('#nav-icon, #nav-icon-dark').click(function(){
 		$(this).toggleClass('open');
 		$('#logo').toggleClass('open');
 		$('#topnav').toggleClass('open');

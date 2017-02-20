@@ -3,39 +3,38 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Web and Android Developer who loves learning, scalability and algorithms. An algorithm a day keeps the O(n^2) time complexity away." />
+    <meta name="description" content="Web and Software Developer who loves learning, scalability and algorithms. An algorithm a day keeps the O(n^2) time complexity away." />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta property="og:site_name" content="Eric Liu" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Eric Liu" />
-    <meta property="og:description" content="Web and Android Developer who loves learning, scalability and algorithms. An algorithm a day keeps the O(n^2) time complexity away." />
+    <meta property="og:description" content="Web and Software Developer who loves learning, scalability and algorithms. An algorithm a day keeps the O(n^2) time complexity away." />
     <meta property="og:url" content="http://ericliu.ca/" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Eric Liu" />
-    <meta name="twitter:description" content="Web and Android Developer who loves learning, scalability and algorithms. An algorithm a day keeps the O(n^2) time complexity away." />
+    <meta name="twitter:description" content="Web and Software Developer who loves learning, scalability and algorithms. An algorithm a day keeps the O(n^2) time complexity away." />
     <meta name="twitter:url" content="http://ericliu.ca/" />
 
-    <link href="assets/lib/build/style.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/favicon/favicon.ico" rel="shortcut icon">
     <link href="assets/favicon/favicon-16x16.png" rel="icon" type='text/png'>
     <link href="assets/favicon/favicon-32x32.png" rel="icon" type='text/png'>
     <link href="assets/favicon/favicon-96x96.png" rel="icon" type='text/png'>
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:800' rel='stylesheet' type='text/css'>
-    <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.8.0.js"></script>
-    <script src="menu.js"></script>
+    <script src="assets/js/jquery-3.1.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
 
     <title>Eric Liu | About Me</title>
   </head>
 
-  <body class="aboutpage">
+  <body>
     <nav class="topnav" id="topnav">
-      <a href="/" class="logo" id="logo">ERIC LIU</a>
+      <a href="/" class="logo-dark" id="logo">ERIC LIU</a>
       <a class="menu" id="menu">
-        <div id="nav-icon">
+        <div id="nav-icon-dark">
           <span id="menu-1"></span>
           <span id="menu-2"></span>
           <span id="menu-3"></span>
@@ -43,64 +42,53 @@
         </div>
       </a>
 
-      <a href="#" class="opt1" id="opt1">About.</a>
-      <a href="projects" class="opt2" id="opt2">Projects.</a>
-      <a href="contact" class="opt3" id="opt3">Contact.</a>
+      <div class="option-container">
+        <ul>
+          <li><a href="about" class="option-1" id="option-1">About.</a></li>
+          <li><a href="projects" class="option-2" id="option-2">Projects.</a></li>
+          <li><a href="contact" class="option-3" id="option-3">Contact.</a></li>
+        </ul>
+      </div>
     </nav>
 
-    <div class="section sec-about">
-      <div class="about-title">
-        About Me
-      </div>
-      <div class="about-description">
-        You've probably been wondering, who am I, and what do I do?
-      </div>
-      <div class="about-paragraph">
-        My name is Eric Liu, I am a Computer Science and Business student at the University of Waterloo, currently enrolled in the Double Degree (BCS/BBA) Program.
-      </div>
-      <div class="about-paragraph">
-        I am very passionate about self-teaching new concepts, working on interesting projects, and collaborating in teams. I think that constantly learning and scanning for new developments in the realm of computer science is crucial to keeping up-to-date with current and future technologies.
-      </div>
-      <div class="about-quote">
-        "Never stop learning, because life never stops teaching."
-      </div>
-      <div class="about-paragraph">
-        In my spare time, I work on a multitude of projects. Some are ongoing works-in-progress, like <span>Differentio</span> and <span>Newstream</span>, which both incorporate machine learning techniques, which are topics I'm currently exploring on my own.
-      </div>
-      <div class="about-paragraph">
-        Other times, I work on mini-projects and experiments, which I use to test and keep myself in check with important concepts with algorithms, object-oriented, dynamic and functional programming.
-      </div>
-      <div class="about-paragraph">
-        I've worked with many languages and frameworks: fluent in Java, C/C++, Python, SQL, Javascript, HTML 5, CSS 3 and Scheme/Racket. I'm familiar with jQuery, Node, Express, Angular, MongoDB and Android Studio. My time working with each are detailed below:
+    <div class="section">
+      <div class="title-container">
+        <hgroup>
+          <h1>About Me.</h1>
+
+          <h2>You've probably been wondering, who am I, and what do I do?</h2>
+
+          <p>My name is Eric Liu, I am a Computer Science and Business Administration student at the University of Waterloo, currently enrolled in the Double Degree (BCS/BBA) Program.</p>
+
+          <p>I am very passionate about self-teaching new concepts, working on interesting projects, and collaborating in teams. I think that constantly learning and scanning for new developments in the realm of computer science is crucial to keeping up-to-date with current and future technologies.</p>
+
+          <p class="quote">"Never stop learning, because life never stops teaching."</p>
+
+          <p>In my spare time, I work on a multitude of projects. Some are ongoing works-in-progress, like <a href="https://github.com/eliucs/differentio">Differentio</a> and <a href="https://github.com/eliucs/newstream">Newstream</a>, which both incorporate machine learning techniques, which are topics I'm currently exploring on my own.</p>
+
+          <p>Other times, I work on mini-projects and experiments, which I use to test and keep myself in check with important concepts with algorithms, object-oriented, dynamic and functional programming.</p>
+
+          <p>I've worked with many languages and frameworks: I'm fluent in Java, C/C++, Python, SQL, Javascript, HTML 5, CSS 3 and Scheme/Racket. I'm familiar with jQuery, Node, Express, Angular, MongoDB and Android Studio.</p>
+        </hgroup>
+
       </div>
 
-      <ul id="skill">
-	      <li><span class="bar bar-java"></span><div>Java, Android Studio (6 years)</div></li>
-	      <li><span class="bar bar-js"></span><div>Javascript, jQuery, Node, Express, Angular (5 years)</div></li>
-	      <li><span class="bar bar-html"></span><div>HTML 5 (5 years)</div></li>
-	      <li><span class="bar bar-css"></span><div>CSS 3 (5 years)</div></li>
-        <li><span class="bar bar-python"></span><div>Python (4 years)</div></li>
-	      <li><span class="bar bar-sql"></span><div>SQL (4 years)</div></li>
-	      <li><span class="bar bar-cpp"></span><div>C/C++ (4 years)</div></li>
-	      <li><span class="bar bar-mongodb"></span><div>MongoDB (2 years)</div></li>
-        <li><span class="bar bar-rkt"></span><div>Scheme/Racket (1 year)</div></li>
-      </ul>
-    </div>
+      <footer>
+        <nav class="bottomnav">
+          <a href="#">About</a>
+          <span>/</span>
+          <a href="projects">Projects</a>
+          <span>/</span>
+          <a href="contact">Contact</a>
+        </nav>
 
-    <div class="footer">
-      <nav class="bottomnav">
-        <a href="#">About</a>
-        <span>/</span>
-        <a href="projects">Projects</a>
-        <span>/</span>
-        <a href="contact">Contact</a>
-      </nav>
-      <div class="footer-text">
-        Made by Eric Liu with <i class="em em-heart"></i>
-      </div>
-      <div class="footer-copyright">
-        &copy; 2017. All Rights Reserved.</i>
-      </div>
-    </div>
+        <div class="footer-text">
+          Made by Eric Liu with <i class="em em-heart"></i>
+        </div>
+        <div class="footer-copyright">
+          &copy; 2017. All Rights Reserved.</i>
+        </div>
+      </footer>
+
   </body>
 </html>
