@@ -76,6 +76,7 @@ html, body {
 }
 
 .option-container ul {
+  padding-left: 0;
   margin-top: 10em;
   text-align: center;
   list-style-type: none;
@@ -131,7 +132,7 @@ html, body {
   cursor: pointer;
 }
 
-#nav-icon span, #nav-icon-dark span {
+#nav-icon span {
   display: block;
   position: absolute;
   height: 0.3em;
@@ -150,7 +151,21 @@ html, body {
 }
 
 #nav-icon-dark span {
+  display: block;
+  position: absolute;
+  height: 0.3em;
+  width: 100%;
   background: #000;
+  border-radius: 0px;
+  left: 0;
+   -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+           transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+     -moz-transition: .25s ease-in-out;
+       -o-transition: .25s ease-in-out;
+          transition: .25s ease-in-out;
 }
 
 #nav-icon span:nth-child(1), #nav-icon-dark span:nth-child(1) {
@@ -167,7 +182,6 @@ html, body {
 }
 
 #nav-icon.open span:nth-child(1), #nav-icon-dark.open span:nth-child(1) {
-  top: 1.25em;
   width: 0%;
   left: 50%;
 }
@@ -187,7 +201,6 @@ html, body {
 }
 
 #nav-icon.open span:nth-child(4), #nav-icon-dark.open span:nth-child(4) {
-  top: 1.25em;
   width: 0%;
   left: 50%;
 }
