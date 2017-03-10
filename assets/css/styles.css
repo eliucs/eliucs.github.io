@@ -139,6 +139,7 @@ html, body {
   width: 100%;
   background: #fff;
   border-radius: 0px;
+
   left: 0;
    -webkit-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
@@ -174,7 +175,7 @@ html, body {
 
 #nav-icon span:nth-child(2), #nav-icon span:nth-child(3),
 #nav-icon-dark span:nth-child(2), #nav-icon-dark span:nth-child(3) {
-  top: 1.9em;
+  top: 1.88em;
 }
 
 #nav-icon span:nth-child(4), #nav-icon-dark span:nth-child(4) {
