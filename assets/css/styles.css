@@ -482,6 +482,7 @@ footer.page {
 
 .card-title,
 .card-description,
+.card-pills,
 .card-view {
   font-family: 'Roboto';
   font-weight: 100;
@@ -510,6 +511,69 @@ footer.page {
   font-size: 0.75em;
   padding-top: 1.25em;
   padding-left: 5%;
+}
+
+.card-pills {
+  padding-top: 1.25em;
+  padding-left: 5%;
+  font-size: 0.8em;
+}
+
+.card-pills span {
+  margin-top: 0.25em;
+  margin-top: 0.25em;
+  margin-left: 0em;
+  margin-right: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: #fff;
+  border-radius: 0.25em;
+}
+
+.pill-python {
+  background-color: #1c505f;
+}
+
+.pill-django {
+  background-color: #001900;
+}
+
+.pill-mongodb {
+  background-color: #329932;
+}
+
+.pill-tensorflow {
+  background-color: #ffa500;
+}
+
+.pill-flask {
+  background-color: #000;
+}
+
+.pill-js {
+  background-color: #aaa50e;
+}
+
+.pill-node {
+  background-color: #4ca64c;
+}
+
+.pill-angular {
+  background-color: #840c24;
+}
+
+.pill-java {
+  background-color: #e50000;
+}
+
+.pill-android {
+  background-color: #a4c639;
+}
+
+.pill-sql {
+  background-color: #00cdcd;
 }
 
 .card-view {
