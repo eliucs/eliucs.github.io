@@ -11,13 +11,26 @@ div.title {
   position: fixed;
   margin-top: 30px;
   margin-left: 30%;
-  font-family: Raleway;
+  font-family: 'Roboto';
   font-weight: bold;
   font-style: normal;
 	font-variant: normal;
   font-size: 36px;
 
   color: #fff;
+}
+
+div.title-dark {
+  position: fixed;
+  margin-top: 30px;
+  margin-left: 30%;
+  font-family: 'Roboto';
+  font-weight: bold;
+  font-style: normal;
+	font-variant: normal;
+  font-size: 36px;
+
+  color: #000;
 }
 
 div.subtitle_container {
@@ -30,15 +43,25 @@ div.subtitle_container {
 }
 
 div.content {
-  font-family: Raleway;
+  font-family: 'Roboto';
   font-weight: normal;
   font-style: normal;
 	font-variant: normal;
   font-size: 14px;
+  color: #fff;
+}
+
+div.content-dark {
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+	font-variant: normal;
+  font-size: 14px;
+  color: #000;
 }
 
 input.content {
-  margin-top: 15px;
+  margin-top: 5px;
   margin-bottom: 10px;
   width: 300px;
 }
@@ -48,6 +71,20 @@ a.content {
   text-decoration: none;
 }
 
+a.content-dark {
+  color: #000;
+  text-decoration: none;
+}
+
  a.content:hover {
-   color: #7fffd4;
+   color: #ff00ff;
+ }
+
+ a.content-dark:hover {
+   color: #ff00ff;
+ }
+
+ form {
+   font-family: 'Roboto';
+   font-size: 14px;
  }
