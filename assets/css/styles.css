@@ -576,6 +576,14 @@ footer.page {
   background-color: #00cdcd;
 }
 
+.pill-csharp {
+  background-color: #0080ff;
+}
+
+.pill-unity {
+  background-color: #939393;
+}
+
 .card-view {
   font-weight: 300;
   font-size: 0.75em;
