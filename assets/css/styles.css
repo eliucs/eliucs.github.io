@@ -285,6 +285,7 @@ html, body {
 
 .title-container hgroup h1,
 .title-container hgroup h2,
+.title-container hgroup h3,
 .title-container hgroup p {
   margin-top: 0;
   font-family: 'Roboto';
@@ -306,6 +307,31 @@ html, body {
   font-weight: 100;
   font-size: 1.2em;
   margin-bottom: 3em;
+}
+
+.title-container hgroup h3 {
+  margin-left: 20%;
+  margin-right: 20%;
+  font-weight: 100;
+  font-size: 1em;
+  margin-top: -2em;
+  margin-bottom: 3em;
+}
+
+.title-container hgroup h3 span {
+  font-weight: 500;
+  font-size: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.title-container hgroup h3 span a {
+  text-decoration: none;
+  color: #000;
+}
+
+.title-container hgroup h3 span a:hover {
+  color: #ff00ff;
 }
 
 .title-container hgroup p {
@@ -599,4 +625,46 @@ footer.page {
 
 .card-view a:hover {
   color: #ff00ff;
+}
+
+.project-container {
+  height: 100%;
+  text-align: center;
+  margin-top: -8em;
+  margin-bottom: 5em;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.project-img {
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.project-container hgroup{
+  text-align: left;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.project-container hgroup h2,
+.project-container hgroup h2 span,
+.project-container hgroup p {
+  font-family: 'Roboto';
+  font-style: normal;
+	font-variant: normal;
+  color: #393939;
+}
+
+.project-container hgroup h2 {
+  font-weight: 400;
+  font-size: 1.25em;
+}
+
+.project-container hgroup h2 span {
+  font-weight: 100;
+}
+
+.project-container hgroup p {
+  font-weight: 100;
 }
