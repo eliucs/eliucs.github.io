@@ -32,7 +32,7 @@
   </head>
 
   <body>
-    <nav class="topnav topnav-light" id="topnav">
+    <nav class="topnav nav-scroll" id="topnav">
       <a href="/" class="logo-dark" id="logo">ERIC LIU</a>
       <a class="menu" id="menu">
         <div id="nav-icon-dark">
@@ -58,20 +58,23 @@
         <hgroup>
           <h1>Newstream.</h1>
 
-          <h2>Using natural language processing and machine learning with NLTK and Scikit Learn to determine if an article is true or fake news.</h2>
+          <h2>Aggregating news and Tweets and applying sentiment analysis on various topics.</h2>
 
           <h3><span><a href="https://getnewstream.com">Website</a></span><span><a href="https://github.com/eliucs/newstream">Github</a></span><span><a href="https://devpost.com/software/newstream">Devpost</a></span></h3>
         </hgroup>
       </div>
 
       <div class="project-container">
-        <img class="project-img" src="../assets/img/newstream.png" alt="Newstream Screenshot">
+        <img class="project-img" src="../assets/img/newstream_1.png" alt="Newstream Screenshot 1">
+        <img class="project-img" src="../assets/img/newstream_2.png" alt="Newstream Screenshot 2">
+        <img class="project-img" src="../assets/img/newstream_3.png" alt="Newstream Screenshot 3">
+        <script src="../assets/js/slides.js"></script>
 
         <hgroup>
-          <h2>Submitted To <span>PennApps XV (University of Pennsylvania, Philadelphia, Pennsylvania)</span></h2>
-          <h2>Technologies Used <span>Python, Flask, Indico API, Plotly, News API, Firebase</span></h2>
-          <p>Given all the recent news and controversies surrounding President Trump and his accusations of certain news sources being "fake news", we wanted to make a web application where you can check whether a certain article is fact or fiction. From the home page, you enter in the URL to a news article, and then the application will display whether or not the article is "True" or "Fake" and gives a percentage confidence for this classification.</p>
-          <p>We built this project in Python with the Flask framework, NLTK and Scikit Learn. We started by compiling a large bank of true news articles (for example, CSPAN, New York Times, Reuters) and fake news articles (for example, abcnews.com.co, nationalreport.net, infowars.com). We trained our model from these articles, which gave us the most likely words and their frequencies to show up in true and fake news articles respectively. Then using the Newspaper API, we parse out an HTML page to its plain text article form and tokenize this body of text by sentence. Applying our fact checking analysis function to each sentence and taking the mode of these values gives us whether or not the article is true or fake, and taking the ratio determines the confidence.</p>
+          <h2>Submitted To <span>PennApps XV (University of Pennsylvania, Philadelphia)</span></h2>
+          <h2>Technologies Used <span>Python, Flask, Indico API, Twitter API, Plotly, Firebase, News API</span></h2>
+          <p>With all the news out there it becomes much more difficult to be able to filter out and get a good overview of the content you're consuming. We built Newstream with all the events happening around President Trump in particular - we wanted a better way to visualize the data from news articles and the trends that change over time around those particular topics. We wanted the information to be displayed clear and concise, unlike many of other news aggregators out there that seem to overwhelm users with information overload.</p>
+          <p>Newstream aggregates news articles with the News API and performs sentiment analysis with the Indico APIto display sentiment score, consensus (negative to positive), sentiment spread and sentiment changes over time in a user friendly and minimalistic interface. For each article, it performs sentiment analysis to give them a sentiment value as well. Using Plotly, a graph is drawn displaying the sentiment change over the last five days. To increase performance, search terms are cached with Firebase and only updated per day for the graph.</p>
         </hgroup>
       </div>
     </div>
