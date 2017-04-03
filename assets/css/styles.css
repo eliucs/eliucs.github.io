@@ -16,7 +16,6 @@ html, body {
   transition-duration: 0.2s;
 }
 
-
 #topnav.open {
   height: 100% !important;
   z-index: 999 !important;
@@ -375,8 +374,9 @@ html, body {
   font-family: 'Roboto';
   font-weight: 300;
   margin-top: -7em;
-  margin-bottom: 4em;
+
   color: #fff;
+  background-color: #1f1f1f;
 }
 
 .contact-container .contact {
@@ -414,7 +414,6 @@ html, body {
   color: #ff00ff;
 }
 
-/* Footer Style */
 footer.page {
   height: 12em;
   width: 100%;
