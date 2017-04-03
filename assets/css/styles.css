@@ -616,6 +616,14 @@ footer.page {
   background-color: #939393;
 }
 
+.pill-aws {
+  background-color: #ffa500;
+}
+
+.pill-watson {
+  background-color: #0c2c4b;
+}
+
 .card-view {
   font-weight: 300;
   font-size: 0.75em;
