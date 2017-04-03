@@ -14,7 +14,6 @@ $(document).ready(function(){
        }
    });
 
-
 	$('#nav-icon, #nav-icon-dark').click(function(){
 		$(this).toggleClass('open');
 		$('#logo').toggleClass('open');
