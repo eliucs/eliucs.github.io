@@ -665,6 +665,10 @@ footer.page {
   background-color: #0c2c4b;
 }
 
+.pill-jquery {
+  background-color: #004c99;
+}
+
 .card-view {
   font-weight: 300;
   font-size: 0.75em;
