@@ -1,17 +1,17 @@
 $(document).ready(function(){
 	var scrollStart = 0;
-	var startChange = $('.nav-scroll');
+	var startChange = $('.nav-scroll-dark');
 	var offset = startChange.offset();
 
 	$(document).scroll(function() {
 		scrollStart = $(this).scrollTop();
 		
 		if (scrollStart > offset.top) {
-			$('.nav-scroll').css('background-color', '#fff');
-			$('.nav-scroll').css('box-shadow', '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)');
+			$('.nav-scroll-dark').css('background-color', '#1f1f1f');
+			$('.nav-scroll-dark').css('box-shadow', '0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)');
 		} else {
-			$('.nav-scroll').css('background-color', 'transparent');
-			$('.nav-scroll').css('box-shadow', 'none');
+			$('.nav-scroll-dark').css('background-color', 'transparent');
+			$('.nav-scroll-dark').css('box-shadow', 'none');
 		}
 	});
 
