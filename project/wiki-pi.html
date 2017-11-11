@@ -35,7 +35,7 @@
     <script src="../assets/js-lib/bootstrap.min.js" type="text/javascript"></script>
     <script src="../assets/js/script.js" type="text/javascript"></script>
 
-    <title>Eric Liu | Differentio</title>
+    <title>Eric Liu | Wiki Pi</title>
   </head>
 
   <body>
@@ -67,8 +67,8 @@
           <div class="col-md-1"></div>
           <div class="col-md-10">
             <div class="container-title">
-              <h1>Differentio.</h1>
-              <p>Online educational reference tool for learning about algorithms and data structures.</p>
+              <h1>Wiki Pi.</h1>
+              <p>Platform built in Node.js using Wikipedia to generate courses as a low-cost educational resource alternative.</p>
             </div>
           </div>
           <div class="col-md-1"></div>
@@ -79,7 +79,7 @@
           <div class="col-md-6">
             <div class="row project-links">
               <div class="col-md-12">
-                <a href="https://github.com/eliucs/differentio">GitHub</a>
+                <a href="https://github.com/eliucs/wiki-pi">GitHub</a>
               </div>
             </div>
           </div>
@@ -89,7 +89,7 @@
         <div class="row project-img-container">
           <div class="col-md-2"></div>
           <div class="col-md-8">
-              <img class="img-fluid img-project" src="../assets/img/differentio.png" alt="Differentio Screenshot" unselectable="on">
+              <img class="img-fluid img-project border border-light" src="../assets/img/wiki-pi.png" alt="Wiki Pi Screenshot" unselectable="on">
           </div>
           <div class="col-md-2"></div>
         </div>
@@ -97,9 +97,9 @@
         <div class="row project-body">
           <div class="col-md-2"></div>
           <div class="col-md-8">
-              <p><strong>Technologies Used </strong>Python, Django, Indico API, eBay API, Alibaba API, Firebase</p>
-              <p>I realized that there aren't any efficient way for importers or exporters to look for products that would be good candidates for arbitrage.</p>
-              <p>Differentio is a web application that aggregates prices on the wholesale side from the Alibaba API and prices on the retail side from the eBay API, filters the search results to only get the ones closely matching the search query using the Wagner-Fischer algorithm. It also aggregates up to five news articles pertinent to the search query and displays an overall sentiment score of them using the Indico API.</p>
+            <p><strong>Technologies Used </strong>JavaScript, Node.js, Wikipedia API, SQLite 3</p>
+            <p>This is an open source project based in Node.js and the Electron.js framework for using Wikipedia (English, text only, ~5,000,000 articles) on a Raspberry Pi to build a low-cost, Internet-free, education resource alternative.
+            Wiki Pi represents Wikipedia as a graph, takes articles as parameters and traverses them based on user-defined text similarity and relevance thresholds to aggregate related articles, and then uses natural language processing techniques/algorithms including Porter's Stemmer to normalize text and a modified algorithm using tf-idf (term frequency-inverse document frequency) to perform text summarization and generate "course content".</p>
           </div>
           <div class="col-md-2"></div>
         </div>

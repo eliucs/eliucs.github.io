@@ -437,3 +437,19 @@ html, body {
 .container-main-contact {
   padding-bottom: 2em;
 }
+
+.project-links {
+  text-align: center;
+}
+
+.project-links-container {
+  margin-bottom: 1em;
+}
+
+.project-img-container {
+  margin-bottom: 1em;
+}
+
+.img-project {
+  border-radius: 0.25em;
+}
