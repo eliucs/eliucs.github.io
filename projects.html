@@ -3,32 +3,39 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Web and Software Developer who loves learning, scalability and algorithms." />
+    <meta name="description" content="Aspiring software engineer who loves learning about algorithms, new technologies, and scalability.">
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta property="og:site_name" content="Eric Liu" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Eric Liu" />
-    <meta property="og:description" content="Web and Software Developer who loves learning, scalability and algorithms." />
-    <meta property="og:url" content="http://ericliu.ca/" />
+    <meta property="og:description" content="Aspiring software engineer who loves learning about algorithms, new technologies, and scalability." />
+    <meta property="og:url" content="https://ericliu.ca/" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Eric Liu" />
-    <meta name="twitter:description" content="Web and Software Developer who loves learning, scalability and algorithms." />
-    <meta name="twitter:url" content="http://ericliu.ca/" />
+    <meta name="twitter:description" content="Aspiring software engineer who loves learning about algorithms, new technologies, and scalability." />
+    <meta name="twitter:url" content="https://ericliu.ca/" />
 
-    <link href="assets/css/styles.css" rel="stylesheet">
+    <!-- Favicons -->
     <link href="assets/favicon/favicon.ico" rel="shortcut icon">
     <link href="assets/favicon/favicon-16x16.png" rel="icon" type='text/png'>
     <link href="assets/favicon/favicon-32x32.png" rel="icon" type='text/png'>
     <link href="assets/favicon/favicon-96x96.png" rel="icon" type='text/png'>
+
+    <!-- Styles -->
+    <link href="assets/css-lib/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css-lib/mdb.min.css" rel="stylesheet">
     <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    <link href="assets/css/styles.css" rel="stylesheet">
 
-    <script src="assets/js/jquery-3.1.1.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js-lib/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="assets/js-lib/popper.min.js" type="text/javascript"></script>
+    <script src="assets/js-lib/bootstrap.min.js" type="text/javascript"></script>
+    <script src="assets/js/script.js" type="text/javascript"></script>
 
-    <title>Eric Liu | Projects</title>
+    <title>Eric Liu</title>
   </head>
 
   <body>
@@ -52,105 +59,234 @@
       </div>
     </nav>
 
-    <div class="section-auto">
-      <div class="title-container">
-        <hgroup>
-          <h1>Projects.</h1>
-
-          <h2>Here are some of the projects I've made or I'm currently working on.</h2>
-        </hgroup>
-      </div>
-
-      <div class="projects-container">
-        <div class="card">
-          <div class="card-title"><a href="project/productive">Productive.</a></div>
-          <div class="card-description">Chrome extension to help keep track of tasks, <br>notes, shortcuts and productivity.</div>
-          <div class="card-pills"><span class="pill-js">javascript</span><span class="pill-jquery">jquery</span></div>
-          <div class="card-view"><span><a href="https://github.com/eliucs/productive"><i class="fa fa-github"></i> GitHub</a></span><a href="https://chrome.google.com/webstore/detail/productive/mbajcbhcbcbdianjgagmnbgnjmhoaooa">View this project &rarr;</a></div>
+    <div class="container-bf">
+        <div class="container-fluid container-main container-body">
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <div class="container-title">
+                <h1>Projects.</h1>
+                <p>Here are my finished projects and works in progress.</p>
+              </div>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+    
+          <div class="row container-cards">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <div class="row row-cards">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="view overlay hm-white-slight">
+                        <img src="assets/img/card/kasparov.png" class="img-fluid" alt="">
+                        <a href="project/kasparov">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><a class="card-link" href="project/kasparov">Kasparov.</a></h4>
+                        <p class="card-text">UCI compatible chess engine built in Java, uses bitboards, alpha-beta pruning, and quiescence search.</p>
+                        <p class="card-text"><a href="https://github.com/eliucs/kasparov">View on GitHub</a></p>  
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="view overlay hm-white-slight">
+                        <img src="assets/img/card/wiki-pi.png" class="img-fluid" alt="">
+                        <a href="project/wiki-pi">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><a class="card-link" href="project/wiki-pi">Wiki Pi.</a></h4>
+                        <p class="card-text">Platform built in Node.js using Wikipedia to generate courses as a low-cost educational resource alternative.</p>
+                        <p class="card-text"><a href="https://github.com/eliucs/wiki-pi">View on GitHub</a></p>  
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="view overlay hm-white-slight">
+                        <img src="assets/img/card/tf-idf-text-summarization.png" class="img-fluid" alt="">
+                        <a href="project/tf-idf-text-summarization">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><a class="card-link" href="project/tf-idf-text-summarization">tf-idf Text Summarizer.</a></h4>
+                        <p class="card-text">JavaScript library for text summarization using tf-idf weighting.</p>
+                        <p class="card-text"><a href="https://github.com/eliucs/tf-idf-text-summarization">View on GitHub</a></p>  
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="view overlay hm-white-slight">
+                        <img src="assets/img/card/kneser-ney-smoothing.png" class="img-fluid" alt="">
+                        <a href="project/kneser-ney-smoothing">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><a class="card-link" href="project/kneser-ney-smoothing">Kneser-Ney Smoothing.</a></h4>
+                        <p class="card-text">PyQt application to demonstrate the Kneser-Ney smoothing algorithm for bigram/word prediction.</p>
+                        <p class="card-text"><a href="https://github.com/eliucs/kneser-ney-smoothing">View on GitHub</a></p>  
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="view overlay hm-white-slight">
+                        <img src="assets/img/card/algorithm-helper.png" class="img-fluid" alt="">
+                        <a href="project/algorithm-helper">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><a class="card-link" href="project/algorithm-helper">Algorithm Helper.</a></h4>                    
+                        <p class="card-text">Online educational reference tool for learning about algorithms and data structures.</p>
+                        <p class="card-text"><a href="https://github.com/algorithm-helper">View on GitHub</a></p>  
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="view overlay hm-white-slight">
+                        <img src="assets/img/card/productive.png" class="img-fluid" alt="">
+                        <a href="project/productive">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><a class="card-link" href="project/productive">Productive.</a></h4>                    
+                        <p class="card-text">Chrome extension to help keep track of tasks, notes, shortcuts and productivity, with auto updating background.</p>
+                        <p class="card-text"><a href="https://github.com/eliucs/productive">View on GitHub</a></p>  
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="view overlay hm-white-slight">
+                        <img src="assets/img/card/alexa-md.png" class="img-fluid" alt="">
+                        <a href="project/alexa-md">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><a class="card-link" href="project/alexa-md">alexaMD.</a></h4>
+                        <p class="card-text">Uses the Amazon Alexa and IBM Watson API to give diagnoses from voice commands.</p>
+                        <p class="card-text"><a href="https://github.com/alexa-md">View on GitHub</a></p>  
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="view overlay hm-white-slight">
+                        <img src="assets/img/card/factable.png" class="img-fluid" alt="">
+                        <a href="project/factable">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><a class="card-link" href="project/factable">Factable.</a></h4>
+                        <p class="card-text">Uses natural language processing and machine learning to determine if an article is fake news.</p>
+                        <p class="card-text"><a href="https://github.com/eliucs/factable">View on GitHub</a></p>  
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="view overlay hm-white-slight">
+                        <img src="assets/img/card/symphonica.png" class="img-fluid" alt="">
+                        <a href="project/symphonica">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><a class="card-link" href="project/symphonica">Symphonica.</a></h4>
+                        <p class="card-text">Uses machine learning with TensorFlow to generate classical music.</p>
+                        <p class="card-text"><a href="https://github.com/eliucs/symphonica">View on GitHub</a></p>  
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="view overlay hm-white-slight">
+                        <img src="assets/img/card/differentio.png" class="img-fluid" alt="">
+                        <a href="project/differentio">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><a class="card-link" href="project/differentio">Differentio.</a></h4>
+                        <p class="card-text">Uses machine learning to gain insights into price differentials of the wholesale market.</p>
+                        <p class="card-text"><a href="https://github.com/eliucs/differentio">View on GitHub</a></p>  
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card">
+                    <div class="view overlay hm-white-slight">
+                        <img src="assets/img/card/newstream.png" class="img-fluid" alt="">
+                        <a href="project/newstream">
+                            <div class="mask"></div>
+                        </a>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title"><a class="card-link" href="project/newstream">Newstream.</a></h4>
+                        <p class="card-text">Aggregates news and Tweets and applies sentiment analysis on various topics.</p>
+                        <p class="card-text"><a href="https://github.com/eliucs/newstream">View on GitHub</a></p>  
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  
+                </div>
+              </div>
+    
+            </div>
+            <div class="col-md-1"></div>
+          </div>
         </div>
-
-        <div class="card">
-          <div class="card-title"><a href="project/alexa-md">alexaMD.</a></div>
-          <div class="card-description">Using the Amazon Alexa and IBM Watson to <br>give diagnoses from voice commands.</div>
-          <div class="card-pills"><span class="pill-python">python</span><span class="pill-flask">flask</span><span class="pill-aws">aws</span><span class="pill-watson">watson</span></div>
-          <div class="card-view"><span><a href="https://github.com/alexa-md"><i class="fa fa-github"></i> GitHub</a></span><a href="https://devpost.com/software/alexamd-9u6eop">View this project &rarr;</a></div>
-        </div>
-
-        <div class="card">
-          <div class="card-title"><a href="project/factable">Factable.</a></div>
-          <div class="card-description">Using natural language processing and machine learning to determine if an article is fake news.</div>
-          <div class="card-pills"><span class="pill-python">python</span><span class="pill-flask">flask</span></div>
-          <div class="card-view"><span><a href="https://github.com/eliucs/factable"><i class="fa fa-github"></i> GitHub</a></span><a href="http://factable.tech">View this project &rarr;</a></div>
-        </div>
-
-        <div class="card">
-          <div class="card-title"><a href="https://github.com/eliucs/3d-rubix-cube-unity">3D Rubix Cube.</a></div>
-          <div class="card-description">Interactive 3D Rubix Cube with standard transformation operations and auto solve.</div>
-          <div class="card-pills"><span class="pill-csharp">c#</span><span class="pill-js">javascript</span><span class="pill-unity">unity</span></div>
-          <div class="card-view"><span><a href="https://github.com/eliucs/3d-rubix-cube-unity"><i class="fa fa-github"></i> GitHub</a></span><a href="https://github.com/eliucs/3d-rubix-cube-unity">View this project &rarr;</a></div>
-        </div>
-
-        <div class="card">
-          <div class="card-title"><a href="project/algorithm-helper">Algorithm Helper.</a></div>
-          <div class="card-description">Online reference tool for cataloguing and <br>explaining algorithms.</div>
-          <div class="card-pills"><span class="pill-python">python</span><span class="pill-django">django</span><span class="pill-sql">sql</span></div>
-          <div class="card-view"><span><a href="https://github.com/algorithm-helper"><i class="fa fa-github"></i> GitHub</a></span><a href="https://algorithmhelper.com">View this project &rarr;</a></div>
-        </div>
-
-        <div class="card">
-          <div class="card-title"><a href="project/symphonica">Symphonica.</a></div>
-          <div class="card-description">Using machine learning with TensorFlow <br>to generate classical music.</div>
-          <div class="card-pills"><span class="pill-python">python</span><span class="pill-flask">flask</span><span class="pill-tensorflow">tensorflow</span></div>
-          <div class="card-view"><span><a href="https://github.com/eliucs/symphonica"><i class="fa fa-github"></i> GitHub</a></span><a href="https://github.com/eliucs/symphonica">View this project &rarr;</a></div>
-        </div>
-
-        <div class="card">
-          <div class="card-title"><a href="project/differentio">Differentio.</a></div>
-          <div class="card-description">Using machine learning to gain insights into price differentials of the wholesale market.</div>
-          <div class="card-pills"><span class="pill-python">python</span><span class="pill-django">django</span><span class="pill-js">javascript</span></div>
-          <div class="card-view"><span><a href="https://github.com/eliucs/differentio"><i class="fa fa-github"></i> GitHub</a></span><a href="http://differentio.com">View this project &rarr;</a></div>
-        </div>
-
-        <div class="card">
-          <div class="card-title"><a href="project/newstream">Newstream.</a></div>
-          <div class="card-description">Aggregating news and Tweets and applying sentiment analysis on various topics.</div>
-          <div class="card-pills"><span class="pill-python">python</span><span class="pill-flask">flask</span><span class="pill-firebase">firebase</span></div>
-          <div class="card-view"><span><a href="https://github.com/eliucs/newstream"><i class="fa fa-github"></i> GitHub</a></span><a href="http://getnewstream.com">View this project &rarr;</a></div>
-        </div>
-
-        <div class="card">
-          <div class="card-title"><a href="https://github.com/eliucs/residenceflow">ResidenceFlow.</a></div>
-          <div class="card-description">A platform for better managing school and commercial residences.</div>
-          <div class="card-pills"><span class="pill-node">node</span><span class="pill-angular">angular</span><span class="pill-mongodb">mongodb</span></div>
-          <div class="card-view"><span><a href="https://github.com/eliucs/residenceflow"><i class="fa fa-github"></i> GitHub</a></span><a href="http://residenceflow.com">View this project &rarr;</a></div>
-        </div>
-
-        <!--
-        <div class="card">
-          <div class="card-title"><a href="https://github.com/eliucs/smartcard">Smartcard.</a></div>
-          <div class="card-description">Android and Android Wear app, determines user location and pulls up corresponding card.</div>
-          <div class="card-pills"><span class="pill-java">java</span><span class="pill-android">android</span><span class="pill-sql">sql</span></div>
-          <div class="card-view"><span><a href="https://github.com/eliucs/smartcard"><i class="fa fa-github"></i> GitHub</a></span><a href="#">View this project &rarr;</a></div>
-        </div> -->
-      </div>
+    
+        <footer class="page-footer footer-main center-on-small-only">
+            <div class="container-fluid footer-content-container">
+              <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 footer-links">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <a class="footer-link" href="projects">About</a>
+                    </div>
+                    <div class="col-md-4">
+                      <a class="footer-link" href="#">Projects</a>
+                    </div>
+                    <div class="col-md-4">
+                      <a class="footer-link" href="contact">Contact</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3"></div>
+              </div>
+            </div>
+    
+            <div class="footer-copyright">
+              <div class="container-fluid">
+                  © 2017 <a class="footer-link" href="https://ericliu.ca">Eric Liu</a>. All Rights Reserved.</a>
+              </div>
+            </div>
+        </footer>
     </div>
-
-    <footer class="page">
-      <nav class="bottomnav">
-        <a href="about">About</a>
-        <span>/</span>
-        <a href="#">Projects</a>
-        <span>/</span>
-        <a href="contact">Contact</a>
-      </nav>
-
-      <div class="footer-text">
-        Made with <i class="em em-heart"></i> by Eric Liu.
-      </div>
-      <div class="footer-copyright">
-        &copy; 2017. All Rights Reserved.</i>
-      </div>
-    </footer>
-
   </body>
 </html>

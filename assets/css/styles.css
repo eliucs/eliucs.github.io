@@ -294,7 +294,7 @@ html, body {
 }
 
 .home-text-link a:hover {
-  color: #ff00ff;
+  color: #add8e6;
 }
 
 /* Home Footer Styles */
@@ -304,6 +304,7 @@ html, body {
   bottom: 2em;
   z-index: 99;
 }
+
 
 .footer-content {
   font-family: 'Roboto';
@@ -319,7 +320,7 @@ html, body {
 }
 
 .footer-content a:hover {
-  color: #ff00ff;
+  color: #add8e6;
   text-decoration: none;
 }
 
@@ -381,7 +382,7 @@ html, body {
 }
 
 .title-container hgroup h3 span a:hover {
-  color: #ff00ff;
+  color: #add8e6;
 }
 
 .title-container hgroup p {
@@ -420,7 +421,7 @@ html, body {
 
 .title-container hgroup p a:hover,
 .title-container hgroup ul li a:hover {
-  color: #ff00ff;
+  color: #add8e6;
 }
 
 .light {
@@ -470,65 +471,7 @@ html, body {
 }
 
 .contact a:hover {
-  color: #ff00ff;
-}
-
-footer.page {
-  height: 12em;
-  width: 100%;
-  background-color: #1f1f1f;
-}
-
-.bottomnav {
-  padding-top: 2.5em;
-  text-align: center;
-}
-
-.bottomnav a, .bottomnav span {
-  text-decoration: none;
-  font-family: 'Roboto';
-  font-weight: 300;
-  font-style: normal;
-	font-variant: normal;
-  color: #ccc;
-  font-size: 1.2em;
-}
-
-.bottomnav a:hover {
-  color: #ff00ff;
-}
-
-.bottomnav span {
-  padding-left: 0.75em;
-  padding-right: 0.75em;
-}
-
-.footer-text, .footer-copyright {
-  font-family: 'Roboto';
-  font-weight: 300;
-  font-style: normal;
-	font-variant: normal;
-  color: #ccc;
-  text-align: center;
-}
-
-.footer-text {
-  font-size: 1.2em;
-  padding-top: 2em;
-}
-
-.footer-text a {
-  color: #ccc;
-  text-decoration: none;
-}
-
-.footer-text a:hover {
-  color: #ff00ff;
-}
-
-.footer-copyright {
-  font-size: 0.5em;
-  padding-top: 2em;
+  color: #add8e6;
 }
 
 /* Projects Styles */
@@ -552,155 +495,6 @@ footer.page {
 	font-variant: normal;
   font-size: 1em;
   color: #393939;
-}
-
-.card {
-  height: 18em;
-  width: 18em;
-  margin: 1em;
-  background: #fff;
-  border-radius: 8px;
-  display: inline-block;
-  text-align: left;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-}
-
-.card:hover {
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-}
-
-.card-title,
-.card-description,
-.card-pills,
-.card-view {
-  font-family: 'Roboto';
-  font-weight: 100;
-  font-style: normal;
-	font-variant: normal;
-  color: #393939;
-}
-
-.card-title {
-  font-size: 1.5em;
-  padding-top: 50%;
-  padding-left: 5%;
-}
-
-.card-title a {
-  color: #393939;
-  text-decoration: none;
-}
-
-.card-title a:hover {
-  color: #ff00ff;
-}
-
-.card-description {
-  font-weight: 300;
-  font-size: 0.75em;
-  padding-top: 1.25em;
-  padding-left: 5%;
-}
-
-.card-pills {
-  padding-top: 1.25em;
-  padding-left: 5%;
-  font-size: 0.8em;
-}
-
-.card-pills span {
-  margin-top: 0.25em;
-  margin-top: 0.25em;
-  margin-left: 0em;
-  margin-right: 0.5em;
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  color: #fff;
-  border-radius: 0.25em;
-}
-
-.pill-python {
-  background-color: #1c505f;
-}
-
-.pill-django {
-  background-color: #001900;
-}
-
-.pill-mongodb {
-  background-color: #329932;
-}
-
-.pill-tensorflow {
-  background-color: #ffa500;
-}
-
-.pill-flask {
-  background-color: #000;
-}
-
-.pill-js {
-  background-color: #ffdf32;
-}
-
-.pill-node {
-  background-color: #4ca64c;
-}
-
-.pill-angular {
-  background-color: #840c24;
-}
-
-.pill-java {
-  background-color: #e50000;
-}
-
-.pill-android {
-  background-color: #a4c639;
-}
-
-.pill-sql {
-  background-color: #00cdcd;
-}
-
-.pill-csharp {
-  background-color: #0080ff;
-}
-
-.pill-unity {
-  background-color: #939393;
-}
-
-.pill-aws {
-  background-color: #ffa500;
-}
-
-.pill-watson {
-  background-color: #0c2c4b;
-}
-
-.pill-jquery {
-  background-color: #004c99;
-}
-
-.card-view {
-  font-weight: 300;
-  font-size: 0.75em;
-  padding-top: 1.25em;
-  padding-left: 5%;
-  padding-bottom: 5%;
-}
-
-.card-view a {
-  color: #393939;
-  text-decoration: none;
-}
-
-.card-view a:hover {
-  color: #ff00ff;
 }
 
 .project-container {
@@ -744,4 +538,101 @@ footer.page {
 
 .project-container hgroup p {
   font-weight: 100;
+}
+
+
+/* asdf */
+.container-main {
+  padding-top: 10em;
+}
+
+.container-title {
+  text-align: center;
+}
+
+.container-title h1 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 800;
+  font-size: 3em;
+}
+
+.container-cards {
+  margin-top: 2em;
+}
+
+.container-contact {
+  margin-top: 2em;
+}
+
+.container-about {
+  margin-top: 2em;
+}
+
+.row-cards {
+  margin-bottom: 0.5em;
+}
+
+.card {
+  margin-bottom: 1.5em;
+}
+
+.card-link {
+  color: #000;
+}
+
+.contact-link {
+  color: #fff;
+}
+
+.contact-link:hover {
+  color: #add8e6;
+}
+
+.body-dark {
+  background-color: #1f1f1f;
+}
+
+.contact-item {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.container-bf {
+  min-height: 100%;
+  position: relative;
+}
+
+.container-body {
+  padding-bottom: 10em;
+}
+
+/* .container-contact {
+  min-height: 100%;
+  position: relative;
+} */
+
+.container-main-contact {
+  padding-bottom: 2em;
+}
+
+.footer-main {
+  background-color: #1f1f1f;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: auto;
+}
+
+.footer-links {
+  text-align: center;
+}
+
+.footer-content-container {
+  margin-bottom: 1em;
+}
+
+.footer-link:hover {
+  color: #add8e6;
 }
