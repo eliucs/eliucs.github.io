@@ -196,6 +196,12 @@ html, body {
   color: #fff;
   word-spacing: 0.5em;
   text-decoration: none;
+
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
 }
 
 .option-1:hover, .option-2:hover, .option-3:hover, .option-4:hover {
