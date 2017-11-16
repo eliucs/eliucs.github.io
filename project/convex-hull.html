@@ -35,7 +35,7 @@
     <script src="../assets/js-lib/bootstrap.min.js" type="text/javascript"></script>
     <script src="../assets/js/script.js" type="text/javascript"></script>
 
-    <title>Eric Liu | alexaMD</title>
+    <title>Eric Liu | Convex Hull</title>
   </head>
 
   <body>
@@ -67,8 +67,8 @@
           <div class="col-md-1"></div>
           <div class="col-md-10">
             <div class="container-title">
-              <h1>alexaMD.</h1>
-              <p>Uses the Amazon Alexa and IBM Watson API to give diagnoses from voice commands.</p>
+              <h1>Convex Hull.</h1>
+              <p>Visualization of Graham's scan algorithm to find the convex hull of a set of points.</p>
             </div>
           </div>
           <div class="col-md-1"></div>
@@ -79,10 +79,10 @@
           <div class="col-md-6">
             <div class="row project-links">
               <div class="col-md-6">
-                <a href="https://github.com/alexa-md">GitHub</a>
+                <a href="https://convexhull.herokuapp.com">Website</a>
               </div>
               <div class="col-md-6">
-                <a href="https://devpost.com/software/alexamd-9u6eop">Devpost</a>
+                <a href="https://github.com/eliucs/convex-hull">GitHub</a>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@
         <div class="row project-img-container">
           <div class="col-md-2"></div>
           <div class="col-md-8">
-              <img class="img-fluid img-project border border-light" src="../assets/img/alexa-md.png" alt="alexaMD Screenshot" unselectable="on">
+              <img class="img-fluid img-project border border-light" src="../assets/img/convex-hull.png" alt="Convex Hull Screenshot" unselectable="on">
           </div>
           <div class="col-md-2"></div>
         </div>
@@ -100,11 +100,24 @@
         <div class="row project-body">
           <div class="col-md-2"></div>
           <div class="col-md-8">
-              <p><strong>Submitted To </strong>HackPrinceton 2017 (Princeton University)</p>
-              <p><strong>Winner </strong>Impact and Innovation Prize (AI for Good Foundation), Best Emerging Platform Prize (Viacom)</p>
-              <p><strong>Technologies Used </strong>Python, Flask, Amazon Alexa API, IBM Watson API, AWS Lambda, Newspaper API</p>
-              <p>Being able to give diagnoses quickly, efficiently and with disclosure of accuracy could mean the difference between preventing a serious disease and not making it to the doctor on time. alexaMD incorporates the use of the Amazon Alexa for the user to say their symptoms in a user-friendly manner, sends the symptom data to be processed by Watson's Natural Language Processing API and give back the user's most likely medical condition as well as the accuracy.</p>
-              <p>The web application works the same way, and is primarily used to demonstrate the power of the Watson API. The user enters their symptoms the same way they would tell Alexa, and the application gives their top 10 most likely symptoms and their associated accuracies, in a concise interface.</p>
+                <p><strong>Technologies Used </strong>JavaScript, jQuery, Node.js, Paper.js</p>
+                <p>This is a Node.js program that demonstrates the Graham's scan algorithm to compute the convex hull of a set of points. A convex hull is the smallest subset of those points that enclose all of the points. Check it out here. Works great on mobile!</p>    
+                <h4>Graham's Scan</h4>
+                <p>Pseudocode:</p>
+                <pre>
+                S : stack of points initialized to be empty (convex hull)
+                p[0] : point with lowest y-coordinate
+                L : list of points sorted in ascending order by polar angle to P
+                
+                S.push(p[0])
+                
+                for each point p[i] in L:
+                    if adding p[i] is a counter clockwise turn:
+                        S.push(p[i])
+                    if adding p[i] is a clockwise turn:
+                        S.pop() until adding p[i] is a counter clockwise turn
+                        S.push(p[i])
+                </pre>
           </div>
           <div class="col-md-2"></div>
         </div>
