@@ -3,3 +3,6 @@
 Website: [ericliu.ca](http://ericliu.ca)
 
 Devpost: [/eliucs](https://devpost.com/eliucs)
+
+Hosted on GitHub Pages
+
