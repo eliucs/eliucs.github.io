@@ -1,8 +1,12 @@
 # Personal Website
 
-Website: [ericliu.ca](http://ericliu.ca)
+My personal website source code and files, built with React and hosted on
+GitHub Pages.
+
+Website: [ericliu.ca](https://ericliu.ca)
+
+LinkedIn: [/in/eliucs](https://linkedin.com/in/eliucs/)
 
 Devpost: [/eliucs](https://devpost.com/eliucs)
 
-Hosted on GitHub Pages
-
+Twitter: [@ericliucs](https://twitter.com/ericliucs)
