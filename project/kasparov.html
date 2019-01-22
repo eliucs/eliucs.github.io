@@ -79,7 +79,7 @@
           <div class="col-md-6">
             <div class="row project-links">
               <div class="col-md-12">
-                <a href="https://github.com/eliucs/kasparov">GitHub</a>
+                <a href="https://github.com/eliucs/kasparov-chess-ai-chess-ai">GitHub</a>
               </div>
             </div>
           </div>
@@ -100,8 +100,8 @@
             <p><strong>Technologies Used </strong>Java, Maven</p>
 
             <p>This project is a UCI compatible chess engine built in Java. The
-            following provides documentation for various aspects of the project 
-            including board representation with bitboards, searching with 
+            following provides documentation for various aspects of the project
+            including board representation with bitboards, searching with
             iterative deepening with alpha-beta pruning, and quiescence
             search to deal with the horizon effect.</p>
 
@@ -133,11 +133,11 @@
             <h4>Board Representation</h4>
 
             <h5>Bitboard</h5>
-            <p>A bitboard is used to represent the 
+            <p>A bitboard is used to represent the
             current state of the chess board. Using a 64-bit number (<code>long</code> in Java, and
-            ignoring the signed bit), each bit maps to a square on the 64-square board. 
-            For example, in the <code>BoardStructure</code> class, bitboards are used to set the 
-            locations of the pawns, and one is used for white, black, and both colored 
+            ignoring the signed bit), each bit maps to a square on the 64-square board.
+            For example, in the <code>BoardStructure</code> class, bitboards are used to set the
+            locations of the pawns, and one is used for white, black, and both colored
             pawns.</p>
 
             <h5>Fifty Move, En Passant, Castling</h5>
@@ -145,24 +145,24 @@
             that a draw can be made if no capture has been made or no pawn has moved in the
             last fifty moves. In the <code>BoardStructure</code> class, we keep track of the fifty move
             with a counter <code>fiftyMove</code>, and whenever we make a move in the <code>MakeMove</code> class,
-            if a non-capture, non-pawn move was made, <code>fiftyMove</code> gets incremented, 
-            otherwise it is reset to zero. Note: a future improvement needs to be made 
+            if a non-capture, non-pawn move was made, <code>fiftyMove</code> gets incremented,
+            otherwise it is reset to zero. Note: a future improvement needs to be made
             for the program to draw whenever the fifty-move rule can be invoked.</p>
 
             <p>En passant is a special pawn capture
-            move. When a pawn makes a double-step move, an enemy pawn can capture it as if 
-            it only advanced one square. It needs to be made immediately on the next move, 
+            move. When a pawn makes a double-step move, an enemy pawn can capture it as if
+            it only advanced one square. It needs to be made immediately on the next move,
             otherwise it is lost. The "en passant square" refers to the destination square
-            itself to which the enemy pawn must move. In the <code>BoardStructure</code> class, we keep 
-            track of the current active (if any) en passant square with <code>enPassant</code>. 
+            itself to which the enemy pawn must move. In the <code>BoardStructure</code> class, we keep
+            track of the current active (if any) en passant square with <code>enPassant</code>.
             Whenever we make a pawn start move (that is, when a pawn starts off at
             ranks 2 or 7), the <code>enPassant</code> square is set.</p>
 
             <p>Castling is a move that involves the
-            king and the rook, where the king moves 2 squares towards the rook, and rook 
+            king and the rook, where the king moves 2 squares towards the rook, and rook
             "jumps" over the king. However, it is only available if neither the king nor
-            the rooks have moved yet. In the <code>BoardStructure</code> class, we keep track of the 
-            castling availability with <code>castlePerm</code>, which is an integer. The first bit 
+            the rooks have moved yet. In the <code>BoardStructure</code> class, we keep track of the
+            castling availability with <code>castlePerm</code>, which is an integer. The first bit
             represents white's king side castling availability, the second bit represents
             white's queen side, the third bit represents black's king side, and the fourth
             bit represents blacks queen side. Note: a future improvement needs to be made
@@ -170,26 +170,26 @@
 
             <h5>Move Generation</h5>
             <p>Move generation is
-            the process of checking all legal moves from a given position of the chess 
+            the process of checking all legal moves from a given position of the chess
             board, for a particular side to move. These moves are stored in a list, called
             the move list. Moves are represented with a 32-bit number. We generate the move
             list by iterating through every piece and determining all of its possible, valid
-            destination squares on the board, that is, the destination square must be 
+            destination squares on the board, that is, the destination square must be
             empty and not offboard. The method of generating all of the move directions is
             with an array <code>pieceDirections</code> that maps each piece to an array of all of its
             directions.</p>
 
             <p>For example, with the knight we must check 8 positions:</p>
-            
+
             <pre>
-                8 . . . . . . . . 
-                7 . . . . . . . . 
-                6 . . . . . . . . 
-                5 . . . x . x . . 
-                4 . . x . . . x . 
-                3 . . . . k . . . 
-                2 . . x . . . x . 
-                1 . . . x . x . . 
+                8 . . . . . . . .
+                7 . . . . . . . .
+                6 . . . . . . . .
+                5 . . . x . x . .
+                4 . . x . . . x .
+                3 . . . . k . . .
+                2 . . x . . . x .
+                1 . . . x . x . .
                     a b c d e f g h
             </pre>
 
@@ -197,35 +197,35 @@
 
             <h5>Forsyth-Edwards Notation (FEN)</h5>
             <p>Forsyth-Edwards Notation (FEN)
-            is a notation used to represent a particular position of the chess board. It is 
+            is a notation used to represent a particular position of the chess board. It is
             in the format:
-            
+
             <pre>
             X1/X2/X3/X4/X5/X6/X7/X8 &lt;side&gt; &lt;castling&gt; &lt;en passant square&gt; &lt;half moves&gt; &lt;full moves&gt;
             </pre>
-            
+
             Each of <code>X1 .. X8</code> represent the ranks 8 to 1, and the contents of each square
             from files A to H are described for each rank. White pieces are represented as
             <code>p = pawn, n = knight, b = bishop, r = rook, q = queen, k = king</code>,
             and the black pieces are the same but uppercase. Consecutive empty squares are
             represented as numbers 1 to 8. Side represents the current side to move (either
-            <code>w</code> for white or <code>b</code> for black). Castling represent current castling 
+            <code>w</code> for white or <code>b</code> for black). Castling represent current castling
             availability (<code>K = white kingside, Q = white queenside, k = black kingside, q = black queen side</code>).
-            The en passant square is represented in algebraic notation. The half move 
+            The en passant square is represented in algebraic notation. The half move
             counter counts the number of half moves made since the last capture or pawn
             move, and this is used to implement the fifty-move rule. The full move counter
             counts the total number of full moves made in the game.</p>
 
             <h5>Perft Testing</h5>
             <p>Perft testing (performance testing)
-            is a method of rigorously testing the validity of the chess engine to 
+            is a method of rigorously testing the validity of the chess engine to
             generate all legal moves for a specified depth, and counting the number of moves
             generated. If the count matches with the test suite expected results, then we
             can be fairly confident in the correctness of the program. We say <code>Perft(X)</code> to
             denote depth <code>X</code>.
-            
-            Perft testing is done with <code>PerftSuiteTest.java</code>, which runs the test suite 
-            specified in <code>perft/perftsuite.txt</code>, which provides 126 positions in FEN, and 
+
+            Perft testing is done with <code>PerftSuiteTest.java</code>, which runs the test suite
+            specified in <code>perft/perftsuite.txt</code>, which provides 126 positions in FEN, and
             the expected number of moves generated for depths <code>Perft(1)</code> to <code>Perft(6)</code>.</p>
 
             <h4>Search and Move Ordering</h4>
@@ -233,20 +233,20 @@
             <h5>PV Table (Principal Variation Table)</h5>
 
             <p>Principle variation
-            refers to the sequence of moves that the program considers the best next moves 
-            to be played. During the iterative deepening loop, we need to consider the PV 
+            refers to the sequence of moves that the program considers the best next moves
+            to be played. During the iterative deepening loop, we need to consider the PV
             during the current iteration. The approach in this program is to store the PV
-            found during search as a <code>PVEntry</code>, which is stored in an array inside the 
-            <code>PVTable</code>. 
-            
-            The <code>PVTable</code> works as a hash table, as we hash the board's <code>positionKey</code> as an 
-            index into the array where we store the <code>PVEntry</code>. Similarly, to retrieve the 
-            last <code>PVEntry</code> based on the current board <code>positionKey</code>, we hash the 
-            <code>positionKey</code> to get an index to lookup in the array. The <code>PVTable</code> size is 
+            found during search as a <code>PVEntry</code>, which is stored in an array inside the
+            <code>PVTable</code>.
+
+            The <code>PVTable</code> works as a hash table, as we hash the board's <code>positionKey</code> as an
+            index into the array where we store the <code>PVEntry</code>. Similarly, to retrieve the
+            last <code>PVEntry</code> based on the current board <code>positionKey</code>, we hash the
+            <code>positionKey</code> to get an index to lookup in the array. The <code>PVTable</code> size is
             fixed at <code>150000</code>, a reasonably large size to prevent hash collisions.</p>
 
             <h5>Most Valuable Victim Least Valuable Aggressor (MVVLVA)</h5>
-            
+
             <p>Most Valuable Victim Least Valuable Aggressor (MVVLVA)
             is exactly what its name implies, and is a heuristic used for ordering capture
             moves. The principle is to use the least valuable piece on the current side to
@@ -255,17 +255,17 @@
             pawn.</p>
 
             <h5>Iterative Deepening</h5>
-            
+
             <p>Iterative deepening
             is a graph search strategy where depth-first search is done to a limited depth,
             and increasing depth limits each time until the search time has been exhausted.
             It combines the space efficiency of depth-first search with the "completeness"
-            of breadth first search. This is implemented, along with alpha-beta search and 
+            of breadth first search. This is implemented, along with alpha-beta search and
             quiescence search, in the <code>Search</code> class.</p>
-            
+
             <p>
-            The approach in this program is that that we iterate from depths 1 to the 
-            maximum depth (given by <code>searchEntry.getDepth()</code>), we run alpha-beta search 
+            The approach in this program is that that we iterate from depths 1 to the
+            maximum depth (given by <code>searchEntry.getDepth()</code>), we run alpha-beta search
             limited to that depth. This can be visualized as:</p>
 
             <pre>
@@ -275,33 +275,33 @@
              / | \    / | \    / | \
             3  3  3  3  3  3  3  3  3
             </pre>
-            
+
             <p>
-            We search only up to depth 1 down the game tree on the first iteration, then up 
-            to 2, then 3, and so on. Note that although we do repeat visits, such as if we 
+            We search only up to depth 1 down the game tree on the first iteration, then up
+            to 2, then 3, and so on. Note that although we do repeat visits, such as if we
             go to a depth of 3 repeating visiting nodes at depth 1 and 2 multiple times, it
             turns out that because the game tree grows exponentially, most of the nodes at
-            at the leaves of the tree, so repeating visiting nodes at the top of the tree do 
+            at the leaves of the tree, so repeating visiting nodes at the top of the tree do
             not majorly affect the overall search time.</p>
 
             <h5>Alpha-beta Pruning</h5>
 
             <p>Alpha-beta is an improvement over the minimax algorithm.</p>
-        
+
             <p>We start off with minimax. Minimax
-            is an algorithm to determine the score of the best move after a certain depth, 
-            for zero-sum games. The main idea behind it is that one side's gain must 
-            translate to the other side's loss, i.e. as we go down the game tree, at odd 
-            depths we search for positions such that we maximize the score, and at even 
-            depths we search for positions such that we minimize the score. However, to 
-            minimize we can simply negate the maximizing score (this is also known as 
+            is an algorithm to determine the score of the best move after a certain depth,
+            for zero-sum games. The main idea behind it is that one side's gain must
+            translate to the other side's loss, i.e. as we go down the game tree, at odd
+            depths we search for positions such that we maximize the score, and at even
+            depths we search for positions such that we minimize the score. However, to
+            minimize we can simply negate the maximizing score (this is also known as
             negamax).</p>
 
             <p>The approach done in this program is to recursively call negamax, negating it
-            each time until the base case, which is a depth of 0, where the 
-            <code>PositionEvaluator</code> class is used to determine a score for that position. The 
+            each time until the base case, which is a depth of 0, where the
+            <code>PositionEvaluator</code> class is used to determine a score for that position. The
             following provides brief pseudocode:</p>
-        
+
             <pre>
             miniMaxSearch(int depth):
                 if (depth == 0)
@@ -314,21 +314,21 @@
                         max = score
                 return max
             </pre>
-            
+
             <p>
             Alpha-beta pruning is an
             algorithm that improves upon minimax in that it introduces two values, <code>alpha</code>
-            and <code>beta</code>, which represent the current lower bound for the score for the 
-            maximizing player and the current upper bound for the score against the 
+            and <code>beta</code>, which represent the current lower bound for the score for the
+            maximizing player and the current upper bound for the score against the
             minimizing player, respectively. This value is nearly equivalent to the <code>max</code>
             in the minimax algorithm. However, as we go down the game tree, if we are at
-            a stage in the algorithm such that in the next branch of the game tree, the 
-            maximizer can do at least as well as the currently explored option (or vice 
+            a stage in the algorithm such that in the next branch of the game tree, the
+            maximizer can do at least as well as the currently explored option (or vice
             versa), then that branch can be eliminated entirely, because there would be no
             point exploring that branch since we already have a lower bound, and thus option
             worse should be ignored. This induces what is called a beta cutoff.
             </p>
-            
+
             <pre>
             alphaBetaSearch(int alpha, int beta, int depth):
                 if (depth == 0)
@@ -347,24 +347,24 @@
 
             <p>
             Quiescence search
-            is used to lessen the effects of the horizon effect, where in the original 
-            alpha-beta search as above evaluates the position, instead we perform an 
+            is used to lessen the effects of the horizon effect, where in the original
+            alpha-beta search as above evaluates the position, instead we perform an
             additional search after. We search tactical exchanges (i.e. capture moves).
             </p>
-            
+
             <p>
             The horizon effect is a problem
             that occurs due to the depth limitation of the search, where a detrimental move
-            may not be able to be avoided because the program cannot search to the depth 
-            of the error, i.e. a significant erroroneous move exists just beyond the search 
+            may not be able to be avoided because the program cannot search to the depth
+            of the error, i.e. a significant erroroneous move exists just beyond the search
             depth of the program, but is not detected.
             </p>
 
             <p>
-            The approach is that we first look at what is called standing pat, which is 
-            essentially a lower bound on the score of if we do nothing, if it is at least 
-            as good as alpha, then we return alpha. Then we generate all of the capture 
-            moves, and continue searching from there, and then using <code>PositionEvaluator</code> 
+            The approach is that we first look at what is called standing pat, which is
+            essentially a lower bound on the score of if we do nothing, if it is at least
+            as good as alpha, then we return alpha. Then we generate all of the capture
+            moves, and continue searching from there, and then using <code>PositionEvaluator</code>
             to evaluate the position.
             </p>
 
@@ -372,20 +372,20 @@
             We can take advantage of the fact that generally, the amount of capture moves
             at any given position is relatively few, so the branching factor resulting from
             looking at further capture moves is low. Compared to if we were to increase the
-            depth of alpha-beta instead, we would have been searching for potentially 
+            depth of alpha-beta instead, we would have been searching for potentially
             hundreds of thousands more positions than a few hundred.
             </p>
-            
+
             <h4>Misc</h4>
 
             <h5>UCI (Universal Chess Interface)</h5>
 
             <p>
-            The Universal Chess Interface (UCI) is a common protocol used to 
-            communicate with a GUI. The program can parse UCI <code>position</code> 
+            The Universal Chess Interface (UCI) is a common protocol used to
+            communicate with a GUI. The program can parse UCI <code>position</code>
             and <code>go</code> commands:
             </p>
-        
+
             <pre>
             position startpos [moves &lt;m1 m2 ... mn&gt;]
             </pre>
@@ -407,12 +407,12 @@
             <pre>
             go [winc &lt;i&gt;] [binc &lt;i&gt;] [wtime &lt;t&gt;] [btime &lt;t&gt;] [movestogo &lt;m&gt;] [depth &lt;d&gt;]
             </pre>
-            
+
             <p>
-            Runs the search, with the given options. <code>winc</code> and <code>binc</code> refer to the white 
-            and black increment per move in milliseconds, <code>wtime</code> and <code>btime</code> refer to the 
-            time left given to white and black in milliseconds, <code>movetime</code> refers to the 
-            maximum time allowed to make a move in milliseconds, <code>movestogo</code> refers to the 
+            Runs the search, with the given options. <code>winc</code> and <code>binc</code> refer to the white
+            and black increment per move in milliseconds, <code>wtime</code> and <code>btime</code> refer to the
+            time left given to white and black in milliseconds, <code>movetime</code> refers to the
+            maximum time allowed to make a move in milliseconds, <code>movestogo</code> refers to the
             remaining number of moves to go, and <code>depth</code> refers to the maximum search depth.
             </p>
 
@@ -448,10 +448,10 @@
               <div class="col-md-3"></div>
             </div>
           </div>
-  
+
           <div class="footer-copyright">
             <div class="container-fluid">
-                © 2017 <a class="footer-link" href="https://ericliu.ca">Eric Liu</a>. All Rights Reserved.</a>
+                © 2019 <a class="footer-link" href="https://ericliu.ca">Eric Liu</a>. All Rights Reserved.</a>
             </div>
           </div>
       </footer>
