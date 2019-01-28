@@ -1,0 +1,12 @@
+{
+  "profileCard": {
+    "title": "Eric Liu",
+    "description": "Hello there! I'm a third year student at the University of Waterloo, majoring in Computer Science and minoring in Combinatorics & Optimization. I'm primarily interested in full stack web development and distributed systems.",
+    "imageUrl": "https://s3.amazonaws.com/eliucs/img/sm/profile-photo-jan-2019.jpeg",
+    "twitterUrl": "https://twitter.com/ericliucs",
+    "linkedinUrl": "https://linkedin.com/in/eliucs",
+    "githubUrl": "https://github.com/eliucs",
+    "devpostUrl": "https://devpost.com/eliucs",
+    "instagramUrl": "https://instagram.com/eliucs"
+  }
+}

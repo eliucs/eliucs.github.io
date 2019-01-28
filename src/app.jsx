@@ -9,7 +9,18 @@ import AppRouter from 'routers/AppRouter';
 import configureStore from 'store/configureStore';
 import 'styles/base/base.scss';
 
-const store = configureStore();
+// Configure font-awesome
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faTwitter,
+  faGithub,
+  faInstagram,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons';
+
+library.add(faTwitter, faGithub, faInstagram, faLinkedin);
+
+const store = configureStore()
 const App = (
   <Provider store={store}>
     <AppRouter />
