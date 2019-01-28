@@ -6,7 +6,11 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import App from 'components/App';
+import AboutPage from 'pages/AboutPage';
+import ContactPage from 'pages/ContactPage';
+import HomePage from 'pages/HomePage';
+import ProjectPage from 'pages/ProjectPage';
+import ProjectsPage from 'pages/ProjectsPage';
 
 /**
  * Renders the AppRouter stateless functional component.
@@ -17,7 +21,31 @@ const AppRouter = () => (
       <Switch>
         <Route
           path="/"
-          component={() => <App title="Test Title" />}
+          component={() => <HomePage />}
+          exact
+        />
+
+        <Route
+          path="/about"
+          component={() => <AboutPage />}
+          exact
+        />
+
+        <Route
+          path="/contact"
+          component={() => <ContactPage />}
+          exact
+        />
+
+        <Route
+          path="/projects"
+          component={() => <ProjectsPage />}
+          exact
+        />
+
+        <Route
+          path="/projects/:projectId"
+          component={() => <ProjectPage />}
           exact
         />
 
