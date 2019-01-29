@@ -25,7 +25,7 @@ const HomePage = () => {
           <Tilt
             className={tiltStyles}
             options={{
-              max: 25,
+              max: 20,
               reverse: true,
             }}
             style={{ height: 250, width: 250 }}
