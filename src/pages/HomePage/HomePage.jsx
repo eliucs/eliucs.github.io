@@ -1,5 +1,5 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Config from 'configuration';
 import InteractiveText from 'components/InteractiveText';
@@ -10,24 +10,21 @@ import {
   homeTextDescriptionStyles,
 } from './styles.scss';
 
-const HomePage = () => {
-  return (
-    <div className={homeBackgroundStyles}>
-      <div className={homeTextContainerStyles}>
-        <div>
-          <InteractiveText
-            data={Config.get('interactiveText.data')}
-            timeDelay={Config.get('interactiveText.timeDelay')}
-          />
-          <div className={homeTextDescriptionStyles}>
-            {Config.get('profileCard.description')}
-          </div>
-        </div>
+const HomePage = () => (
+  <div className={homeBackgroundStyles}>
+    <div className={homeTextContainerStyles}>
+      <div>
+        <InteractiveText
+          data={Config.get('interactiveText.data')}
+          timeDelay={Config.get('interactiveText.timeDelay')}
+        />
+        <div
+          className={homeTextDescriptionStyles}
+          dangerouslySetInnerHTML={{ __html: Config.get('profileCard.description') }}
+        />
       </div>
     </div>
-  );
-};
-
-HomePage.propTypes = {};
+  </div>
+);
 
 export default HomePage;

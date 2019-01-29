@@ -1,7 +1,7 @@
 :local(.homeBackgroundStyles) {
   width: 100wh;
   height: 100vh;
-  color: #fff;
+  color: #FFF;
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
   background-size: 400% 400%;
   -webkit-animation: gradient 15s ease infinite;
@@ -54,6 +54,15 @@
 
 :local(.homeTextDescriptionStyles) {
   width: 30vw;
+
+  a {
+    text-decoration: none;
+    color: #FFF;
+  }
+
+  a:hover {
+    color: #DDD;
+  }
 
   @media all and (max-width: 768px) {
     width: auto;
