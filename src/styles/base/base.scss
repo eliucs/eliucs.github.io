@@ -1,6 +1,4 @@
-// @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,600');
-// @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800');
-// @import url('https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,400,600');
+@import './fonts.scss';
 
 html, body {
   width: 100%;
@@ -8,7 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   outline: none !important;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'San Francisco', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 *:focus {
