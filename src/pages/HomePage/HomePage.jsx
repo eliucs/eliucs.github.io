@@ -15,13 +15,13 @@ const HomePage = () => {
     <div className={homeBackgroundStyles}>
       <div className={homeTextContainerStyles}>
         <div>
-        <InteractiveText
-          data={Config.get('interactiveText.data')}
-          timeDelay={Config.get('interactiveText.timeDelay')}
-        />
-        <div className={homeTextDescriptionStyles}>
-          {Config.get('profileCard.description')}
-        </div>
+          <InteractiveText
+            data={Config.get('interactiveText.dataTest')}
+            timeDelay={Config.get('interactiveText.timeDelay')}
+          />
+          <div className={homeTextDescriptionStyles}>
+            {Config.get('profileCard.description')}
+          </div>
         </div>
       </div>
     </div>
