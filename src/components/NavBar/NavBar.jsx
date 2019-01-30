@@ -69,6 +69,13 @@ const NavBar = ({
   );
 };
 
+NavBar.propTypes = {
+  dispatch: PropTypes.func,
+  navBarTheme: PropTypes.string,
+  navBarActive: PropTypes.bool,
+  navBarPageTheme: PropTypes.string,
+};
+
 const mapStateToProps = ({
   navBarTheme,
   navBarActive,

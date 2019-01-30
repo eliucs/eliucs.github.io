@@ -3,11 +3,22 @@ import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 
-import { setThemeDark } from 'actions/NavBarActions';
+import {
+  setThemeDark,
+  setPageThemeDark,
+  hamburgerClose,
+} from 'actions/NavBarActions';
+import {
+  menuClose,
+} from 'actions/MenuActions';
+
 import { projectStyles } from './styles.scss';
 
 const ProjectPage = ({ dispatch }) => {
   dispatch(setThemeDark());
+  dispatch(setPageThemeDark());
+  dispatch(hamburgerClose());
+  dispatch(menuClose());
 
   return (
     <div className={projectStyles}>
