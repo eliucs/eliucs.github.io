@@ -1,5 +1,5 @@
-import TestReducer from './TestReducer';
+import NavBarThemeReducer from './NavBarThemeReducer';
 
 export {
-  TestReducer,
+  NavBarThemeReducer,
 };

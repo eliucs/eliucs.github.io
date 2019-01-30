@@ -1,8 +1,12 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
+import PropTypes from 'prop-types';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
 
 import Config from 'configuration';
 import InteractiveText from 'components/InteractiveText';
+import { setThemeLight } from 'actions/NavBarThemeActions';
 
 import {
   homeBackgroundStyles,
@@ -10,21 +14,33 @@ import {
   homeTextDescriptionStyles,
 } from './styles.scss';
 
-const HomePage = () => (
-  <div className={homeBackgroundStyles}>
-    <div className={homeTextContainerStyles}>
-      <div>
-        <InteractiveText
-          data={Config.get('interactiveText.data')}
-          timeDelay={Config.get('interactiveText.timeDelay')}
-        />
-        <div
-          className={homeTextDescriptionStyles}
-          dangerouslySetInnerHTML={{ __html: Config.get('profileCard.description') }}
-        />
+const HomePage = ({ dispatch }) => {
+  dispatch(setThemeLight());
+
+  return (
+    <div className={homeBackgroundStyles}>
+      <div className={homeTextContainerStyles}>
+        <div>
+          <InteractiveText
+            data={Config.get('interactiveText.data')}
+            timeDelay={Config.get('interactiveText.timeDelay')}
+          />
+          <div
+            className={homeTextDescriptionStyles}
+            dangerouslySetInnerHTML={{ __html: Config.get('profileCard.description') }}
+          />
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
-export default HomePage;
+HomePage.propTypes = {
+  dispatch: PropTypes.func,
+};
+
+const mapStateToProps = () => ({});
+
+export default compose(
+  connect(mapStateToProps),
+)(HomePage);

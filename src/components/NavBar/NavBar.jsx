@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
 import { HamburgerSlider } from 'react-animated-burgers';
 
 import { NavBarModeEnum } from 'enums';
 
 import { navBarContainerStyles } from './styles.scss';
 
-export default class NavBar extends Component {
+class NavBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,7 +20,7 @@ export default class NavBar extends Component {
   };
 
   getBarColor = () => {
-    switch (this.props.mode) {
+    switch (this.props.navBarTheme) {
       case NavBarModeEnum.Light:
         return '#fff';
       case NavBarModeEnum.Dark:
@@ -43,6 +44,12 @@ export default class NavBar extends Component {
   }
 }
 
-NavBar.propTypes = {
-  mode: PropTypes.string,
-};
+NavBar.propTypes = {};
+
+const mapStateToProps = state => ({
+  navBarTheme: state.navBarTheme,
+});
+
+export default compose(
+  connect(mapStateToProps),
+)(NavBar);

@@ -1,13 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { projectsPage } from './styles.scss';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
 
-const ProjectsPage = props => (
-  <div className={projectsPage}>
-    <h1>Projects Page</h1>
-  </div>
-);
+import { setThemeDark } from 'actions/NavBarThemeActions';
+import { projectsStyles } from './styles.scss';
 
-ProjectsPage.propTypes = {};
+const ProjectsPage = ({ dispatch }) => {
+  dispatch(setThemeDark());
 
-export default ProjectsPage;
+  return (
+    <div className={projectsStyles}>
+      <h1>Projects Page</h1>
+    </div>
+  );
+};
+
+ProjectsPage.propTypes = {
+  dispatch: PropTypes.func,
+};
+
+const mapStateToProps = () => ({});
+
+export default compose(
+  connect(mapStateToProps),
+)(ProjectsPage);

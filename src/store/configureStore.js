@@ -1,9 +1,9 @@
 import { createStore, combineReducers } from 'redux';
-import { TestReducer } from 'reducers';
+import { NavBarThemeReducer } from 'reducers';
 
 export default () => {
   const store = createStore(combineReducers({
-    testValue: TestReducer,
+    navBarTheme: NavBarThemeReducer,
   }));
   return store;
 };

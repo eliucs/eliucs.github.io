@@ -1,13 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+
+import { setThemeDark } from 'actions/NavBarThemeActions';
 import { contactStyles } from './styles.scss';
 
-const ContactPage = props => (
-  <div className={contactStyles}>
-    <h1>Contact Page</h1>
-  </div>
-);
+const ContactPage = ({ dispatch }) => {
+  dispatch(setThemeDark());
 
-ContactPage.propTypes = {};
+  return (
+    <div className={contactStyles}>
+      <h1>Contact Page</h1>
+    </div>
+  );
+};
 
-export default ContactPage;
+ContactPage.propTypes = {
+  dispatch: PropTypes.func,
+};
+
+const mapStateToProps = () => ({});
+
+export default compose(
+  connect(mapStateToProps),
+)(ContactPage);

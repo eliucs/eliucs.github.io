@@ -1,5 +1,5 @@
-import TestActions from './TestActions';
+import NavBarThemeActions from './NavBarThemeActions';
 
 export {
-  TestActions,
+  NavBarThemeActions,
 };

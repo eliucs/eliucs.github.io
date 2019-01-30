@@ -9,7 +9,6 @@ import AppRouter from 'routers/AppRouter';
 import configureStore from 'store/configureStore';
 import 'styles/base/base.scss';
 
-// Configure font-awesome
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
   faTwitter,
