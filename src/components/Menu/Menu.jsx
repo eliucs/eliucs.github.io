@@ -46,6 +46,7 @@ const Menu = ({ dispatch, isMenuOpen }) => {
 };
 
 Menu.propTypes = {
+  dispatch: PropTypes.func,
   isMenuOpen: PropTypes.bool,
 };
 
