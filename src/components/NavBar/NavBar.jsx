@@ -9,25 +9,37 @@ import {
   menuOpen,
   menuClose,
 } from 'actions/MenuActions';
+import {
+  hamburgerOpen,
+  hamburgerClose,
+  setThemeLight,
+  setThemeDark,
+} from 'actions/NavBarActions';
 
 import { navBarContainerStyles } from './styles.scss';
 
 class NavBar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isActive: false,
-    };
-  }
-
   toggleButton = () => {
-    if (!this.state.isActive) {
+    if (!this.props.navBarActive) {
       this.props.dispatch(menuOpen());
+      this.props.dispatch(hamburgerOpen());
+      this.props.dispatch(setThemeLight());
     } else {
       this.props.dispatch(menuClose());
-    }
+      this.props.dispatch(hamburgerClose());
 
-    this.setState({ isActive: !this.state.isActive });
+      switch (this.props.navBarPageTheme) {
+        case NavBarModeEnum.Light:
+          this.props.dispatch(setThemeLight());
+          break;
+        case NavBarModeEnum.Dark:
+          this.props.dispatch(setThemeDark());
+          break;
+        default:
+          this.props.dispatch(setThemeLight());
+          break;
+      }
+    }
   };
 
   getBarColor = () => {
@@ -45,7 +57,7 @@ class NavBar extends Component {
     return (
       <div className={navBarContainerStyles}>
         <HamburgerSlider
-          isActive={this.state.isActive}
+          isActive={this.props.navBarActive}
           toggleButton={this.toggleButton}
           barColor={this.getBarColor()}
           buttonStyle={{ outline: 'none' }}
@@ -59,8 +71,14 @@ NavBar.propTypes = {
   navBarTheme: PropTypes.string,
 };
 
-const mapStateToProps = state => ({
-  navBarTheme: state.navBarTheme,
+const mapStateToProps = ({
+  navBarTheme,
+  navBarActive,
+  navBarPageTheme,
+}) => ({
+  navBarTheme,
+  navBarActive,
+  navBarPageTheme,
 });
 
 export default compose(

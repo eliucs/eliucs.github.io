@@ -6,7 +6,10 @@ import { connect } from 'react-redux';
 
 import Config from 'configuration';
 import InteractiveText from 'components/InteractiveText';
-import { setThemeLight } from 'actions/NavBarActions';
+import {
+  setThemeLight,
+  setPageThemeLight,
+} from 'actions/NavBarActions';
 
 import {
   homeBackgroundStyles,
@@ -16,6 +19,7 @@ import {
 
 const HomePage = ({ dispatch }) => {
   dispatch(setThemeLight());
+  dispatch(setPageThemeLight());
 
   return (
     <div className={homeBackgroundStyles}>
