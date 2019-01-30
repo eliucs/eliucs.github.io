@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 
-import { setThemeDark } from 'actions/NavBarThemeActions';
+import { setThemeDark } from 'actions/NavBarActions';
 import { contactStyles } from './styles.scss';
 
 const ContactPage = ({ dispatch }) => {

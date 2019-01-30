@@ -1,7 +1,7 @@
-import NavBarThemeActions from './NavBarThemeActions';
+import NavBarActions from './NavBarActions';
 import MenuActions from './MenuActions';
 
 export {
-  NavBarThemeActions,
+  NavBarActions,
   MenuActions,
 };

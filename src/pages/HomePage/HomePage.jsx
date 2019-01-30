@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 import Config from 'configuration';
 import InteractiveText from 'components/InteractiveText';
-import { setThemeLight } from 'actions/NavBarThemeActions';
+import { setThemeLight } from 'actions/NavBarActions';
 
 import {
   homeBackgroundStyles,
