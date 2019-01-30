@@ -24,5 +24,21 @@
       "Hello."
     ],
     "timeDelay": 1000
+  },
+  "menu": {
+    "menuItems": [
+      {
+        "title": "About.",
+        "route": "/about"
+      },
+      {
+        "title": "Projects.",
+        "route": "/projects"
+      },
+      {
+        "title": "Contact.",
+        "route": "/contact"
+      }
+    ]
   }
 }

@@ -11,7 +11,9 @@ import ContactPage from 'pages/ContactPage';
 import HomePage from 'pages/HomePage';
 import ProjectPage from 'pages/ProjectPage';
 import ProjectsPage from 'pages/ProjectsPage';
+
 import NavBar from 'components/NavBar';
+import Menu from 'components/Menu';
 
 /**
  * Renders the AppRouter stateless functional component.
@@ -20,6 +22,7 @@ const AppRouter = () => (
   <BrowserRouter>
     <div>
       <NavBar />
+      <Menu />
 
       <Switch>
         <Route
