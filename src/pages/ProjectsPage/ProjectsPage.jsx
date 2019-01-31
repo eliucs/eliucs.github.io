@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
+import { Col, Container, Row } from 'reactstrap';
 
+import Config from 'configuration';
 import {
   setThemeDark,
   setPageThemeDark,
@@ -11,6 +13,7 @@ import {
 import {
   menuClose,
 } from 'actions/MenuActions';
+import PageHeader from 'components/PageHeader';
 
 import { projectsStyles } from './styles.scss';
 
@@ -21,9 +24,21 @@ const ProjectsPage = ({ dispatch }) => {
   dispatch(menuClose());
 
   return (
-    <div className={projectsStyles}>
-      <h1>Projects Page</h1>
-    </div>
+    <Container
+      fluid
+      className={projectsStyles}
+    >
+      <Row>
+        <Col md="2" />
+        <Col md="8">
+          <PageHeader
+            title={Config.get('projects.header.title')}
+            subtitle={Config.get('projects.header.subtitle')}
+          />
+        </Col>
+        <Col md="2" />
+      </Row>
+    </Container>
   );
 };
 

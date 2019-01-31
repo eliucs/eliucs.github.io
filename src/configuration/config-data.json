@@ -43,9 +43,19 @@
     ]
   },
   "about": {
+    "header": {
+      "title": "About Me.",
+      "subtitle": "Who am I, what do I do?"
+    },
     "markdown": {
       "key": "about",
       "url": "https://s3.amazonaws.com/eliucs/content/about/about.md"
+    }
+  },
+  "projects": {
+    "header": {
+      "title": "Projects.",
+      "subtitle": "Here are my finished projects and works in progress."
     }
   }
 }

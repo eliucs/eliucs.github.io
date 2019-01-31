@@ -14,13 +14,9 @@ import {
   menuClose,
 } from 'actions/MenuActions';
 import Markdown from 'components/Markdown';
+import PageHeader from 'components/PageHeader';
 
-import {
-  aboutStyles,
-  aboutHeaderStyles,
-  aboutHeaderTitleStyles,
-  aboutHeaderSubtitleStyles,
-} from './styles.scss';
+import { aboutStyles } from './styles.scss';
 
 const AboutPage = ({ dispatch }) => {
   dispatch(setThemeDark());
@@ -36,10 +32,10 @@ const AboutPage = ({ dispatch }) => {
       <Row>
         <Col md="2" />
         <Col md="8">
-          <div className={aboutHeaderStyles}>
-            <div className={aboutHeaderTitleStyles}>About Me.</div>
-            <div className={aboutHeaderSubtitleStyles}>Who am I, what do I do?</div>
-          </div>
+          <PageHeader
+            title={Config.get('about.header.title')}
+            subtitle={Config.get('about.header.subtitle')}
+          />
           <Markdown
             contentKey={Config.get('about.markdown.key')}
             url={Config.get('about.markdown.url')}
