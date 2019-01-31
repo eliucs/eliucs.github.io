@@ -4,6 +4,7 @@ import {
   NavBarHamburgerReducer,
   NavBarPageThemeReducer,
   MenuReducer,
+  MarkdownReducer,
 } from 'reducers';
 
 export default () => {
@@ -12,6 +13,7 @@ export default () => {
     navBarActive: NavBarHamburgerReducer,
     navBarPageTheme: NavBarPageThemeReducer,
     isMenuOpen: MenuReducer,
+    cachedContent: MarkdownReducer,
   }));
   return store;
 };

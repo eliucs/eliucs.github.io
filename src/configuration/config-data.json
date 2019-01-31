@@ -20,9 +20,6 @@
       "नमस्ते.",
       "مرحبا."
     ],
-    "dataTest": [
-      "Hello."
-    ],
     "timeDelay": 1000
   },
   "menu": {
@@ -42,6 +39,9 @@
     ]
   },
   "about": {
-    "url": "https://s3.amazonaws.com/eliucs/content/about/about.md"
+    "markdown": {
+      "key": "about",
+      "url": "https://s3.amazonaws.com/eliucs/content/about/about.md"
+    }
   }
 }

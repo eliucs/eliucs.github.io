@@ -4,6 +4,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Col, Container, Row } from 'reactstrap';
 
+import Config from 'configuration';
 import {
   setThemeDark,
   setPageThemeDark,
@@ -39,8 +40,10 @@ const AboutPage = ({ dispatch }) => {
             <div className={aboutHeaderTitleStyles}>About Me.</div>
             <div className={aboutHeaderSubtitleStyles}>Who am I, what do I do?</div>
           </div>
-
-          <Markdown />
+          <Markdown
+            contentKey={Config.get('about.markdown.key')}
+            url={Config.get('about.markdown.url')}
+          />
         </Col>
         <Col md="2" />
       </Row>
