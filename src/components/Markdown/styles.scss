@@ -1,0 +1,15 @@
+:local(.markdownStyles) {
+  a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+
+    &:hover {
+      color: #EA178C;
+    }
+  }
+}

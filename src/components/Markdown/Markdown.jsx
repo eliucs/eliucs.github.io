@@ -7,6 +7,8 @@ import marked from 'marked';
 
 import { cacheContent } from 'actions/MarkdownActions';
 
+import { markdownStyles } from './styles.scss';
+
 class Markdown extends Component {
   constructor(props) {
     super(props);
@@ -40,6 +42,7 @@ class Markdown extends Component {
   render() {
     return (
       <div
+        className={markdownStyles}
         dangerouslySetInnerHTML={{
           __html: this.state.content,
         }}

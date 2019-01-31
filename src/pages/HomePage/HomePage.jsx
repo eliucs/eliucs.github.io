@@ -9,7 +9,11 @@ import InteractiveText from 'components/InteractiveText';
 import {
   setThemeLight,
   setPageThemeLight,
+  hamburgerClose,
 } from 'actions/NavBarActions';
+import {
+  menuClose,
+} from 'actions/MenuActions';
 
 import {
   homeBackgroundStyles,
@@ -20,6 +24,8 @@ import {
 const HomePage = ({ dispatch }) => {
   dispatch(setThemeLight());
   dispatch(setPageThemeLight());
+  dispatch(hamburgerClose());
+  dispatch(menuClose());
 
   return (
     <div className={homeBackgroundStyles}>

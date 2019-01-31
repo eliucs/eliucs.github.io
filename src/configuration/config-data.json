@@ -25,6 +25,10 @@
   "menu": {
     "menuItems": [
       {
+        "title": "Home.",
+        "route": "/"
+      },
+      {
         "title": "About.",
         "route": "/about"
       },
