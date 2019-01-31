@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
+import { Col, Container, Row } from 'reactstrap';
 
 import {
   setThemeDark,
@@ -11,8 +12,14 @@ import {
 import {
   menuClose,
 } from 'actions/MenuActions';
+import Markdown from 'components/Markdown';
 
-import { aboutStyles } from './styles.scss';
+import {
+  aboutStyles,
+  aboutHeaderStyles,
+  aboutHeaderTitleStyles,
+  aboutHeaderSubtitleStyles,
+} from './styles.scss';
 
 const AboutPage = ({ dispatch }) => {
   dispatch(setThemeDark());
@@ -21,9 +28,23 @@ const AboutPage = ({ dispatch }) => {
   dispatch(menuClose());
 
   return (
-    <div className={aboutStyles}>
-      <h1>About Page</h1>
-    </div>
+    <Container
+      fluid
+      className={aboutStyles}
+    >
+      <Row>
+        <Col md="2" />
+        <Col md="8">
+          <div className={aboutHeaderStyles}>
+            <div className={aboutHeaderTitleStyles}>About Me.</div>
+            <div className={aboutHeaderSubtitleStyles}>Who am I, what do I do?</div>
+          </div>
+
+          <Markdown />
+        </Col>
+        <Col md="2" />
+      </Row>
+    </Container>
   );
 };
 

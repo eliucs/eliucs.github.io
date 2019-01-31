@@ -33,9 +33,13 @@ const Menu = ({ dispatch, isMenuOpen }) => {
               <div
                 key={i}
                 className={menuItemStyles}
-                onClick={() => dispatch(menuClose())}
               >
-                <Link to={menuItem.route}>{menuItem.title}</Link>
+                <Link
+                  to={menuItem.route}
+                  onClick={() => dispatch(menuClose())}
+                >
+                  {menuItem.title}
+                </Link>
               </div>
             ))
           }

@@ -1,5 +1,17 @@
-:local(.appStyles) {
-  h1 {
-    color: black;
-  }
+:local(.aboutStyles) {
+  padding: 6rem 2rem 4rem 2rem;
+}
+
+:local(.aboutHeaderStyles) {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+:local(.aboutHeaderTitleStyles) {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+:local(.aboutHeaderSubtitleStyles) {
+
 }

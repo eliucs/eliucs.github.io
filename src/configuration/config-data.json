@@ -40,5 +40,8 @@
         "route": "/contact"
       }
     ]
+  },
+  "about": {
+    "url": "https://s3.amazonaws.com/eliucs/content/about/about.md"
   }
 }
