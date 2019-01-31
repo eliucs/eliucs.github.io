@@ -1,3 +1,5 @@
+<img src="https://s3.amazonaws.com/eliucs/img/misc/profile-photo-jan-2019-resized.png" />
+
 My name is Eric Liu, I'm currently a third year student at the [University of
 Waterloo](https://uwaterloo.ca/), majoring in Computer Science and minoring in Combinatorics &
 Optimization. My primary interests are in full stack web development and

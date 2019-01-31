@@ -14,6 +14,7 @@ import {
   menuClose,
 } from 'actions/MenuActions';
 import PageHeader from 'components/PageHeader';
+import ProjectGallery from 'components/ProjectGallery';
 
 import { projectsStyles } from './styles.scss';
 
@@ -29,14 +30,17 @@ const ProjectsPage = ({ dispatch }) => {
       className={projectsStyles}
     >
       <Row>
-        <Col md="2" />
-        <Col md="8">
+        <Col md="1" />
+        <Col md="10">
           <PageHeader
             title={Config.get('projects.header.title')}
             subtitle={Config.get('projects.header.subtitle')}
           />
+          <ProjectGallery
+
+          />
         </Col>
-        <Col md="2" />
+        <Col md="1" />
       </Row>
     </Container>
   );
