@@ -37,7 +37,7 @@ const ProjectsPage = ({ dispatch }) => {
             subtitle={Config.get('projects.header.subtitle')}
           />
           <ProjectGallery
-
+            projects={Config.get('projects.items')}
           />
         </Col>
         <Col md="1" />

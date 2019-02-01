@@ -65,12 +65,25 @@
         "url": "https://s3.amazonaws.com/eliucs/content/projects/algorithm-helper.md",
         "links": [
           {
-            "name": "",
-            "url": ""
+            "name": "Website",
+            "url": "https://www.algorithmhelper.com"
+          },
+          {
+            "name": "GitHub",
+            "url": "https://github.com/algorithm-helper"
           }
         ],
         "tags": [
-
+          "javascript",
+          "react",
+          "node",
+          "express",
+          "mongodb",
+          "aws",
+          "docker",
+          "elasticsearch",
+          "algorithms",
+          "data structures"
         ]
       },
       {
@@ -80,12 +93,18 @@
         "url": "https://s3.amazonaws.com/eliucs/content/projects/kasparov-chess-ai.md",
         "links": [
           {
-            "name": "",
-            "url": ""
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/kasparov-chess-ai"
           }
         ],
         "tags": [
-
+          "java",
+          "chess engine",
+          "uci",
+          "bitboards",
+          "alpha-beta pruning",
+          "quiescence search",
+          "perft testing"
         ]
       },
       {
@@ -95,12 +114,17 @@
         "url": "https://s3.amazonaws.com/eliucs/content/projects/wiki-graph-search.md",
         "links": [
           {
-            "name": "",
-            "url": ""
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/wiki-graph-search"
           }
         ],
         "tags": [
-
+          "javascript",
+          "node",
+          "python",
+          "wikipedia api",
+          "raspberry pi",
+          "sql"
         ]
       },
       {
@@ -110,12 +134,21 @@
         "url": "https://s3.amazonaws.com/eliucs/content/projects/alexa-md.md",
         "links": [
           {
-            "name": "",
-            "url": ""
+            "name": "GitHub",
+            "url": "https://github.com/alexa-md"
+          },
+          {
+            "name": "Devpost",
+            "url": "https://devpost.com/software/alexamd-9u6eop"
           }
         ],
         "tags": [
-
+          "python",
+          "flask",
+          "javascript",
+          "aws lambda",
+          "amazon alexa api",
+          "ibm watson api"
         ]
       },
       {
@@ -125,12 +158,21 @@
         "url": "https://s3.amazonaws.com/eliucs/content/projects/factable.md",
         "links": [
           {
-            "name": "",
-            "url": ""
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/factable"
+          },
+          {
+            "name": "Devpost",
+            "url": "https://devpost.com/software/factable"
           }
         ],
         "tags": [
-
+          "python",
+          "flask",
+          "nltk",
+          "scikit learn",
+          "machine learning",
+          "newspaper api"
         ]
       },
       {
@@ -140,12 +182,18 @@
         "url": "https://s3.amazonaws.com/eliucs/content/projects/productive.md",
         "links": [
           {
-            "name": "",
-            "url": ""
+            "name": "Chrome Web Store",
+            "url": "https://chrome.google.com/webstore/detail/productive/mbajcbhcbcbdianjgagmnbgnjmhoaooa"
+          },
+          {
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/productive"
           }
         ],
         "tags": [
-
+          "javascript",
+          "jquery",
+          "bootstrap"
         ]
       },
       {
@@ -155,12 +203,16 @@
         "url": "https://s3.amazonaws.com/eliucs/content/projects/kneser-ney-smoothing.md",
         "links": [
           {
-            "name": "",
-            "url": ""
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/kneser-ney"
           }
         ],
         "tags": [
-
+          "python",
+          "pyqt",
+          "kneser-ney smoothing",
+          "n-grams",
+          "nlp"
         ]
       },
       {
@@ -170,12 +222,15 @@
         "url": "https://s3.amazonaws.com/eliucs/content/projects/tf-idf-text-summarizer.md",
         "links": [
           {
-            "name": "",
-            "url": ""
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/tf-idf-text-summarizer"
           }
         ],
         "tags": [
-
+          "javascript",
+          "tf-idf weighting",
+          "text summarization",
+          "nlp"
         ]
       },
       {
@@ -185,42 +240,15 @@
         "url": "https://s3.amazonaws.com/eliucs/content/projects/newstream.md",
         "links": [
           {
-            "name": "",
-            "url": ""
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/newstream"
           }
         ],
         "tags": [
-
-        ]
-      },
-      {
-        "title": "DFA.",
-        "description": "JavaScript library for creating DFAs, NFAs, and epsilon-NFAs.",
-        "projectId": "dfa",
-        "url": "https://s3.amazonaws.com/eliucs/content/projects/dfa.md",
-        "links": [
-          {
-            "name": "",
-            "url": ""
-          }
-        ],
-        "tags": [
-
-        ]
-      },
-      {
-        "title": "Porter Stemmer",
-        "description": "JavaScript library that implements the Porter stemmer algorithm.",
-        "projectId": "porter-stemmer",
-        "url": "https://s3.amazonaws.com/eliucs/content/projects/porter-stemmer.md",
-        "links": [
-          {
-            "name": "",
-            "url": ""
-          }
-        ],
-        "tags": [
-
+          "python",
+          "flask",
+          "indico api",
+          "plotly"
         ]
       },
       {
@@ -230,12 +258,19 @@
         "url": "https://s3.amazonaws.com/eliucs/content/projects/minimum-spanning-tree.md",
         "links": [
           {
-            "name": "",
-            "url": ""
+            "name": "Website",
+            "url": "https://minspantree.herokuapp.com/"
+          },
+          {
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/minimum-spanning-tree"
           }
         ],
         "tags": [
-
+          "javascript",
+          "minimum spanning tree",
+          "prim's algorithm",
+          "kruskal's algorithm"
         ]
       },
       {
@@ -245,12 +280,18 @@
         "url": "https://s3.amazonaws.com/eliucs/content/projects/convex-hull.md",
         "links": [
           {
-            "name": "",
-            "url": ""
+            "name": "Website",
+            "url": "https://convexhull.herokuapp.com/"
+          },
+          {
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/convex-hull"
           }
         ],
         "tags": [
-
+          "javascript",
+          "convex hull",
+          "graham's scan algorithm"
         ]
       }
     ]
