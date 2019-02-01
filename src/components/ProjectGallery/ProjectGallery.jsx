@@ -1,22 +1,72 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Col, Container, Row } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
-import { projectGalleryStyles } from './styles.scss';
+import {
+  projectGalleryStyles,
+  projectGalleryItemStyles,
+  projectGalleryItemImgStyles,
+  projectGalleryItemTextContainerStyles,
+  projectGalleryItemTitleStyles,
+  projectGalleryItemDescriptionStyles,
+} from './styles.scss';
 
-const ProjectGallery = () => (
-  <Container fluid>
-    <Row>
-      <Col xs="12" sm="6" md="4">1</Col>
-      <Col xs="12" sm="6" md="4">1</Col>
-      <Col xs="12" sm="6" md="4">1</Col>
-      <Col xs="12" sm="6" md="4">1</Col>
-      <Col xs="12" sm="6" md="4">1</Col>
-      <Col xs="12" sm="6" md="4">1</Col>
-    </Row>
-  </Container>
-);
+const ProjectGallery = ({
+  projects,
+  baseThumbnailUrl,
+}) => {
+  const buildThumbnailUrl = projectId => `${baseThumbnailUrl}/${projectId}.png`;
 
-ProjectGallery.propTypes = {};
+  return (
+    <Container
+      fluid
+      className={projectGalleryStyles}
+    >
+      <Row>
+        {
+          projects
+          && projects.length > 0
+          && projects.map(({
+            title,
+            description,
+            projectId,
+          }, i) => (
+            <Col
+              key={i}
+              xs="12"
+              sm="6"
+              md="6"
+              className={projectGalleryItemStyles}
+            >
+              <Link
+                to={`/projects/${projectId}`}
+              >
+                <img
+                  className={projectGalleryItemImgStyles}
+                  src={buildThumbnailUrl(projectId)}
+                  alt={title}
+                />
+              </Link>
+              <div className={projectGalleryItemTextContainerStyles}>
+                <div className={projectGalleryItemTitleStyles}>
+                  <Link to={`/projects/${projectId}`}>{title}</Link>
+                </div>
+                <div className={projectGalleryItemDescriptionStyles}>
+                  {description}
+                </div>
+              </div>
+            </Col>
+          ))
+        }
+      </Row>
+    </Container>
+  );
+};
+
+ProjectGallery.propTypes = {
+  projects: PropTypes.array,
+  baseThumbnailUrl: PropTypes.string,
+};
 
 export default ProjectGallery;

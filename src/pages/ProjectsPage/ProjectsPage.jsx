@@ -38,6 +38,7 @@ const ProjectsPage = ({ dispatch }) => {
           />
           <ProjectGallery
             projects={Config.get('projects.items')}
+            baseThumbnailUrl={Config.get('projects.baseThumbnailUrl')}
           />
         </Col>
         <Col md="1" />
