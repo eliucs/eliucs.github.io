@@ -52,6 +52,38 @@
       "url": "https://s3.amazonaws.com/eliucs/content/about/about.md"
     }
   },
+  "contact": {
+    "header": {
+      "title": "Contact.",
+      "subtitle": "I would love to get in touch with you!"
+    },
+    "items": [
+      {
+        "title": "Email.",
+        "description": "Send me something!",
+        "link": "yh7liu [at] edu [dot] uwaterloo [dot] ca",
+        "url": "mailto:yh7liu@edu.uwaterloo.ca"
+      },
+      {
+        "title": "LinkedIn.",
+        "description": "Hire me!",
+        "link": "/eliucs",
+        "url": "https://linkedin.com/in/eliucs"
+      },
+      {
+        "title": "GitHub.",
+        "description": "Fork my repos!",
+        "link": "/eliucs",
+        "url": "https://github.com/eliucs"
+      },
+      {
+        "title": "Instagram.",
+        "description": "Follow me!",
+        "link": "@eliucs",
+        "url": "https://instagram.com/eliucs"
+      }
+    ]
+  },
   "projects": {
     "header": {
       "title": "Projects.",
