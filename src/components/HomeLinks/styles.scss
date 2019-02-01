@@ -1,0 +1,18 @@
+:local(.homeLinkContainerStyles) {
+  & > span {
+    margin-left: 1rem;
+    margin-right: 1rem;
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      transition: 0.2s;
+      -webkit-transition: 0.2s;
+      -moz-transition: 0.2s;
+
+      &:hover {
+        color: #ddd;
+      }
+    }
+  }
+}

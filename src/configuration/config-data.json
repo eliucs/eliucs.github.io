@@ -1,0 +1,324 @@
+{
+  "profileCard": {
+    "title": "Eric Liu",
+    "description": "My name is Eric Liu, I'm a third year student at the <a href=\"https://uwaterloo.ca\" target=\"_blank\"><b>University of Waterloo</b></a>, studying Computer Science and Combinatorics & Optimization. I'm primarily interested in full stack web development and distributed systems.",
+    "imageUrl": "https://s3.amazonaws.com/eliucs/img/sm/profile-photo-jan-2019.jpeg",
+    "twitterUrl": "https://twitter.com/ericliucs",
+    "linkedinUrl": "https://linkedin.com/in/eliucs",
+    "githubUrl": "https://github.com/eliucs",
+    "devpostUrl": "https://devpost.com/eliucs",
+    "instagramUrl": "https://instagram.com/eliucs",
+    "emailUrl": "mailto:yh7liu@edu.uwaterloo.ca"
+  },
+  "interactiveText": {
+    "data": [
+      "Hello.",
+      "Hola.",
+      "Bonjour.",
+      "你好.",
+      "Привет.",
+      "こんにちは.",
+      "नमस्ते.",
+      "مرحبا."
+    ],
+    "timeDelay": 1000
+  },
+  "menu": {
+    "menuItems": [
+      {
+        "title": "Home.",
+        "route": "/"
+      },
+      {
+        "title": "About.",
+        "route": "/about"
+      },
+      {
+        "title": "Projects.",
+        "route": "/projects"
+      },
+      {
+        "title": "Contact.",
+        "route": "/contact"
+      }
+    ]
+  },
+  "about": {
+    "header": {
+      "title": "About Me.",
+      "subtitle": "Who am I, what do I do?"
+    },
+    "markdown": {
+      "key": "about",
+      "url": "https://s3.amazonaws.com/eliucs/content/about/about.md"
+    }
+  },
+  "contact": {
+    "header": {
+      "title": "Contact.",
+      "subtitle": "I would love to get in touch with you!"
+    },
+    "items": [
+      {
+        "title": "Email.",
+        "description": "Send me something!",
+        "link": "yh7liu [at] edu [dot] uwaterloo [dot] ca",
+        "url": "mailto:yh7liu@edu.uwaterloo.ca"
+      },
+      {
+        "title": "GitHub.",
+        "description": "Fork my repos!",
+        "link": "/eliucs",
+        "url": "https://github.com/eliucs"
+      },
+      {
+        "title": "LinkedIn.",
+        "description": "Hire me!",
+        "link": "/eliucs",
+        "url": "https://linkedin.com/in/eliucs"
+      },
+      {
+        "title": "Instagram.",
+        "description": "Follow me!",
+        "link": "@eliucs",
+        "url": "https://instagram.com/eliucs"
+      }
+    ]
+  },
+  "projects": {
+    "header": {
+      "title": "Projects.",
+      "subtitle": "Here are my finished projects and works in progress."
+    },
+    "baseContentUrl": "https://s3.amazonaws.com/eliucs/content/projects",
+    "baseImageUrl": "https://s3.amazonaws.com/eliucs/img/projects/full",
+    "baseThumbnailUrl": "https://s3.amazonaws.com/eliucs/img/projects/sm",
+    "items": [
+      {
+        "title": "Algorithm Helper.",
+        "description": "Web application for learning about algorithms, data structures, and other software engineering topics.",
+        "projectId": "algorithm-helper",
+        "links": [
+          {
+            "name": "Website",
+            "url": "https://www.algorithmhelper.com"
+          },
+          {
+            "name": "GitHub",
+            "url": "https://github.com/algorithm-helper"
+          }
+        ],
+        "tags": [
+          "javascript",
+          "react",
+          "node",
+          "express",
+          "mongodb",
+          "aws",
+          "docker",
+          "elasticsearch",
+          "algorithms",
+          "data structures"
+        ]
+      },
+      {
+        "title": "Kasparov Chess AI.",
+        "description": "UCI compatible chess engine built in Java, uses bitboards, alpha-beta pruning, and quiescence search.",
+        "projectId": "kasparov-chess-ai",
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/kasparov-chess-ai"
+          }
+        ],
+        "tags": [
+          "java",
+          "chess engine",
+          "uci",
+          "bitboards",
+          "alpha-beta pruning",
+          "quiescence search",
+          "perft testing"
+        ]
+      },
+      {
+        "title": "Wiki Graph Search.",
+        "description": "Platform built in Node using Wikipedia to generate courses as a low-cost educational resource alternative.",
+        "projectId": "wiki-graph-search",
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/wiki-graph-search"
+          }
+        ],
+        "tags": [
+          "javascript",
+          "node",
+          "python",
+          "wikipedia api",
+          "raspberry pi",
+          "sql"
+        ]
+      },
+      {
+        "title": "Alexa MD.",
+        "description": "Amazon Alexa app that uses the IBM Watson API to give diagnoses from voice commands.",
+        "projectId": "alexa-md",
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/alexa-md"
+          },
+          {
+            "name": "Devpost",
+            "url": "https://devpost.com/software/alexamd-9u6eop"
+          }
+        ],
+        "tags": [
+          "python",
+          "flask",
+          "javascript",
+          "aws lambda",
+          "amazon alexa api",
+          "ibm watson api"
+        ]
+      },
+      {
+        "title": "Factable.",
+        "description": "Uses natural language processing and machine learning to determine if an article is fake news.",
+        "projectId": "factable",
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/factable"
+          },
+          {
+            "name": "Devpost",
+            "url": "https://devpost.com/software/factable"
+          }
+        ],
+        "tags": [
+          "python",
+          "flask",
+          "nltk",
+          "scikit learn",
+          "machine learning",
+          "newspaper api"
+        ]
+      },
+      {
+        "title": "Productive.",
+        "description": "Chrome extension to help keep track of tasks, notes, shortcuts and productivity, with auto updating background.",
+        "projectId": "productive",
+        "links": [
+          {
+            "name": "Chrome Web Store",
+            "url": "https://chrome.google.com/webstore/detail/productive/mbajcbhcbcbdianjgagmnbgnjmhoaooa"
+          },
+          {
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/productive"
+          }
+        ],
+        "tags": [
+          "javascript",
+          "jquery",
+          "bootstrap"
+        ]
+      },
+      {
+        "title": "Kneser-Ney Smoothing.",
+        "description": "PyQt application to demonstrate the Kneser-Ney smoothing algorithm for bigram/word prediction.",
+        "projectId": "kneser-ney-smoothing",
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/kneser-ney"
+          }
+        ],
+        "tags": [
+          "python",
+          "pyqt",
+          "kneser-ney smoothing",
+          "n-grams",
+          "nlp"
+        ]
+      },
+      {
+        "title": "tf-idf Text Summarizer.",
+        "description": "JavaScript library for text summarization using tf-idf weighting.",
+        "projectId": "tf-idf-text-summarizer",
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/tf-idf-text-summarizer"
+          }
+        ],
+        "tags": [
+          "javascript",
+          "tf-idf weighting",
+          "text summarization",
+          "nlp"
+        ]
+      },
+      {
+        "title": "Newstream.",
+        "description": "Aggregates news and Tweets and applies sentiment analysis on various topics.",
+        "projectId": "newstream",
+        "links": [
+          {
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/newstream"
+          }
+        ],
+        "tags": [
+          "python",
+          "flask",
+          "indico api",
+          "plotly"
+        ]
+      },
+      {
+        "title": "Minimum Spanning Tree",
+        "description": "Visualization of Prim's and Kruskal's algorithm for finding the minimum spanning tree.",
+        "projectId": "minimum-spanning-tree",
+        "links": [
+          {
+            "name": "Website",
+            "url": "https://minspantree.herokuapp.com/"
+          },
+          {
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/minimum-spanning-tree"
+          }
+        ],
+        "tags": [
+          "javascript",
+          "minimum spanning tree",
+          "prim's algorithm",
+          "kruskal's algorithm"
+        ]
+      },
+      {
+        "title": "Convex Hull",
+        "description": "Visualization of Graham's scan algorithm to find the convex hull of a set of points.",
+        "projectId": "convex-hull",
+        "links": [
+          {
+            "name": "Website",
+            "url": "https://convexhull.herokuapp.com/"
+          },
+          {
+            "name": "GitHub",
+            "url": "https://github.com/eliucs/convex-hull"
+          }
+        ],
+        "tags": [
+          "javascript",
+          "convex hull",
+          "graham's scan algorithm"
+        ]
+      }
+    ]
+  }
+}
