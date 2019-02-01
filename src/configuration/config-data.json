@@ -7,7 +7,8 @@
     "linkedinUrl": "https://linkedin.com/in/eliucs",
     "githubUrl": "https://github.com/eliucs",
     "devpostUrl": "https://devpost.com/eliucs",
-    "instagramUrl": "https://instagram.com/eliucs"
+    "instagramUrl": "https://instagram.com/eliucs",
+    "emailUrl": "mailto:yh7liu@edu.uwaterloo.ca"
   },
   "interactiveText": {
     "data": [
@@ -65,16 +66,16 @@
         "url": "mailto:yh7liu@edu.uwaterloo.ca"
       },
       {
-        "title": "LinkedIn.",
-        "description": "Hire me!",
-        "link": "/eliucs",
-        "url": "https://linkedin.com/in/eliucs"
-      },
-      {
         "title": "GitHub.",
         "description": "Fork my repos!",
         "link": "/eliucs",
         "url": "https://github.com/eliucs"
+      },
+      {
+        "title": "LinkedIn.",
+        "description": "Hire me!",
+        "link": "/eliucs",
+        "url": "https://linkedin.com/in/eliucs"
       },
       {
         "title": "Instagram.",

@@ -14,6 +14,7 @@ import {
 import {
   menuClose,
 } from 'actions/MenuActions';
+import HomeLinks from 'components/HomeLinks';
 
 import {
   homeBackgroundStyles,
@@ -38,6 +39,9 @@ const HomePage = ({ dispatch }) => {
           <div
             className={homeTextDescriptionStyles}
             dangerouslySetInnerHTML={{ __html: Config.get('profileCard.description') }}
+          />
+          <HomeLinks
+            profile={Config.get('profileCard')}
           />
         </div>
       </div>

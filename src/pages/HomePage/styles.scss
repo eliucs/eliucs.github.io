@@ -54,14 +54,18 @@
 
 :local(.homeTextDescriptionStyles) {
   width: 30vw;
+  margin-bottom: 2rem;
 
   a {
     text-decoration: none;
     color: #FFF;
-  }
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
 
-  a:hover {
-    color: #DDD;
+    &:hover {
+      color: #DDD;
+    }
   }
 
   @media all and (max-width: 768px) {
