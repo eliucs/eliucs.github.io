@@ -57,12 +57,14 @@
       "title": "Projects.",
       "subtitle": "Here are my finished projects and works in progress."
     },
+    "baseContentUrl": "https://s3.amazonaws.com/eliucs/content/projects",
+    "baseImageUrl": "https://s3.amazonaws.com/eliucs/img/projects/full",
+    "baseThumbnailUrl": "https://s3.amazonaws.com/eliucs/img/projects/sm",
     "items": [
       {
         "title": "Algorithm Helper.",
         "description": "Web application for learning about algorithms, data structures, and other software engineering topics.",
         "projectId": "algorithm-helper",
-        "url": "https://s3.amazonaws.com/eliucs/content/projects/algorithm-helper.md",
         "links": [
           {
             "name": "Website",
@@ -90,7 +92,6 @@
         "title": "Kasparov Chess AI.",
         "description": "UCI compatible chess engine built in Java, uses bitboards, alpha-beta pruning, and quiescence search.",
         "projectId": "kasparov-chess-ai",
-        "url": "https://s3.amazonaws.com/eliucs/content/projects/kasparov-chess-ai.md",
         "links": [
           {
             "name": "GitHub",
@@ -111,7 +112,6 @@
         "title": "Wiki Graph Search.",
         "description": "Platform built in Node using Wikipedia to generate courses as a low-cost educational resource alternative.",
         "projectId": "wiki-graph-search",
-        "url": "https://s3.amazonaws.com/eliucs/content/projects/wiki-graph-search.md",
         "links": [
           {
             "name": "GitHub",
@@ -131,7 +131,6 @@
         "title": "Alexa MD.",
         "description": "Amazon Alexa app that uses the IBM Watson API to give diagnoses from voice commands.",
         "projectId": "alexa-md",
-        "url": "https://s3.amazonaws.com/eliucs/content/projects/alexa-md.md",
         "links": [
           {
             "name": "GitHub",
@@ -155,7 +154,6 @@
         "title": "Factable.",
         "description": "Uses natural language processing and machine learning to determine if an article is fake news.",
         "projectId": "factable",
-        "url": "https://s3.amazonaws.com/eliucs/content/projects/factable.md",
         "links": [
           {
             "name": "GitHub",
@@ -179,7 +177,6 @@
         "title": "Productive.",
         "description": "Chrome extension to help keep track of tasks, notes, shortcuts and productivity, with auto updating background.",
         "projectId": "productive",
-        "url": "https://s3.amazonaws.com/eliucs/content/projects/productive.md",
         "links": [
           {
             "name": "Chrome Web Store",
@@ -200,7 +197,6 @@
         "title": "Kneser-Ney Smoothing.",
         "description": "PyQt application to demonstrate the Kneser-Ney smoothing algorithm for bigram/word prediction.",
         "projectId": "kneser-ney-smoothing",
-        "url": "https://s3.amazonaws.com/eliucs/content/projects/kneser-ney-smoothing.md",
         "links": [
           {
             "name": "GitHub",
@@ -219,7 +215,6 @@
         "title": "tf-idf Text Summarizer.",
         "description": "JavaScript library for text summarization using tf-idf weighting.",
         "projectId": "tf-idf-text-summarizer",
-        "url": "https://s3.amazonaws.com/eliucs/content/projects/tf-idf-text-summarizer.md",
         "links": [
           {
             "name": "GitHub",
@@ -237,7 +232,6 @@
         "title": "Newstream.",
         "description": "Aggregates news and Tweets and applies sentiment analysis on various topics.",
         "projectId": "newstream",
-        "url": "https://s3.amazonaws.com/eliucs/content/projects/newstream.md",
         "links": [
           {
             "name": "GitHub",
@@ -255,7 +249,6 @@
         "title": "Minimum Spanning Tree",
         "description": "Visualization of Prim's and Kruskal's algorithm for finding the minimum spanning tree.",
         "projectId": "minimum-spanning-tree",
-        "url": "https://s3.amazonaws.com/eliucs/content/projects/minimum-spanning-tree.md",
         "links": [
           {
             "name": "Website",
@@ -277,7 +270,6 @@
         "title": "Convex Hull",
         "description": "Visualization of Graham's scan algorithm to find the convex hull of a set of points.",
         "projectId": "convex-hull",
-        "url": "https://s3.amazonaws.com/eliucs/content/projects/convex-hull.md",
         "links": [
           {
             "name": "Website",
