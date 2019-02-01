@@ -1,4 +1,4 @@
-**Submitted** To MHacks 9 (University of Michigan, Ann Arbor)
+**Submitted To** MHacks 9 (University of Michigan, Ann Arbor)
 
 **Winner** Best Use of .tech Domain (DotTech)
 

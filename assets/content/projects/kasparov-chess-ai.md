@@ -1,4 +1,4 @@
-**Technologies Used:** Java, Maven
+**Technologies Used** Java, Maven
 
 This project is a UCI ([Universal Chess Interface](http://wbec-ridderkerk.nl/html/UCIProtocol.html))
 compatible chess engine built in Java. The following provides documentation for
