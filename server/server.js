@@ -2,7 +2,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const path = require('path');
 
-const publicPath = path.resolve(process.cwd(), 'dist');
+const publicPath = path.resolve(process.cwd(), 'public');
 const port = process.env.PORT || 3000;
 
 const app = express();

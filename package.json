@@ -14,7 +14,7 @@
     "client:devw": "webpack --mode development --config webpack/webpack-client.config.js --watch",
     "client:wds": "webpack-dev-server --mode development --config webpack/webpack-client.config.js",
     "predeploy": "yarn run client:build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d public",
     "heroku-postbuild": "yarn run client:build"
   },
   "homepage": "http://eliucs.github.io/eliucs.github.io",

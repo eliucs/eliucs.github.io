@@ -23,5 +23,5 @@ out
 *.tmp
 
 # Build
-/dist/bundle-client.js.map
-/dist/main.css.map
+/public/bundle-client.js.map
+/public/main.css.map
