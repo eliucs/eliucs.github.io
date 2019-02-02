@@ -1,7 +1,7 @@
 # Personal Website
 
 My personal website source code and files, built with React and hosted on
-GitHub Pages.
+Heroku.
 
 Website: [ericliu.ca](https://ericliu.ca)
 
