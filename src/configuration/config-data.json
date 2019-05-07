@@ -1,7 +1,7 @@
 {
   "profileCard": {
     "title": "Eric Liu",
-    "description": "My name is Eric Liu, I'm a third year student at the <a href=\"https://uwaterloo.ca\" target=\"_blank\"><b>University of Waterloo</b></a>, studying Computer Science and Combinatorics & Optimization. I'm primarily interested in full stack web development and distributed systems.",
+    "description": "My name is Eric Liu, I'm a third year student at the <a href=\"https://uwaterloo.ca\" target=\"_blank\"><b>University of Waterloo</b></a>, studying Computer Science and Combinatorics & Optimization. Currently an SWE intern <a href=\"https://pay.google.com\" target=\"_blank\"><b>@Google</b></a> on the Google Pay team, previously <a href=\"https://globality.com\" target=\"_blank\"><b>@Globality</b></a>, <a href=\"https://tulip.co\" target=\"_blank\"><b>@Tulip</b></a>.",
     "imageUrl": "https://s3.amazonaws.com/eliucs/img/sm/profile-photo-jan-2019.jpeg",
     "twitterUrl": "https://twitter.com/ericliucs",
     "linkedinUrl": "https://linkedin.com/in/eliucs",
