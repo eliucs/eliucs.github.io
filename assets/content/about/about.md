@@ -1,4 +1,4 @@
-<img src="https://s3.amazonaws.com/eliucs/img/misc/profile-photo-jan-2019-resized.png" />
+<img src="https://s3.amazonaws.com/eliucs/img/misc/profile-photo-aug-2019-resized.jpeg" />
 
 My name is Eric Liu, I'm currently a third year student at the [University of
 Waterloo](https://uwaterloo.ca/), majoring in Computer Science and minoring in Combinatorics &
