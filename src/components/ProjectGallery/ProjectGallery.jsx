@@ -4,12 +4,10 @@ import { Col, Container, Row } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 import {
-  projectGalleryStyles,
   projectGalleryItemStyles,
   projectGalleryItemImgStyles,
   projectGalleryItemTextContainerStyles,
   projectGalleryItemTitleStyles,
-  projectGalleryItemDescriptionStyles,
 } from './styles.scss';
 
 const ProjectGallery = ({
@@ -19,10 +17,7 @@ const ProjectGallery = ({
   const buildThumbnailUrl = projectId => `${baseThumbnailUrl}/${projectId}.png`;
 
   return (
-    <Container
-      fluid
-      className={projectGalleryStyles}
-    >
+    <Container fluid>
       <Row>
         {
           projects
@@ -52,9 +47,7 @@ const ProjectGallery = ({
                 <div className={projectGalleryItemTitleStyles}>
                   <Link to={`/projects/${projectId}`}>{title}</Link>
                 </div>
-                <div className={projectGalleryItemDescriptionStyles}>
-                  {description}
-                </div>
+                <div>{description}</div>
               </div>
             </Col>
           ))
