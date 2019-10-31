@@ -17,6 +17,9 @@
     "deploy": "gh-pages -d public",
     "heroku-postbuild": "yarn run client:build"
   },
+  "engines": {
+    "node": "11.13.0"
+  },
   "homepage": "http://eliucs.github.io/eliucs.github.io",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
