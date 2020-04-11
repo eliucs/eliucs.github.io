@@ -1,13 +1,13 @@
 {
   "profileCard": {
     "title": "Eric Liu",
-    "description": "My name is Eric Liu, I'm a third year student at the <a href=\"https://uwaterloo.ca\" target=\"_blank\"><b>University of Waterloo</b></a>, studying Computer Science and Combinatorics & Optimization. SWE intern <a href=\"https://facebook.com\" target=\"_blank\"><b>@Facebook</b></a> on the Instagram Stories Team. Former SWE intern <a href=\"https://google.com\" target=\"_blank\"><b>@Google</b></a>, <a href=\"https://globality.com\" target=\"_blank\"><b>@Globality</b></a>, <a href=\"https://tulip.co\" target=\"_blank\"><b>@Tulip</b></a>.",
+    "description": "My name is Eric Liu, I'm a fourth year student at the <a href=\"https://uwaterloo.ca\" target=\"_blank\"><b>University of Waterloo</b></a>, studying Computer Science and Combinatorics & Optimization. SWE intern <a href=\"https://facebook.com\" target=\"_blank\"><b>@Facebook</b></a> on the Instagram Reels Team. Former SWE intern <a href=\"https://google.com\" target=\"_blank\"><b>@Google</b></a>, <a href=\"https://globality.com\" target=\"_blank\"><b>@Globality</b></a>, <a href=\"https://tulip.co\" target=\"_blank\"><b>@Tulip</b></a>.",
     "imageUrl": "https://s3.amazonaws.com/eliucs/img/sm/profile-photo-jan-2019.jpeg",
     "twitterUrl": "https://twitter.com/ericliucs",
     "linkedinUrl": "https://linkedin.com/in/eliucs",
     "githubUrl": "https://github.com/eliucs",
     "devpostUrl": "https://devpost.com/eliucs",
-    "instagramUrl": "https://instagram.com/eliucs",
+    "instagramUrl": "https://instagram.com/eric.yh.liu/",
     "emailUrl": "mailto:eric@ericliu.ca"
   },
   "interactiveText": {
@@ -81,7 +81,7 @@
         "title": "Instagram.",
         "description": "Follow me!",
         "link": "@eliucs",
-        "url": "https://instagram.com/eliucs"
+        "url": "https://instagram.com/eric.yh.liu/"
       }
     ]
   },
