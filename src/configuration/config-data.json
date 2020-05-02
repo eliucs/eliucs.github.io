@@ -68,19 +68,19 @@
       {
         "title": "GitHub.",
         "description": "Fork my repos!",
-        "link": "/eliucs",
+        "link": "/ericyhliu",
         "url": "https://github.com/ericyhliu"
       },
       {
         "title": "LinkedIn.",
         "description": "Hire me!",
-        "link": "/eliucs",
+        "link": "/ericyhliu",
         "url": "https://linkedin.com/in/ericyhliu"
       },
       {
         "title": "Instagram.",
         "description": "Follow me!",
-        "link": "@eliucs",
+        "link": "@eric.yh.liu",
         "url": "https://instagram.com/eric.yh.liu/"
       }
     ]
@@ -128,7 +128,7 @@
         "links": [
           {
             "name": "GitHub",
-            "url": "https://github.com/eliucs/kasparov-chess-ai"
+            "url": "https://github.com/ericyhliu/kasparov-chess-ai"
           }
         ],
         "tags": [
@@ -148,7 +148,7 @@
         "links": [
           {
             "name": "GitHub",
-            "url": "https://github.com/eliucs/wiki-graph-search"
+            "url": "https://github.com/ericyhliu/wiki-graph-search"
           }
         ],
         "tags": [
@@ -190,7 +190,7 @@
         "links": [
           {
             "name": "GitHub",
-            "url": "https://github.com/eliucs/factable"
+            "url": "https://github.com/ericyhliu/factable"
           },
           {
             "name": "Devpost",
@@ -217,7 +217,7 @@
           },
           {
             "name": "GitHub",
-            "url": "https://github.com/eliucs/productive"
+            "url": "https://github.com/ericyhliu/productive"
           }
         ],
         "tags": [
@@ -233,7 +233,7 @@
         "links": [
           {
             "name": "GitHub",
-            "url": "https://github.com/eliucs/kneser-ney"
+            "url": "https://github.com/ericyhliu/kneser-ney"
           }
         ],
         "tags": [
@@ -251,7 +251,7 @@
         "links": [
           {
             "name": "GitHub",
-            "url": "https://github.com/eliucs/tf-idf-text-summarizer"
+            "url": "https://github.com/ericyhliu/tf-idf-text-summarizer"
           }
         ],
         "tags": [
@@ -268,7 +268,7 @@
         "links": [
           {
             "name": "GitHub",
-            "url": "https://github.com/eliucs/newstream"
+            "url": "https://github.com/ericyhliu/newstream"
           }
         ],
         "tags": [
@@ -289,7 +289,7 @@
           },
           {
             "name": "GitHub",
-            "url": "https://github.com/eliucs/minimum-spanning-tree"
+            "url": "https://github.com/ericyhliu/minimum-spanning-tree"
           }
         ],
         "tags": [
@@ -310,7 +310,7 @@
           },
           {
             "name": "GitHub",
-            "url": "https://github.com/eliucs/convex-hull"
+            "url": "https://github.com/ericyhliu/convex-hull"
           }
         ],
         "tags": [
