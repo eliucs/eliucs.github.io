@@ -11,6 +11,7 @@ import ContactPage from 'pages/ContactPage';
 import HomePage from 'pages/HomePage';
 import ProjectPage from 'pages/ProjectPage';
 import ProjectsPage from 'pages/ProjectsPage';
+import IrenePage from 'pages/IrenePage';
 
 import NavBar from 'components/NavBar';
 import Menu from 'components/Menu';
@@ -52,6 +53,12 @@ const AppRouter = () => (
         <Route
           path="/projects/:projectId"
           component={() => <ProjectPage />}
+          exact
+        />
+
+        <Route
+          path="/irene"
+          component={() => <IrenePage />}
           exact
         />
 
