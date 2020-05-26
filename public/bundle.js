@@ -67646,11 +67646,12 @@ function (_Component) {
         return prev + curr.length;
       }, 0);
       this.interval = setInterval(function () {
+        console.log(_this2.state.indices.size, str.length, sum);
+
         if (_this2.state.indices.size === str.length - sum) {
           clearInterval(_this2.interval);
-        } // Repeatedly generate an index from 0 to LENGTH - 1 that has not been
-        // seen yet and does not also appear in set
-
+          return;
+        }
 
         var indexReplace = -1;
 

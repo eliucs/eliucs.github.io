@@ -46,12 +46,13 @@ export default class DisappearingText extends Component {
     const sum = data.reduce((prev, curr) => prev + curr.length, 0);
 
     this.interval = setInterval(() => {
+      console.log(this.state.indices.size, str.length, sum);
+
       if (this.state.indices.size === (str.length - sum)) {
         clearInterval(this.interval);
+        return;
       }
 
-      // Repeatedly generate an index from 0 to LENGTH - 1 that has not been
-      // seen yet and does not also appear in set
       let indexReplace = -1;
       while (true) {
         indexReplace = randomInt(0, LENGTH - 1);
