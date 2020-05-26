@@ -1,75 +1,17 @@
-:local(.homeBackgroundStyles) {
+:local(.ireneBackgroundStyles) {
   width: 100wh;
   height: 100vh;
   color: #FFF;
-  background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background: #000;
   background-size: 400% 400%;
-  -webkit-animation: gradient 10s ease infinite;
-  -moz-animation: gradient 10s ease infinite;
-  animation: gradient 10s ease infinite;
-
-  @-webkit-keyframes gradient {
-    0% {
-      background-position: 0% 50%
-    }
-    50% {
-      background-position: 100% 50%
-    }
-    100% {
-      background-position: 0% 50%
-    }
-  }
-
-  @-moz-keyframes gradient {
-    0% {
-      background-position: 0% 50%
-    }
-    50% {
-      background-position: 100% 50%
-    }
-    100% {
-      background-position: 0% 50%
-    }
-  }
-
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%
-    }
-    50% {
-      background-position: 100% 50%
-    }
-    100% {
-      background-position: 0% 50%
-    }
-  }
 }
 
-:local(.homeTextContainerStyles) {
+:local(.ireneTextContainerStyles) {
   display: flex;
   align-items: center;
   height: 100%;
   margin-left: 2rem;
-}
-
-:local(.homeTextDescriptionStyles) {
-  width: 30vw;
-  margin-bottom: 2rem;
-
-  a {
-    text-decoration: none;
-    color: #FFF;
-    transition: 0.2s;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-
-    &:hover {
-      color: #DDD;
-    }
-  }
-
-  @media all and (max-width: 768px) {
-    width: auto;
-    margin-right: 2rem;
-  }
+  margin-right: 2rem;
+  word-break: break-all;
+  line-height: 1;
 }

@@ -7363,6 +7363,28 @@ a.text-dark:focus, a.text-dark:hover {
 .pages-ProjectsPage-styles__projectsStyles {
   padding: 6rem 2rem 4rem 2rem; }
 
+.components-DisappearingText-styles__disappearingTextStyles {
+  font-size: 8vw;
+  font-weight: 700; }
+  .components-DisappearingText-styles__disappearingTextStyles i {
+    display: clear; }
+
+.pages-IrenePage-styles__ireneBackgroundStyles {
+  width: 100wh;
+  height: 100vh;
+  color: #FFF;
+  background: #000;
+  background-size: 400% 400%; }
+
+.pages-IrenePage-styles__ireneTextContainerStyles {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  word-break: break-all;
+  line-height: 1; }
+
 .components-NavBar-styles__navBarContainerStyles {
   position: fixed;
   top: 1rem;
@@ -7403,32 +7425,8 @@ a.text-dark:focus, a.text-dark:hover {
 
 @font-face {
   font-family: 'San Francisco';
-  src: url(/fonts/SF-Pro-Display-Ultralight.otf) format("opentype");
-  font-weight: 100;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'San Francisco';
-  src: url(/fonts/SF-Pro-Display-Thin.otf) format("opentype");
-  font-weight: 200;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'San Francisco';
-  src: url(/fonts/SF-Pro-Display-Light.otf) format("opentype");
-  font-weight: 300;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'San Francisco';
   src: url(/fonts/SF-Pro-Display-Regular.otf) format("opentype");
   font-weight: 400;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'San Francisco';
-  src: url(/fonts/SF-Pro-Display-Medium.otf) format("opentype");
-  font-weight: 500;
   font-style: normal; }
 
 @font-face {
@@ -7441,18 +7439,6 @@ a.text-dark:focus, a.text-dark:hover {
   font-family: 'San Francisco';
   src: url(/fonts/SF-Pro-Display-Bold.otf) format("opentype");
   font-weight: 700;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'San Francisco';
-  src: url(/fonts/SF-Pro-Display-Heavy.otf) format("opentype");
-  font-weight: 800;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'San Francisco';
-  src: url(/fonts/SF-Pro-Display-Black.otf) format("opentype");
-  font-weight: 900;
   font-style: normal; }
 
 html, body {
