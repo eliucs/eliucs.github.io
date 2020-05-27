@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 
+import Config from 'configuration';
 import DisappearingText from 'components/DisappearingText';
 import {
   setThemeLight,
@@ -19,8 +20,6 @@ import {
   ireneTextContainerStyles,
 } from './styles.scss';
 
-const IRENE_DATA = ['no', 'u'];
-
 const IrenePage = ({ dispatch }) => {
   dispatch(setThemeLight());
   dispatch(setPageThemeLight());
@@ -31,8 +30,10 @@ const IrenePage = ({ dispatch }) => {
     <div className={ireneBackgroundStyles}>
       <div className={ireneTextContainerStyles}>
         <DisappearingText
-          data={IRENE_DATA}
-          timeDelay={150}
+          charset={Config.get('irene.disappearingText.charset')}
+          data={Config.get('irene.disappearingText.data')}
+          length={Config.get('irene.disappearingText.length')}
+          timeDelay={Config.get('irene.disappearingText.timeDelay')}
         />
       </div>
     </div>

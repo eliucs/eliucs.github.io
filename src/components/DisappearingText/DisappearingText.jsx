@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { disappearingTextStyles } from './styles.scss';
+import {
+  disappearingTextStyles,
+  disappearingTextBlankStyles,
+} from './styles.scss';
 
 function randomString(length, chars) {
   let result = '';
@@ -18,57 +21,74 @@ function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-const LENGTH = 120;
-const CHAR_SET = 'abcdefghijklmnopqrstuvwxyz';
+function shuffle(arr) {
+  const n = arr.length;
+  for (let i = 0; i < n - 1; i++) {
+    const r = randomInt(i, n - 1);
+    const temp = arr[r];
+    arr[r] = arr[i];
+    arr[i] = temp;
+  }
+}
 
 export default class DisappearingText extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      strModified: '',
+      index: 0,
+      strModifiedNode: null,
       indices: new Set(),
     };
   }
 
   componentDidMount() {
-    const { data, timeDelay } = this.props;
-    let str = randomString(LENGTH, CHAR_SET);
+    const {
+      charset,
+      data,
+      length,
+      timeDelay,
+    } = this.props;
+    let str = randomString(length, charset);
     const set = new Set();
 
     for (let i = 0; i < data.length; i++) {
-      const start = i * (LENGTH / data.length);
-      const end = (i + 1) * (LENGTH / data.length) - data[i].length - 1;
+      const start = i * (length / data.length);
+      const end = (i + 1) * (length / data.length) - data[i].length - 1;
       const index = randomInt(start, end);
       str = replaceAt(str, index, data[i]);
       for (let j = index; j < index + data[i].length; j++) set.add(j);
     }
 
-    const sum = data.reduce((prev, curr) => prev + curr.length, 0);
+    const indexOrderList = [...Array(length).keys()];
+    shuffle(indexOrderList);
 
     this.interval = setInterval(() => {
-      console.log(this.state.indices.size, str.length, sum);
-
-      if (this.state.indices.size === (str.length - sum)) {
+      if (this.state.index >= length) {
         clearInterval(this.interval);
         return;
       }
 
-      let indexReplace = -1;
+      let nextIndex = this.state.index;
       while (true) {
-        indexReplace = randomInt(0, LENGTH - 1);
-        if (!this.state.indices.has(indexReplace) && !set.has(indexReplace)) break;
+        if (nextIndex >= length) return;
+        if (!set.has(indexOrderList[nextIndex])) break;
+        nextIndex++;
       }
-      this.state.indices.add(indexReplace);
-      let strModified = '';
-      for (let i = 0; i < str.length; i++) {
-        if (this.state.indices.has(i)) {
-          strModified += `<span style="color:black;">${str[i]}</span>`;
-        } else {
-          strModified += str[i];
-        }
-      }
+      this.state.indices.add(indexOrderList[nextIndex]);
+      const strModifiedNode = (
+        <>
+          {[...Array(length).keys()].map(i => (this.state.indices.has(i)
+            ? <span key={i} className={disappearingTextBlankStyles}>{str[i]}</span>
+            : <span key={i}>{str[i]}</span>
+          ))
+          }
+        </>
+      );
 
-      this.setState({ strModified });
+      this.setState({
+        strModifiedNode,
+        index: ++nextIndex,
+      });
     }, timeDelay);
   }
 
@@ -82,13 +102,16 @@ export default class DisappearingText extends Component {
     return (
       <div
         className={disappearingTextStyles}
-        dangerouslySetInnerHTML={{ __html: this.state.strModified }}
-      />
+      >
+        {this.state.strModifiedNode}
+      </div>
     );
   }
 }
 
 DisappearingText.props = {
+  charset: PropTypes.string,
   data: PropTypes.array,
+  length: PropTypes.number,
   timeDelay: PropTypes.number,
 };

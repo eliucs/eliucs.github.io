@@ -320,5 +320,13 @@
         ]
       }
     ]
+  },
+  "irene": {
+    "disappearingText": {
+      "charset": "abcdefghijklmnopqrstuvwxyz",
+      "data": ["no", "u"],
+      "length": 120,
+      "timeDelay": 150
+    }
   }
 }

@@ -67559,6 +67559,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -67599,8 +67607,16 @@ function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-var LENGTH = 120;
-var CHAR_SET = 'abcdefghijklmnopqrstuvwxyz';
+function shuffle(arr) {
+  var n = arr.length;
+
+  for (var i = 0; i < n - 1; i++) {
+    var r = randomInt(i, n - 1);
+    var temp = arr[r];
+    arr[r] = arr[i];
+    arr[i] = temp;
+  }
+}
 
 var DisappearingText =
 /*#__PURE__*/
@@ -67614,7 +67630,8 @@ function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(DisappearingText).call(this, props));
     _this.state = {
-      strModified: '',
+      index: 0,
+      strModifiedNode: null,
       indices: new Set()
     };
     return _this;
@@ -67626,14 +67643,16 @@ function (_Component) {
       var _this2 = this;
 
       var _this$props = this.props,
+          charset = _this$props.charset,
           data = _this$props.data,
+          length = _this$props.length,
           timeDelay = _this$props.timeDelay;
-      var str = randomString(LENGTH, CHAR_SET);
+      var str = randomString(length, charset);
       var set = new Set();
 
       for (var i = 0; i < data.length; i++) {
-        var start = i * (LENGTH / data.length);
-        var end = (i + 1) * (LENGTH / data.length) - data[i].length - 1;
+        var start = i * (length / data.length);
+        var end = (i + 1) * (length / data.length) - data[i].length - 1;
         var index = randomInt(start, end);
         str = replaceAt(str, index, data[i]);
 
@@ -67642,38 +67661,37 @@ function (_Component) {
         }
       }
 
-      var sum = data.reduce(function (prev, curr) {
-        return prev + curr.length;
-      }, 0);
-      this.interval = setInterval(function () {
-        console.log(_this2.state.indices.size, str.length, sum);
+      var indexOrderList = _toConsumableArray(Array(length).keys());
 
-        if (_this2.state.indices.size === str.length - sum) {
+      shuffle(indexOrderList);
+      this.interval = setInterval(function () {
+        if (_this2.state.index >= length) {
           clearInterval(_this2.interval);
           return;
         }
 
-        var indexReplace = -1;
+        var nextIndex = _this2.state.index;
 
         while (true) {
-          indexReplace = randomInt(0, LENGTH - 1);
-          if (!_this2.state.indices.has(indexReplace) && !set.has(indexReplace)) break;
+          if (nextIndex >= length) return;
+          if (!set.has(indexOrderList[nextIndex])) break;
+          nextIndex++;
         }
 
-        _this2.state.indices.add(indexReplace);
+        _this2.state.indices.add(indexOrderList[nextIndex]);
 
-        var strModified = '';
-
-        for (var _i = 0; _i < str.length; _i++) {
-          if (_this2.state.indices.has(_i)) {
-            strModified += "<span style=\"color:black;\">".concat(str[_i], "</span>");
-          } else {
-            strModified += str[_i];
-          }
-        }
+        var strModifiedNode = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, _toConsumableArray(Array(length).keys()).map(function (i) {
+          return _this2.state.indices.has(i) ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+            key: i,
+            className: _styles_scss__WEBPACK_IMPORTED_MODULE_2__["disappearingTextBlankStyles"]
+          }, str[i]) : react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+            key: i
+          }, str[i]);
+        }));
 
         _this2.setState({
-          strModified: strModified
+          strModifiedNode: strModifiedNode,
+          index: ++nextIndex
         });
       }, timeDelay);
     }
@@ -67688,11 +67706,8 @@ function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: _styles_scss__WEBPACK_IMPORTED_MODULE_2__["disappearingTextStyles"],
-        dangerouslySetInnerHTML: {
-          __html: this.state.strModified
-        }
-      });
+        className: _styles_scss__WEBPACK_IMPORTED_MODULE_2__["disappearingTextStyles"]
+      }, this.state.strModifiedNode);
     }
   }]);
 
@@ -67701,7 +67716,9 @@ function (_Component) {
 
 
 DisappearingText.props = {
+  charset: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string,
   data: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.array,
+  length: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number,
   timeDelay: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.number
 };
 
@@ -67730,7 +67747,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-module.exports = {"disappearingTextStyles":"components-DisappearingText-styles__disappearingTextStyles"};
+module.exports = {"disappearingTextStyles":"components-DisappearingText-styles__disappearingTextStyles","disappearingTextBlankStyles":"components-DisappearingText-styles__disappearingTextBlankStyles"};
 
 /***/ }),
 
@@ -68624,10 +68641,10 @@ function () {
 /*!****************************************!*\
   !*** ./configuration/config-data.json ***!
   \****************************************/
-/*! exports provided: profileCard, interactiveText, menu, about, contact, projects, default */
+/*! exports provided: profileCard, interactiveText, menu, about, contact, projects, irene, default */
 /***/ (function(module) {
 
-module.exports = {"profileCard":{"title":"Eric Liu","description":"My name is Eric Liu, I'm a fourth year student at the <a href=\"https://uwaterloo.ca\" target=\"_blank\"><b>University of Waterloo</b></a>, studying Computer Science. Former SWE intern <a href=\"https://facebook.com\" target=\"_blank\"><b>@Facebook</b></a> on Instagram, <a href=\"https://google.com\" target=\"_blank\"><b>@Google</b></a>, <a href=\"https://globality.com\" target=\"_blank\"><b>@Globality</b></a>, <a href=\"https://tulip.co\" target=\"_blank\"><b>@Tulip</b></a>.","imageUrl":"https://s3.amazonaws.com/eliucs/img/sm/profile-photo-jan-2019.jpeg","twitterUrl":"https://twitter.com/ericyhliu","linkedinUrl":"https://linkedin.com/in/ericyhliu","githubUrl":"https://github.com/ericyhliu","devpostUrl":"https://devpost.com/ericyhliu","instagramUrl":"https://instagram.com/eric.yh.liu/","emailUrl":"mailto:eric@ericliu.ca"},"interactiveText":{"data":["Hello.","Hola.","Bonjour.","你好.","Привет.","こんにちは.","नमस्ते.","مرحبا."],"timeDelay":1000},"menu":{"menuItems":[{"title":"Home.","route":"/"},{"title":"About.","route":"/about"},{"title":"Projects.","route":"/projects"},{"title":"Contact.","route":"/contact"}]},"about":{"header":{"title":"About Me.","subtitle":"Who am I, what do I do?"},"markdown":{"key":"about","url":"https://s3.amazonaws.com/eliucs/content/about/about.md"}},"contact":{"header":{"title":"Contact.","subtitle":"I would love to get in touch with you!"},"items":[{"title":"Email.","description":"Send me something!","link":"eric@ericliu.ca","url":"mailto:eric@ericliu.ca"},{"title":"GitHub.","description":"Fork my repos!","link":"/ericyhliu","url":"https://github.com/ericyhliu"},{"title":"LinkedIn.","description":"Hire me!","link":"/ericyhliu","url":"https://linkedin.com/in/ericyhliu"},{"title":"Instagram.","description":"Follow me!","link":"@eric.yh.liu","url":"https://instagram.com/eric.yh.liu/"}]},"projects":{"header":{"title":"Projects.","subtitle":"Here are my finished projects and works in progress."},"baseContentUrl":"https://s3.amazonaws.com/eliucs/content/projects","baseImageUrl":"https://s3.amazonaws.com/eliucs/img/projects/full","baseThumbnailUrl":"https://s3.amazonaws.com/eliucs/img/projects/sm","items":[{"title":"Algorithm Helper.","description":"Web application for learning about algorithms, data structures, and other software engineering topics.","projectId":"algorithm-helper","links":[{"name":"Website","url":"https://www.algorithmhelper.com"},{"name":"GitHub","url":"https://github.com/algorithm-helper"}],"tags":["javascript","react","node","express","mongodb","aws","docker","elasticsearch","algorithms","data structures"]},{"title":"Kasparov Chess AI.","description":"UCI compatible chess engine built in Java, uses bitboards, alpha-beta pruning, and quiescence search.","projectId":"kasparov-chess-ai","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/kasparov-chess-ai"}],"tags":["java","chess engine","uci","bitboards","alpha-beta pruning","quiescence search","perft testing"]},{"title":"Wiki Graph Search.","description":"Platform built in Node using Wikipedia to generate courses as a low-cost educational resource alternative.","projectId":"wiki-graph-search","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/wiki-graph-search"}],"tags":["javascript","node","python","wikipedia api","raspberry pi","sql"]},{"title":"Alexa MD.","description":"Amazon Alexa app that uses the IBM Watson API to give diagnoses from voice commands.","projectId":"alexa-md","links":[{"name":"GitHub","url":"https://github.com/alexa-md"},{"name":"Devpost","url":"https://devpost.com/software/alexamd-9u6eop"}],"tags":["python","flask","javascript","aws lambda","amazon alexa api","ibm watson api"]},{"title":"Factable.","description":"Uses natural language processing and machine learning to determine if an article is fake news.","projectId":"factable","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/factable"},{"name":"Devpost","url":"https://devpost.com/software/factable"}],"tags":["python","flask","nltk","scikit learn","machine learning","newspaper api"]},{"title":"Productive.","description":"Chrome extension to help keep track of tasks, notes, shortcuts and productivity, with auto updating background.","projectId":"productive","links":[{"name":"Chrome Web Store","url":"https://chrome.google.com/webstore/detail/productive/mbajcbhcbcbdianjgagmnbgnjmhoaooa"},{"name":"GitHub","url":"https://github.com/ericyhliu/productive"}],"tags":["javascript","jquery","bootstrap"]},{"title":"Kneser-Ney Smoothing.","description":"PyQt application to demonstrate the Kneser-Ney smoothing algorithm for bigram/word prediction.","projectId":"kneser-ney-smoothing","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/kneser-ney"}],"tags":["python","pyqt","kneser-ney smoothing","n-grams","nlp"]},{"title":"tf-idf Text Summarizer.","description":"JavaScript library for text summarization using tf-idf weighting.","projectId":"tf-idf-text-summarizer","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/tf-idf-text-summarizer"}],"tags":["javascript","tf-idf weighting","text summarization","nlp"]},{"title":"Newstream.","description":"Aggregates news and Tweets and applies sentiment analysis on various topics.","projectId":"newstream","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/newstream"}],"tags":["python","flask","indico api","plotly"]},{"title":"Minimum Spanning Tree","description":"Visualization of Prim's and Kruskal's algorithm for finding the minimum spanning tree.","projectId":"minimum-spanning-tree","links":[{"name":"Website","url":"https://minspantree.herokuapp.com/"},{"name":"GitHub","url":"https://github.com/ericyhliu/minimum-spanning-tree"}],"tags":["javascript","minimum spanning tree","prim's algorithm","kruskal's algorithm"]},{"title":"Convex Hull","description":"Visualization of Graham's scan algorithm to find the convex hull of a set of points.","projectId":"convex-hull","links":[{"name":"Website","url":"https://convexhull.herokuapp.com/"},{"name":"GitHub","url":"https://github.com/ericyhliu/convex-hull"}],"tags":["javascript","convex hull","graham's scan algorithm"]}]}};
+module.exports = {"profileCard":{"title":"Eric Liu","description":"My name is Eric Liu, I'm a fourth year student at the <a href=\"https://uwaterloo.ca\" target=\"_blank\"><b>University of Waterloo</b></a>, studying Computer Science. Former SWE intern <a href=\"https://facebook.com\" target=\"_blank\"><b>@Facebook</b></a> on Instagram, <a href=\"https://google.com\" target=\"_blank\"><b>@Google</b></a>, <a href=\"https://globality.com\" target=\"_blank\"><b>@Globality</b></a>, <a href=\"https://tulip.co\" target=\"_blank\"><b>@Tulip</b></a>.","imageUrl":"https://s3.amazonaws.com/eliucs/img/sm/profile-photo-jan-2019.jpeg","twitterUrl":"https://twitter.com/ericyhliu","linkedinUrl":"https://linkedin.com/in/ericyhliu","githubUrl":"https://github.com/ericyhliu","devpostUrl":"https://devpost.com/ericyhliu","instagramUrl":"https://instagram.com/eric.yh.liu/","emailUrl":"mailto:eric@ericliu.ca"},"interactiveText":{"data":["Hello.","Hola.","Bonjour.","你好.","Привет.","こんにちは.","नमस्ते.","مرحبا."],"timeDelay":1000},"menu":{"menuItems":[{"title":"Home.","route":"/"},{"title":"About.","route":"/about"},{"title":"Projects.","route":"/projects"},{"title":"Contact.","route":"/contact"}]},"about":{"header":{"title":"About Me.","subtitle":"Who am I, what do I do?"},"markdown":{"key":"about","url":"https://s3.amazonaws.com/eliucs/content/about/about.md"}},"contact":{"header":{"title":"Contact.","subtitle":"I would love to get in touch with you!"},"items":[{"title":"Email.","description":"Send me something!","link":"eric@ericliu.ca","url":"mailto:eric@ericliu.ca"},{"title":"GitHub.","description":"Fork my repos!","link":"/ericyhliu","url":"https://github.com/ericyhliu"},{"title":"LinkedIn.","description":"Hire me!","link":"/ericyhliu","url":"https://linkedin.com/in/ericyhliu"},{"title":"Instagram.","description":"Follow me!","link":"@eric.yh.liu","url":"https://instagram.com/eric.yh.liu/"}]},"projects":{"header":{"title":"Projects.","subtitle":"Here are my finished projects and works in progress."},"baseContentUrl":"https://s3.amazonaws.com/eliucs/content/projects","baseImageUrl":"https://s3.amazonaws.com/eliucs/img/projects/full","baseThumbnailUrl":"https://s3.amazonaws.com/eliucs/img/projects/sm","items":[{"title":"Algorithm Helper.","description":"Web application for learning about algorithms, data structures, and other software engineering topics.","projectId":"algorithm-helper","links":[{"name":"Website","url":"https://www.algorithmhelper.com"},{"name":"GitHub","url":"https://github.com/algorithm-helper"}],"tags":["javascript","react","node","express","mongodb","aws","docker","elasticsearch","algorithms","data structures"]},{"title":"Kasparov Chess AI.","description":"UCI compatible chess engine built in Java, uses bitboards, alpha-beta pruning, and quiescence search.","projectId":"kasparov-chess-ai","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/kasparov-chess-ai"}],"tags":["java","chess engine","uci","bitboards","alpha-beta pruning","quiescence search","perft testing"]},{"title":"Wiki Graph Search.","description":"Platform built in Node using Wikipedia to generate courses as a low-cost educational resource alternative.","projectId":"wiki-graph-search","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/wiki-graph-search"}],"tags":["javascript","node","python","wikipedia api","raspberry pi","sql"]},{"title":"Alexa MD.","description":"Amazon Alexa app that uses the IBM Watson API to give diagnoses from voice commands.","projectId":"alexa-md","links":[{"name":"GitHub","url":"https://github.com/alexa-md"},{"name":"Devpost","url":"https://devpost.com/software/alexamd-9u6eop"}],"tags":["python","flask","javascript","aws lambda","amazon alexa api","ibm watson api"]},{"title":"Factable.","description":"Uses natural language processing and machine learning to determine if an article is fake news.","projectId":"factable","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/factable"},{"name":"Devpost","url":"https://devpost.com/software/factable"}],"tags":["python","flask","nltk","scikit learn","machine learning","newspaper api"]},{"title":"Productive.","description":"Chrome extension to help keep track of tasks, notes, shortcuts and productivity, with auto updating background.","projectId":"productive","links":[{"name":"Chrome Web Store","url":"https://chrome.google.com/webstore/detail/productive/mbajcbhcbcbdianjgagmnbgnjmhoaooa"},{"name":"GitHub","url":"https://github.com/ericyhliu/productive"}],"tags":["javascript","jquery","bootstrap"]},{"title":"Kneser-Ney Smoothing.","description":"PyQt application to demonstrate the Kneser-Ney smoothing algorithm for bigram/word prediction.","projectId":"kneser-ney-smoothing","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/kneser-ney"}],"tags":["python","pyqt","kneser-ney smoothing","n-grams","nlp"]},{"title":"tf-idf Text Summarizer.","description":"JavaScript library for text summarization using tf-idf weighting.","projectId":"tf-idf-text-summarizer","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/tf-idf-text-summarizer"}],"tags":["javascript","tf-idf weighting","text summarization","nlp"]},{"title":"Newstream.","description":"Aggregates news and Tweets and applies sentiment analysis on various topics.","projectId":"newstream","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/newstream"}],"tags":["python","flask","indico api","plotly"]},{"title":"Minimum Spanning Tree","description":"Visualization of Prim's and Kruskal's algorithm for finding the minimum spanning tree.","projectId":"minimum-spanning-tree","links":[{"name":"Website","url":"https://minspantree.herokuapp.com/"},{"name":"GitHub","url":"https://github.com/ericyhliu/minimum-spanning-tree"}],"tags":["javascript","minimum spanning tree","prim's algorithm","kruskal's algorithm"]},{"title":"Convex Hull","description":"Visualization of Graham's scan algorithm to find the convex hull of a set of points.","projectId":"convex-hull","links":[{"name":"Website","url":"https://convexhull.herokuapp.com/"},{"name":"GitHub","url":"https://github.com/ericyhliu/convex-hull"}],"tags":["javascript","convex hull","graham's scan algorithm"]}]},"irene":{"disappearingText":{"charset":"abcdefghijklmnopqrstuvwxyz","data":["no","u"],"length":120,"timeDelay":150}}};
 
 /***/ }),
 
@@ -68976,11 +68993,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux */ "../node_modules/redux/es/redux.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "../node_modules/react-redux/es/index.js");
-/* harmony import */ var components_DisappearingText__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/DisappearingText */ "./components/DisappearingText/index.js");
-/* harmony import */ var actions_NavBarActions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! actions/NavBarActions */ "./actions/NavBarActions.js");
-/* harmony import */ var actions_MenuActions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! actions/MenuActions */ "./actions/MenuActions.js");
-/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles.scss */ "./pages/IrenePage/styles.scss");
-/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var configuration__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! configuration */ "./configuration/index.js");
+/* harmony import */ var components_DisappearingText__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! components/DisappearingText */ "./components/DisappearingText/index.js");
+/* harmony import */ var actions_NavBarActions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! actions/NavBarActions */ "./actions/NavBarActions.js");
+/* harmony import */ var actions_MenuActions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! actions/MenuActions */ "./actions/MenuActions.js");
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./styles.scss */ "./pages/IrenePage/styles.scss");
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_8__);
 /* eslint-disable react/no-danger */
 
 
@@ -68990,21 +69008,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var IRENE_DATA = ['no', 'u'];
+
 
 var IrenePage = function IrenePage(_ref) {
   var dispatch = _ref.dispatch;
-  dispatch(Object(actions_NavBarActions__WEBPACK_IMPORTED_MODULE_5__["setThemeLight"])());
-  dispatch(Object(actions_NavBarActions__WEBPACK_IMPORTED_MODULE_5__["setPageThemeLight"])());
-  dispatch(Object(actions_NavBarActions__WEBPACK_IMPORTED_MODULE_5__["hamburgerClose"])());
-  dispatch(Object(actions_MenuActions__WEBPACK_IMPORTED_MODULE_6__["menuClose"])());
+  dispatch(Object(actions_NavBarActions__WEBPACK_IMPORTED_MODULE_6__["setThemeLight"])());
+  dispatch(Object(actions_NavBarActions__WEBPACK_IMPORTED_MODULE_6__["setPageThemeLight"])());
+  dispatch(Object(actions_NavBarActions__WEBPACK_IMPORTED_MODULE_6__["hamburgerClose"])());
+  dispatch(Object(actions_MenuActions__WEBPACK_IMPORTED_MODULE_7__["menuClose"])());
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: _styles_scss__WEBPACK_IMPORTED_MODULE_7__["ireneBackgroundStyles"]
+    className: _styles_scss__WEBPACK_IMPORTED_MODULE_8__["ireneBackgroundStyles"]
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: _styles_scss__WEBPACK_IMPORTED_MODULE_7__["ireneTextContainerStyles"]
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_DisappearingText__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    data: IRENE_DATA,
-    timeDelay: 150
+    className: _styles_scss__WEBPACK_IMPORTED_MODULE_8__["ireneTextContainerStyles"]
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_DisappearingText__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    charset: configuration__WEBPACK_IMPORTED_MODULE_4__["default"].get('irene.disappearingText.charset'),
+    data: configuration__WEBPACK_IMPORTED_MODULE_4__["default"].get('irene.disappearingText.data'),
+    length: configuration__WEBPACK_IMPORTED_MODULE_4__["default"].get('irene.disappearingText.length'),
+    timeDelay: configuration__WEBPACK_IMPORTED_MODULE_4__["default"].get('irene.disappearingText.timeDelay')
   })));
 };
 

@@ -7366,8 +7366,9 @@ a.text-dark:focus, a.text-dark:hover {
 .components-DisappearingText-styles__disappearingTextStyles {
   font-size: 8vw;
   font-weight: 700; }
-  .components-DisappearingText-styles__disappearingTextStyles i {
-    display: clear; }
+
+.components-DisappearingText-styles__disappearingTextBlankStyles {
+  color: transparent; }
 
 .pages-IrenePage-styles__ireneBackgroundStyles {
   width: 100wh;
