@@ -324,7 +324,7 @@
   "irene": {
     "disappearingText": {
       "charset": "abcdefghijklmnopqrstuvwxyz",
-      "data": ["no", "u"],
+      "data": ["i", "love", "you"],
       "length": 120,
       "timeDelay": 150
     }
