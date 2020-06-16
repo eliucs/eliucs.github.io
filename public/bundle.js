@@ -67751,6 +67751,165 @@ module.exports = {"disappearingTextStyles":"components-DisappearingText-styles__
 
 /***/ }),
 
+/***/ "./components/FingersTouching/FingersTouching.jsx":
+/*!********************************************************!*\
+  !*** ./components/FingersTouching/FingersTouching.jsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return FingersTouching; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./styles.scss */ "./components/FingersTouching/styles.scss");
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+ // import PropTypes from 'prop-types';
+
+ // function shuffleArray(arr) {
+//   for (let i = arr.length - 1; i > 0; i--) {
+//     const j = Math.floor(Math.random() * (i + 1));
+//     const temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//   }
+// }
+
+var LEFT_FINGER = "\uD83D\uDC49";
+var RIGHT_FINGER = "\uD83D\uDC48";
+var CUTE_FACE = "\uD83E\uDD7A";
+
+var FingersTouching =
+/*#__PURE__*/
+function (_Component) {
+  _inherits(FingersTouching, _Component);
+
+  function FingersTouching(props) {
+    var _this;
+
+    _classCallCheck(this, FingersTouching);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(FingersTouching).call(this, props));
+    _this.state = {
+      isTouching: false
+    };
+    _this.leftFinger = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    _this.rightFinger = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    _this.cuteFace = react__WEBPACK_IMPORTED_MODULE_0___default.a.createRef();
+    _this.checkFingersTouching = _this.checkFingersTouching.bind(_assertThisInitialized(_assertThisInitialized(_this))); // this.burstEmojis = this.burstEmojis.bind(this);
+
+    return _this;
+  }
+
+  _createClass(FingersTouching, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      window.addEventListener('resize', this.checkFingersTouching);
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      window.removeEventListener('resize', this.checkFingersTouching);
+
+      if (this.interval) {
+        clearInterval(this.interval);
+      }
+    }
+  }, {
+    key: "checkFingersTouching",
+    value: function checkFingersTouching() {
+      var leftFinger = this.leftFinger.current.getBoundingClientRect();
+      var rightFinger = this.rightFinger.current.getBoundingClientRect();
+      var isTouching = leftFinger.left <= rightFinger.right && rightFinger.left <= leftFinger.right;
+      if (!isTouching) return;
+      this.setState({
+        isTouching: true
+      });
+      window.removeEventListener('resize', this.checkFingersTouching); // this.interval = setInterval(this.burstEmojis, 2000);
+    } // burstEmojis() {}
+
+  }, {
+    key: "render",
+    value: function render() {
+      if (!this.state.isTouching) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: _styles_scss__WEBPACK_IMPORTED_MODULE_1__["fingersTouchingContainerStyles"]
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: _styles_scss__WEBPACK_IMPORTED_MODULE_1__["fingersTouchingLeftStyles"],
+          ref: this.leftFinger
+        }, LEFT_FINGER), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: _styles_scss__WEBPACK_IMPORTED_MODULE_1__["fingersTouchingRightStyles"],
+          ref: this.rightFinger
+        }, RIGHT_FINGER));
+      }
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: _styles_scss__WEBPACK_IMPORTED_MODULE_1__["fingersTouchingContainerStyles"]
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: _styles_scss__WEBPACK_IMPORTED_MODULE_1__["fingersTouchingCenterStyles"]
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: _styles_scss__WEBPACK_IMPORTED_MODULE_1__["fingersTouchingCuteFaceStyles"],
+        ref: this.cuteFace
+      }, CUTE_FACE), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: _styles_scss__WEBPACK_IMPORTED_MODULE_1__["fingersTouchingTextStyles"]
+      }, "i love u")));
+    }
+  }]);
+
+  return FingersTouching;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+FingersTouching.props = {};
+
+/***/ }),
+
+/***/ "./components/FingersTouching/index.js":
+/*!*********************************************!*\
+  !*** ./components/FingersTouching/index.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _FingersTouching__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FingersTouching */ "./components/FingersTouching/FingersTouching.jsx");
+
+/* harmony default export */ __webpack_exports__["default"] = (_FingersTouching__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/***/ }),
+
+/***/ "./components/FingersTouching/styles.scss":
+/*!************************************************!*\
+  !*** ./components/FingersTouching/styles.scss ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"fingersTouchingContainerStyles":"components-FingersTouching-styles__fingersTouchingContainerStyles","fingersTouchingLeftStyles":"components-FingersTouching-styles__fingersTouchingLeftStyles","fingersTouchingRightStyles":"components-FingersTouching-styles__fingersTouchingRightStyles","fingersTouchingCenterStyles":"components-FingersTouching-styles__fingersTouchingCenterStyles","fingersTouchingCuteFaceStyles":"components-FingersTouching-styles__fingersTouchingCuteFaceStyles","fingersTouchingTextStyles":"components-FingersTouching-styles__fingersTouchingTextStyles","flowOne":"components-FingersTouching-styles__flowOne","flowTwo":"components-FingersTouching-styles__flowTwo","flowThree":"components-FingersTouching-styles__flowThree"};
+
+/***/ }),
+
 /***/ "./components/HomeLinks/HomeLinks.jsx":
 /*!********************************************!*\
   !*** ./components/HomeLinks/HomeLinks.jsx ***!
@@ -68644,7 +68803,7 @@ function () {
 /*! exports provided: profileCard, interactiveText, menu, about, contact, projects, irene, default */
 /***/ (function(module) {
 
-module.exports = {"profileCard":{"title":"Eric Liu","description":"My name is Eric Liu, I'm a fourth year student at the <a href=\"https://uwaterloo.ca\" target=\"_blank\"><b>University of Waterloo</b></a>, studying Computer Science. Former SWE intern <a href=\"https://facebook.com\" target=\"_blank\"><b>@Facebook</b></a> on Instagram, <a href=\"https://google.com\" target=\"_blank\"><b>@Google</b></a>, <a href=\"https://globality.com\" target=\"_blank\"><b>@Globality</b></a>, <a href=\"https://tulip.co\" target=\"_blank\"><b>@Tulip</b></a>.","imageUrl":"https://s3.amazonaws.com/eliucs/img/sm/profile-photo-jan-2019.jpeg","twitterUrl":"https://twitter.com/ericyhliu","linkedinUrl":"https://linkedin.com/in/ericyhliu","githubUrl":"https://github.com/ericyhliu","devpostUrl":"https://devpost.com/ericyhliu","instagramUrl":"https://instagram.com/eric.yh.liu/","emailUrl":"mailto:eric@ericliu.ca"},"interactiveText":{"data":["Hello.","Hola.","Bonjour.","你好.","Привет.","こんにちは.","नमस्ते.","مرحبا."],"timeDelay":1000},"menu":{"menuItems":[{"title":"Home.","route":"/"},{"title":"About.","route":"/about"},{"title":"Projects.","route":"/projects"},{"title":"Contact.","route":"/contact"}]},"about":{"header":{"title":"About Me.","subtitle":"Who am I, what do I do?"},"markdown":{"key":"about","url":"https://s3.amazonaws.com/eliucs/content/about/about.md"}},"contact":{"header":{"title":"Contact.","subtitle":"I would love to get in touch with you!"},"items":[{"title":"Email.","description":"Send me something!","link":"eric@ericliu.ca","url":"mailto:eric@ericliu.ca"},{"title":"GitHub.","description":"Fork my repos!","link":"/ericyhliu","url":"https://github.com/ericyhliu"},{"title":"LinkedIn.","description":"Hire me!","link":"/ericyhliu","url":"https://linkedin.com/in/ericyhliu"},{"title":"Instagram.","description":"Follow me!","link":"@eric.yh.liu","url":"https://instagram.com/eric.yh.liu/"}]},"projects":{"header":{"title":"Projects.","subtitle":"Here are my finished projects and works in progress."},"baseContentUrl":"https://s3.amazonaws.com/eliucs/content/projects","baseImageUrl":"https://s3.amazonaws.com/eliucs/img/projects/full","baseThumbnailUrl":"https://s3.amazonaws.com/eliucs/img/projects/sm","items":[{"title":"Algorithm Helper.","description":"Web application for learning about algorithms, data structures, and other software engineering topics.","projectId":"algorithm-helper","links":[{"name":"Website","url":"https://www.algorithmhelper.com"},{"name":"GitHub","url":"https://github.com/algorithm-helper"}],"tags":["javascript","react","node","express","mongodb","aws","docker","elasticsearch","algorithms","data structures"]},{"title":"Kasparov Chess AI.","description":"UCI compatible chess engine built in Java, uses bitboards, alpha-beta pruning, and quiescence search.","projectId":"kasparov-chess-ai","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/kasparov-chess-ai"}],"tags":["java","chess engine","uci","bitboards","alpha-beta pruning","quiescence search","perft testing"]},{"title":"Wiki Graph Search.","description":"Platform built in Node using Wikipedia to generate courses as a low-cost educational resource alternative.","projectId":"wiki-graph-search","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/wiki-graph-search"}],"tags":["javascript","node","python","wikipedia api","raspberry pi","sql"]},{"title":"Alexa MD.","description":"Amazon Alexa app that uses the IBM Watson API to give diagnoses from voice commands.","projectId":"alexa-md","links":[{"name":"GitHub","url":"https://github.com/alexa-md"},{"name":"Devpost","url":"https://devpost.com/software/alexamd-9u6eop"}],"tags":["python","flask","javascript","aws lambda","amazon alexa api","ibm watson api"]},{"title":"Factable.","description":"Uses natural language processing and machine learning to determine if an article is fake news.","projectId":"factable","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/factable"},{"name":"Devpost","url":"https://devpost.com/software/factable"}],"tags":["python","flask","nltk","scikit learn","machine learning","newspaper api"]},{"title":"Productive.","description":"Chrome extension to help keep track of tasks, notes, shortcuts and productivity, with auto updating background.","projectId":"productive","links":[{"name":"Chrome Web Store","url":"https://chrome.google.com/webstore/detail/productive/mbajcbhcbcbdianjgagmnbgnjmhoaooa"},{"name":"GitHub","url":"https://github.com/ericyhliu/productive"}],"tags":["javascript","jquery","bootstrap"]},{"title":"Kneser-Ney Smoothing.","description":"PyQt application to demonstrate the Kneser-Ney smoothing algorithm for bigram/word prediction.","projectId":"kneser-ney-smoothing","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/kneser-ney"}],"tags":["python","pyqt","kneser-ney smoothing","n-grams","nlp"]},{"title":"tf-idf Text Summarizer.","description":"JavaScript library for text summarization using tf-idf weighting.","projectId":"tf-idf-text-summarizer","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/tf-idf-text-summarizer"}],"tags":["javascript","tf-idf weighting","text summarization","nlp"]},{"title":"Newstream.","description":"Aggregates news and Tweets and applies sentiment analysis on various topics.","projectId":"newstream","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/newstream"}],"tags":["python","flask","indico api","plotly"]},{"title":"Minimum Spanning Tree","description":"Visualization of Prim's and Kruskal's algorithm for finding the minimum spanning tree.","projectId":"minimum-spanning-tree","links":[{"name":"Website","url":"https://minspantree.herokuapp.com/"},{"name":"GitHub","url":"https://github.com/ericyhliu/minimum-spanning-tree"}],"tags":["javascript","minimum spanning tree","prim's algorithm","kruskal's algorithm"]},{"title":"Convex Hull","description":"Visualization of Graham's scan algorithm to find the convex hull of a set of points.","projectId":"convex-hull","links":[{"name":"Website","url":"https://convexhull.herokuapp.com/"},{"name":"GitHub","url":"https://github.com/ericyhliu/convex-hull"}],"tags":["javascript","convex hull","graham's scan algorithm"]}]},"irene":{"disappearingText":{"charset":"abcdefghijklmnopqrstuvwxyz","data":["no","u"],"length":120,"timeDelay":150}}};
+module.exports = {"profileCard":{"title":"Eric Liu","description":"My name is Eric Liu, I'm a fourth year student at the <a href=\"https://uwaterloo.ca\" target=\"_blank\"><b>University of Waterloo</b></a>, studying Computer Science. Former SWE intern <a href=\"https://facebook.com\" target=\"_blank\"><b>@Facebook</b></a> on Instagram, <a href=\"https://google.com\" target=\"_blank\"><b>@Google</b></a>, <a href=\"https://globality.com\" target=\"_blank\"><b>@Globality</b></a>, <a href=\"https://tulip.co\" target=\"_blank\"><b>@Tulip</b></a>.","imageUrl":"https://s3.amazonaws.com/eliucs/img/sm/profile-photo-jan-2019.jpeg","twitterUrl":"https://twitter.com/ericyhliu","linkedinUrl":"https://linkedin.com/in/ericyhliu","githubUrl":"https://github.com/ericyhliu","devpostUrl":"https://devpost.com/ericyhliu","instagramUrl":"https://instagram.com/eric.yh.liu/","emailUrl":"mailto:eric@ericliu.ca"},"interactiveText":{"data":["Hello.","Hola.","Bonjour.","你好.","Привет.","こんにちは.","नमस्ते.","مرحبا."],"timeDelay":1000},"menu":{"menuItems":[{"title":"Home.","route":"/"},{"title":"About.","route":"/about"},{"title":"Projects.","route":"/projects"},{"title":"Contact.","route":"/contact"}]},"about":{"header":{"title":"About Me.","subtitle":"Who am I, what do I do?"},"markdown":{"key":"about","url":"https://s3.amazonaws.com/eliucs/content/about/about.md"}},"contact":{"header":{"title":"Contact.","subtitle":"I would love to get in touch with you!"},"items":[{"title":"Email.","description":"Send me something!","link":"eric@ericliu.ca","url":"mailto:eric@ericliu.ca"},{"title":"GitHub.","description":"Fork my repos!","link":"/ericyhliu","url":"https://github.com/ericyhliu"},{"title":"LinkedIn.","description":"Hire me!","link":"/ericyhliu","url":"https://linkedin.com/in/ericyhliu"},{"title":"Instagram.","description":"Follow me!","link":"@eric.yh.liu","url":"https://instagram.com/eric.yh.liu/"}]},"projects":{"header":{"title":"Projects.","subtitle":"Here are my finished projects and works in progress."},"baseContentUrl":"https://s3.amazonaws.com/eliucs/content/projects","baseImageUrl":"https://s3.amazonaws.com/eliucs/img/projects/full","baseThumbnailUrl":"https://s3.amazonaws.com/eliucs/img/projects/sm","items":[{"title":"Algorithm Helper.","description":"Web application for learning about algorithms, data structures, and other software engineering topics.","projectId":"algorithm-helper","links":[{"name":"Website","url":"https://www.algorithmhelper.com"},{"name":"GitHub","url":"https://github.com/algorithm-helper"}],"tags":["javascript","react","node","express","mongodb","aws","docker","elasticsearch","algorithms","data structures"]},{"title":"Kasparov Chess AI.","description":"UCI compatible chess engine built in Java, uses bitboards, alpha-beta pruning, and quiescence search.","projectId":"kasparov-chess-ai","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/kasparov-chess-ai"}],"tags":["java","chess engine","uci","bitboards","alpha-beta pruning","quiescence search","perft testing"]},{"title":"Wiki Graph Search.","description":"Platform built in Node using Wikipedia to generate courses as a low-cost educational resource alternative.","projectId":"wiki-graph-search","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/wiki-graph-search"}],"tags":["javascript","node","python","wikipedia api","raspberry pi","sql"]},{"title":"Alexa MD.","description":"Amazon Alexa app that uses the IBM Watson API to give diagnoses from voice commands.","projectId":"alexa-md","links":[{"name":"GitHub","url":"https://github.com/alexa-md"},{"name":"Devpost","url":"https://devpost.com/software/alexamd-9u6eop"}],"tags":["python","flask","javascript","aws lambda","amazon alexa api","ibm watson api"]},{"title":"Factable.","description":"Uses natural language processing and machine learning to determine if an article is fake news.","projectId":"factable","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/factable"},{"name":"Devpost","url":"https://devpost.com/software/factable"}],"tags":["python","flask","nltk","scikit learn","machine learning","newspaper api"]},{"title":"Productive.","description":"Chrome extension to help keep track of tasks, notes, shortcuts and productivity, with auto updating background.","projectId":"productive","links":[{"name":"Chrome Web Store","url":"https://chrome.google.com/webstore/detail/productive/mbajcbhcbcbdianjgagmnbgnjmhoaooa"},{"name":"GitHub","url":"https://github.com/ericyhliu/productive"}],"tags":["javascript","jquery","bootstrap"]},{"title":"Kneser-Ney Smoothing.","description":"PyQt application to demonstrate the Kneser-Ney smoothing algorithm for bigram/word prediction.","projectId":"kneser-ney-smoothing","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/kneser-ney"}],"tags":["python","pyqt","kneser-ney smoothing","n-grams","nlp"]},{"title":"tf-idf Text Summarizer.","description":"JavaScript library for text summarization using tf-idf weighting.","projectId":"tf-idf-text-summarizer","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/tf-idf-text-summarizer"}],"tags":["javascript","tf-idf weighting","text summarization","nlp"]},{"title":"Newstream.","description":"Aggregates news and Tweets and applies sentiment analysis on various topics.","projectId":"newstream","links":[{"name":"GitHub","url":"https://github.com/ericyhliu/newstream"}],"tags":["python","flask","indico api","plotly"]},{"title":"Minimum Spanning Tree","description":"Visualization of Prim's and Kruskal's algorithm for finding the minimum spanning tree.","projectId":"minimum-spanning-tree","links":[{"name":"Website","url":"https://minspantree.herokuapp.com/"},{"name":"GitHub","url":"https://github.com/ericyhliu/minimum-spanning-tree"}],"tags":["javascript","minimum spanning tree","prim's algorithm","kruskal's algorithm"]},{"title":"Convex Hull","description":"Visualization of Graham's scan algorithm to find the convex hull of a set of points.","projectId":"convex-hull","links":[{"name":"Website","url":"https://convexhull.herokuapp.com/"},{"name":"GitHub","url":"https://github.com/ericyhliu/convex-hull"}],"tags":["javascript","convex hull","graham's scan algorithm"]}]},"irene":{"disappearingText":{"charset":"abcdefghijklmnopqrstuvwxyz","data":["i","love","you"],"length":120,"timeDelay":150}}};
 
 /***/ }),
 
@@ -68975,6 +69134,88 @@ __webpack_require__.r(__webpack_exports__);
 
 // extracted by mini-css-extract-plugin
 module.exports = {"homeBackgroundStyles":"pages-HomePage-styles__homeBackgroundStyles","gradient":"pages-HomePage-styles__gradient","homeTextContainerStyles":"pages-HomePage-styles__homeTextContainerStyles","homeTextDescriptionStyles":"pages-HomePage-styles__homeTextDescriptionStyles"};
+
+/***/ }),
+
+/***/ "./pages/Irene2Page/Irene2Page.jsx":
+/*!*****************************************!*\
+  !*** ./pages/Irene2Page/Irene2Page.jsx ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "../node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux */ "../node_modules/redux/es/redux.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "../node_modules/react-redux/es/index.js");
+/* harmony import */ var components_FingersTouching__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! components/FingersTouching */ "./components/FingersTouching/index.js");
+/* harmony import */ var actions_NavBarActions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! actions/NavBarActions */ "./actions/NavBarActions.js");
+/* harmony import */ var actions_MenuActions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! actions/MenuActions */ "./actions/MenuActions.js");
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./styles.scss */ "./pages/Irene2Page/styles.scss");
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_7__);
+/* eslint-disable react/no-danger */
+
+
+
+
+
+
+
+
+
+var Irene2Page = function Irene2Page(_ref) {
+  var dispatch = _ref.dispatch;
+  dispatch(Object(actions_NavBarActions__WEBPACK_IMPORTED_MODULE_5__["setThemeLight"])());
+  dispatch(Object(actions_NavBarActions__WEBPACK_IMPORTED_MODULE_5__["setPageThemeLight"])());
+  dispatch(Object(actions_NavBarActions__WEBPACK_IMPORTED_MODULE_5__["hamburgerClose"])());
+  dispatch(Object(actions_MenuActions__WEBPACK_IMPORTED_MODULE_6__["menuClose"])());
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _styles_scss__WEBPACK_IMPORTED_MODULE_7__["irene2BackgroundStyles"]
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _styles_scss__WEBPACK_IMPORTED_MODULE_7__["irene2ContainerStyles"]
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_FingersTouching__WEBPACK_IMPORTED_MODULE_4__["default"], null)));
+};
+
+Irene2Page.propTypes = {
+  dispatch: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.func
+};
+
+var mapStateToProps = function mapStateToProps() {
+  return {};
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_2__["compose"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps))(Irene2Page));
+
+/***/ }),
+
+/***/ "./pages/Irene2Page/index.js":
+/*!***********************************!*\
+  !*** ./pages/Irene2Page/index.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Irene2Page__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Irene2Page */ "./pages/Irene2Page/Irene2Page.jsx");
+
+/* harmony default export */ __webpack_exports__["default"] = (_Irene2Page__WEBPACK_IMPORTED_MODULE_1__["default"]);
+
+/***/ }),
+
+/***/ "./pages/Irene2Page/styles.scss":
+/*!**************************************!*\
+  !*** ./pages/Irene2Page/styles.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"irene2BackgroundStyles":"pages-Irene2Page-styles__irene2BackgroundStyles","irene2ContainerStyles":"pages-Irene2Page-styles__irene2ContainerStyles"};
 
 /***/ }),
 
@@ -69512,8 +69753,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var pages_ProjectPage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! pages/ProjectPage */ "./pages/ProjectPage/index.js");
 /* harmony import */ var pages_ProjectsPage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! pages/ProjectsPage */ "./pages/ProjectsPage/index.js");
 /* harmony import */ var pages_IrenePage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! pages/IrenePage */ "./pages/IrenePage/index.js");
-/* harmony import */ var components_NavBar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! components/NavBar */ "./components/NavBar/index.js");
-/* harmony import */ var components_Menu__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! components/Menu */ "./components/Menu/index.js");
+/* harmony import */ var pages_Irene2Page__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! pages/Irene2Page */ "./pages/Irene2Page/index.js");
+/* harmony import */ var components_NavBar__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! components/NavBar */ "./components/NavBar/index.js");
+/* harmony import */ var components_Menu__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! components/Menu */ "./components/Menu/index.js");
+
 
 
 
@@ -69529,7 +69772,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 var AppRouter = function AppRouter() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_NavBar__WEBPACK_IMPORTED_MODULE_8__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_Menu__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_NavBar__WEBPACK_IMPORTED_MODULE_9__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_Menu__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/",
     component: function component() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pages_HomePage__WEBPACK_IMPORTED_MODULE_4__["default"], null);
@@ -69560,9 +69803,15 @@ var AppRouter = function AppRouter() {
     },
     exact: true
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
-    path: "/irene",
+    path: "/irene/1",
     component: function component() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pages_IrenePage__WEBPACK_IMPORTED_MODULE_7__["default"], null);
+    },
+    exact: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/irene/2",
+    component: function component() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pages_Irene2Page__WEBPACK_IMPORTED_MODULE_8__["default"], null);
     },
     exact: true
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
