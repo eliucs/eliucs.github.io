@@ -7479,6 +7479,18 @@ a.text-dark:focus, a.text-dark:hover {
   height: 100%;
   width: 100%; }
 
+.pages-Irene21Page-styles__irene21BackgroundStyles {
+  width: 100wh;
+  height: 100vh;
+  color: #FFF;
+  background: #000;
+  background-size: 400% 400%; }
+
+.pages-Irene21Page-styles__irene21ContainerStyles {
+  position: relative;
+  height: 100%;
+  width: 100%; }
+
 .components-NavBar-styles__navBarContainerStyles {
   position: fixed;
   top: 1rem;

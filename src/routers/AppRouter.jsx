@@ -13,6 +13,7 @@ import ProjectPage from 'pages/ProjectPage';
 import ProjectsPage from 'pages/ProjectsPage';
 import IrenePage from 'pages/IrenePage';
 import Irene2Page from 'pages/Irene2Page';
+import Irene21Page from 'pages/Irene21Page';
 
 import NavBar from 'components/NavBar';
 import Menu from 'components/Menu';
@@ -66,6 +67,12 @@ const AppRouter = () => (
         <Route
           path="/irene/2"
           component={() => <Irene2Page />}
+          exact
+        />
+
+        <Route
+          path="/irene/2.1"
+          component={() => <Irene21Page />}
           exact
         />
 

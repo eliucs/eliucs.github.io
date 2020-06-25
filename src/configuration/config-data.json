@@ -328,5 +328,8 @@
       "length": 120,
       "timeDelay": 150
     }
+  },
+  "irene2-1": {
+    "videoSrc": "https://eliucs.s3.amazonaws.com/video/21.mp4"
   }
 }
