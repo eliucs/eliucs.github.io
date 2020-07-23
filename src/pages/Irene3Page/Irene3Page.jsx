@@ -15,11 +15,11 @@ import {
 } from 'actions/MenuActions';
 
 import {
-  irene21BackgroundStyles,
-  irene21ContainerStyles,
+  irene3BackgroundStyles,
+  irene3ContainerStyles,
 } from './styles.scss';
 
-class Irene21Page extends Component {
+class Irene3Page extends Component {
   constructor(props) {
     super(props);
     this.video = React.createRef();
@@ -33,11 +33,11 @@ class Irene21Page extends Component {
     dispatch(menuClose());
 
     return (
-      <div className={irene21BackgroundStyles}>
-        <div className={irene21ContainerStyles}>
+      <div className={irene3BackgroundStyles}>
+        <div className={irene3ContainerStyles}>
           {/* eslint-disable-next-line */}
           <video ref={this.video} height="100%" width="100%" onClick={() => this.video.current.play()}>
-            <source src={Config.get('irene2-1.videoSrc')} type="video/mp4" />
+            <source src={Config.get('irene3.videoSrc')} type="video/mp4" />
             <track />
           </video>
         </div>
@@ -46,7 +46,7 @@ class Irene21Page extends Component {
   }
 }
 
-Irene21Page.propTypes = {
+Irene3Page.propTypes = {
   dispatch: PropTypes.func,
 };
 
@@ -54,4 +54,4 @@ const mapStateToProps = () => ({});
 
 export default compose(
   connect(mapStateToProps),
-)(Irene21Page);
+)(Irene3Page);
