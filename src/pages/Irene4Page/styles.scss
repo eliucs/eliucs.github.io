@@ -1,0 +1,15 @@
+:local(.irene4BackgroundStyles) {
+  width: 100wh;
+  height: 100vh;
+  background: #eeeeee;
+  background-size: 400% 400%;
+}
+
+:local(.irene4ContainerStyles) {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -100px;
+}

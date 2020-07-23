@@ -25,3 +25,6 @@ out
 # Build
 /public/bundle-client.js.map
 /public/main.css.map
+
+# Configuration
+config

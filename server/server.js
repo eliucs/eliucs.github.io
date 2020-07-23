@@ -2,6 +2,10 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const path = require('path');
 const { VoiceResponse } = require('twilio').twiml;
+const twilioClient = require('twilio')(
+  process.env.TWILIO_ACCOUNT_SID,
+  process.env.TWILIO_AUTH_TOKEN,
+);
 
 const publicPath = path.resolve(process.cwd(), 'public');
 const port = process.env.PORT || 3000;
@@ -28,6 +32,23 @@ app.post('/voice', (req, res) => {
   twiml.play(songUrl);
   res.header('Content-Type', 'text/xml');
   res.send(twiml.toString());
+});
+
+app.post('/call', (req, res) => {
+  res.header('Content-Type', 'application/json');
+  const { phoneNumberTo } = req.body;
+  twilioClient.calls
+    .create({
+      url: 'https://ericliu.ca/voice',
+      to: `+${phoneNumberTo}`,
+      from: process.env.TWILIO_PHONE_NUMBER,
+    })
+    .then(call => {
+      console.log(call.sid);
+      res.send({
+        callSid: call.sid,
+      });
+    });
 });
 
 module.exports = app;

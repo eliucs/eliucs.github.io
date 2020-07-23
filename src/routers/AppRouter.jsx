@@ -14,6 +14,7 @@ import ProjectsPage from 'pages/ProjectsPage';
 import IrenePage from 'pages/IrenePage';
 import Irene2Page from 'pages/Irene2Page';
 import Irene3Page from 'pages/Irene3Page';
+import Irene4Page from 'pages/Irene4Page';
 
 import NavBar from 'components/NavBar';
 import Menu from 'components/Menu';
@@ -73,6 +74,12 @@ const AppRouter = () => (
         <Route
           path="/irene/3"
           component={() => <Irene3Page />}
+          exact
+        />
+
+        <Route
+          path="/irene/4"
+          component={() => <Irene4Page />}
           exact
         />
 
