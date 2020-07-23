@@ -40,7 +40,7 @@ app.post('/call', (req, res) => {
   twilioClient.calls
     .create({
       url: 'https://ericliu.ca/voice',
-      to: `+${phoneNumberTo}`,
+      to: `${phoneNumberTo}`,
       from: process.env.TWILIO_PHONE_NUMBER,
     })
     .then(call => {
