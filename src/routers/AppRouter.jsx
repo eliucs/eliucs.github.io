@@ -11,10 +11,12 @@ import ContactPage from 'pages/ContactPage';
 import HomePage from 'pages/HomePage';
 import ProjectPage from 'pages/ProjectPage';
 import ProjectsPage from 'pages/ProjectsPage';
+
 import IrenePage from 'pages/IrenePage';
 import Irene2Page from 'pages/Irene2Page';
 import Irene3Page from 'pages/Irene3Page';
 import Irene4Page from 'pages/Irene4Page';
+import IreneCountdownPage from 'pages/IreneCountdownPage';
 
 import NavBar from 'components/NavBar';
 import Menu from 'components/Menu';
@@ -80,6 +82,12 @@ const AppRouter = () => (
         <Route
           path="/irene/4"
           component={() => <Irene4Page />}
+          exact
+        />
+
+        <Route
+          path="/irene/countdown"
+          component={() => <IreneCountdownPage />}
           exact
         />
 

@@ -69558,6 +69558,85 @@ module.exports = {"irene4BackgroundStyles":"pages-Irene4Page-styles__irene4Backg
 
 /***/ }),
 
+/***/ "./pages/IreneCountdownPage/IreneCountdownPage.jsx":
+/*!*********************************************************!*\
+  !*** ./pages/IreneCountdownPage/IreneCountdownPage.jsx ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ "../node_modules/redux/es/redux.js");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "../node_modules/react-redux/es/index.js");
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles.scss */ "./pages/IreneCountdownPage/styles.scss");
+/* harmony import */ var _styles_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_styles_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* eslint-disable react/no-danger */
+
+
+
+
+var TEXT = 'until I see ❤️';
+var TARGET_DATE = new Date(2020, 7, 17);
+var DAY_MS = 1000 * 60 * 60 * 24;
+
+function getDaysText() {
+  var today = new Date();
+  var daysLeft = Math.max(Math.ceil((TARGET_DATE.getTime() - today.getTime()) / DAY_MS), 0);
+  return "".concat(daysLeft, " days");
+}
+
+function IreneCountdownPage() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _styles_scss__WEBPACK_IMPORTED_MODULE_3__["ireneCountdownBackgroundStyles"]
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _styles_scss__WEBPACK_IMPORTED_MODULE_3__["ireneCountdownContainerStyles"]
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _styles_scss__WEBPACK_IMPORTED_MODULE_3__["ireneCountdownDateStyles"]
+  }, getDaysText()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: _styles_scss__WEBPACK_IMPORTED_MODULE_3__["ireneCountdownTextStyles"]
+  }, TEXT))));
+}
+
+IreneCountdownPage.propTypes = {};
+
+var mapStateToProps = function mapStateToProps() {
+  return {};
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(redux__WEBPACK_IMPORTED_MODULE_1__["compose"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps))(IreneCountdownPage));
+
+/***/ }),
+
+/***/ "./pages/IreneCountdownPage/index.js":
+/*!*******************************************!*\
+  !*** ./pages/IreneCountdownPage/index.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _IreneCountdownPage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./IreneCountdownPage */ "./pages/IreneCountdownPage/IreneCountdownPage.jsx");
+
+/* harmony default export */ __webpack_exports__["default"] = (_IreneCountdownPage__WEBPACK_IMPORTED_MODULE_0__["default"]);
+
+/***/ }),
+
+/***/ "./pages/IreneCountdownPage/styles.scss":
+/*!**********************************************!*\
+  !*** ./pages/IreneCountdownPage/styles.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+module.exports = {"ireneCountdownBackgroundStyles":"pages-IreneCountdownPage-styles__ireneCountdownBackgroundStyles","ireneCountdownContainerStyles":"pages-IreneCountdownPage-styles__ireneCountdownContainerStyles","ireneCountdownDateStyles":"pages-IreneCountdownPage-styles__ireneCountdownDateStyles","ireneCountdownTextStyles":"pages-IreneCountdownPage-styles__ireneCountdownTextStyles"};
+
+/***/ }),
+
 /***/ "./pages/IrenePage/IrenePage.jsx":
 /*!***************************************!*\
   !*** ./pages/IrenePage/IrenePage.jsx ***!
@@ -70095,8 +70174,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var pages_Irene2Page__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! pages/Irene2Page */ "./pages/Irene2Page/index.js");
 /* harmony import */ var pages_Irene3Page__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! pages/Irene3Page */ "./pages/Irene3Page/index.js");
 /* harmony import */ var pages_Irene4Page__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! pages/Irene4Page */ "./pages/Irene4Page/index.js");
-/* harmony import */ var components_NavBar__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! components/NavBar */ "./components/NavBar/index.js");
-/* harmony import */ var components_Menu__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! components/Menu */ "./components/Menu/index.js");
+/* harmony import */ var pages_IreneCountdownPage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! pages/IreneCountdownPage */ "./pages/IreneCountdownPage/index.js");
+/* harmony import */ var components_NavBar__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! components/NavBar */ "./components/NavBar/index.js");
+/* harmony import */ var components_Menu__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! components/Menu */ "./components/Menu/index.js");
+
 
 
 
@@ -70115,7 +70196,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 var AppRouter = function AppRouter() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_NavBar__WEBPACK_IMPORTED_MODULE_11__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_Menu__WEBPACK_IMPORTED_MODULE_12__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_NavBar__WEBPACK_IMPORTED_MODULE_12__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(components_Menu__WEBPACK_IMPORTED_MODULE_13__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/",
     component: function component() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pages_HomePage__WEBPACK_IMPORTED_MODULE_4__["default"], null);
@@ -70167,6 +70248,12 @@ var AppRouter = function AppRouter() {
     path: "/irene/4",
     component: function component() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pages_Irene4Page__WEBPACK_IMPORTED_MODULE_10__["default"], null);
+    },
+    exact: true
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/irene/countdown",
+    component: function component() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(pages_IreneCountdownPage__WEBPACK_IMPORTED_MODULE_11__["default"], null);
     },
     exact: true
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
