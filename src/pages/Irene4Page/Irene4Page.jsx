@@ -49,7 +49,7 @@ class Irene4Page extends React.Component {
 
   onButtonClick() {
     const data = { phoneNumberTo: this.state.phone };
-    fetch('/call', {
+    fetch('localhost:3000/call', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: { 'Content-Type': 'application/json' },
