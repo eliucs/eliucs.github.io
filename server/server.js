@@ -20,6 +20,8 @@ app.use(bodyParser.urlencoded({
 
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
+  console.log(`Twilio Account SID: ${process.env.TWILIO_ACCOUNT_SID}`);
+  console.log(`Twilio Auth Token: ${process.env.TWILIO_AUTH_TOKEN}`);
 });
 
 app.get('*', (req, res) => {

@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "lint": "eslint .",
-    "start": "node server/server.js",
+    "start": "source config/.env && node server/server.js",
     "client:build": "webpack --mode production --config webpack/webpack-client.config.js",
     "client:dev": "webpack --mode development --config webpack/webpack-client.config.js",
     "client:devw": "webpack --mode development --config webpack/webpack-client.config.js --watch",
