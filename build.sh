@@ -2,4 +2,4 @@
 
 sudo yarn run predeploy
 
-pm2 start yarn --interpreter bash --name api -- start
+sudo yarn run start

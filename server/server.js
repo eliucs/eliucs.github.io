@@ -39,7 +39,7 @@ app.post('/voice', (req, res) => {
 app.post('/call', (req, res) => {
   res.header('Content-Type', 'application/json');
   const { phoneNumberTo } = req.body;
-  console.log(phoneNumberTo);
+  console.log('/call', phoneNumberTo);
   twilioClient.calls
     .create({
       url: 'https://ericliu.ca/voice',
