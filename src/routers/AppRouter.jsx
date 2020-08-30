@@ -16,6 +16,7 @@ import IrenePage from 'pages/IrenePage';
 import Irene2Page from 'pages/Irene2Page';
 import Irene3Page from 'pages/Irene3Page';
 import Irene4Page from 'pages/Irene4Page';
+import Irene5Page from 'pages/Irene5Page';
 import IreneCountdownPage from 'pages/IreneCountdownPage';
 
 import NavBar from 'components/NavBar';
@@ -82,6 +83,12 @@ const AppRouter = () => (
         <Route
           path="/irene/4"
           component={() => <Irene4Page />}
+          exact
+        />
+
+        <Route
+          path="/irene/5"
+          component={() => <Irene5Page />}
           exact
         />
 

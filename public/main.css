@@ -8397,6 +8397,43 @@ a.text-dark:focus, a.text-dark:hover {
   justify-content: center;
   margin-left: -100px; }
 
+.pages-Irene5Page-styles__irene5BackgroundStyles {
+  width: 100wh;
+  height: 100vh;
+  color: #FFF;
+  background: #000;
+  background-size: 400% 400%; }
+
+.pages-Irene5Page-styles__irene5ContainerStyles {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+
+.pages-Irene5Page-styles__irene5HeartStyles {
+  fill: red;
+  position: relative;
+  top: 5px;
+  width: 100px; }
+
+.pages-Irene5Page-styles__irene5PulseShortStyles {
+  animation: pages-Irene5Page-styles__pulse 1s ease infinite;
+  animation-iteration-count: 1; }
+
+.pages-Irene5Page-styles__irene5PulseLongStyles {
+  animation: pages-Irene5Page-styles__pulse 2s ease infinite;
+  animation-iteration-count: 1; }
+
+@keyframes pages-Irene5Page-styles__pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1); } }
+
 .pages-IreneCountdownPage-styles__ireneCountdownBackgroundStyles {
   width: 100wh;
   height: 100vh;

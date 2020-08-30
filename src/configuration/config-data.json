@@ -331,5 +331,13 @@
   },
   "irene3": {
     "videoSrc": "https://eliucs.s3.amazonaws.com/video/21.mp4"
+  },
+  "irene5": {
+    "morseCode": {
+      "short": 0,
+      "long": 1,
+      "sequence": [0, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 0, 1],
+      "delay": 2100
+    }
   }
 }
