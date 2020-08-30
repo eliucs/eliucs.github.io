@@ -7184,7 +7184,7 @@ a.text-dark:focus, a.text-dark:hover {
   font-weight: 700;
   font-size: 3rem; }
 
-.pages-AboutPage-styles__aboutStyles {
+.pages-about-styles__aboutStyles {
   padding: 6rem 2rem 4rem 2rem; }
 
 .components-ContactLinks-styles__contactLinksItemStyles {
@@ -7218,7 +7218,7 @@ a.text-dark:focus, a.text-dark:hover {
     .components-ContactLinks-styles__contactLinksItemLinkStyles a:hover {
       color: #EA178C; }
 
-.pages-ContactPage-styles__contactStyles {
+.pages-contact-styles__contactStyles {
   padding: 6rem 2rem 4rem 2rem; }
 
 .components-InteractiveText-styles__interactiveTextStyles {
@@ -7237,17 +7237,17 @@ a.text-dark:focus, a.text-dark:hover {
     .components-HomeLinks-styles__homeLinkContainerStyles > span a:hover {
       color: #ddd; }
 
-.pages-HomePage-styles__homeBackgroundStyles {
+.pages-home-styles__homeBackgroundStyles {
   width: 100wh;
   height: 100vh;
   color: #FFF;
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
   background-size: 400% 400%;
-  -webkit-animation: pages-HomePage-styles__gradient 10s ease infinite;
-  -moz-animation: pages-HomePage-styles__gradient 10s ease infinite;
-  animation: pages-HomePage-styles__gradient 10s ease infinite; }
+  -webkit-animation: pages-home-styles__gradient 10s ease infinite;
+  -moz-animation: pages-home-styles__gradient 10s ease infinite;
+  animation: pages-home-styles__gradient 10s ease infinite; }
 
-@-webkit-keyframes pages-HomePage-styles__gradient {
+@-webkit-keyframes pages-home-styles__gradient {
   0% {
     background-position: 0% 50%; }
   50% {
@@ -7255,7 +7255,7 @@ a.text-dark:focus, a.text-dark:hover {
   100% {
     background-position: 0% 50%; } }
 
-@-moz-keyframes pages-HomePage-styles__gradient {
+@-moz-keyframes pages-home-styles__gradient {
   0% {
     background-position: 0% 50%; }
   50% {
@@ -7263,7 +7263,7 @@ a.text-dark:focus, a.text-dark:hover {
   100% {
     background-position: 0% 50%; } }
 
-@keyframes pages-HomePage-styles__gradient {
+@keyframes pages-home-styles__gradient {
   0% {
     background-position: 0% 50%; }
   50% {
@@ -7271,25 +7271,25 @@ a.text-dark:focus, a.text-dark:hover {
   100% {
     background-position: 0% 50%; } }
 
-.pages-HomePage-styles__homeTextContainerStyles {
+.pages-home-styles__homeTextContainerStyles {
   display: flex;
   align-items: center;
   height: 100%;
   margin-left: 2rem; }
 
-.pages-HomePage-styles__homeTextDescriptionStyles {
+.pages-home-styles__homeTextDescriptionStyles {
   width: 30vw;
   margin-bottom: 2rem; }
-  .pages-HomePage-styles__homeTextDescriptionStyles a {
+  .pages-home-styles__homeTextDescriptionStyles a {
     text-decoration: none;
     color: #FFF;
     transition: 0.2s;
     -webkit-transition: 0.2s;
     -moz-transition: 0.2s; }
-    .pages-HomePage-styles__homeTextDescriptionStyles a:hover {
+    .pages-home-styles__homeTextDescriptionStyles a:hover {
       color: #DDD; }
   @media all and (max-width: 768px) {
-    .pages-HomePage-styles__homeTextDescriptionStyles {
+    .pages-home-styles__homeTextDescriptionStyles {
       width: auto;
       margin-right: 2rem; } }
 
@@ -7312,13 +7312,13 @@ a.text-dark:focus, a.text-dark:hover {
     .components-ProjectLinks-styles__projectLinksItemStyles a:hover {
       color: #EA178C; }
 
-.pages-ProjectPage-styles__projectStyles {
+.pages-project-styles__projectStyles {
   padding: 6rem 2rem 4rem 2rem; }
 
-.pages-ProjectPage-styles__projectImageContainerStyles {
+.pages-project-styles__projectImageContainerStyles {
   width: 100%; }
 
-.pages-ProjectPage-styles__projectImageStyles {
+.pages-project-styles__projectImageStyles {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -7360,7 +7360,7 @@ a.text-dark:focus, a.text-dark:hover {
     .components-ProjectGallery-styles__projectGalleryItemTitleStyles a:hover {
       color: #EA178C; }
 
-.pages-ProjectsPage-styles__projectsStyles {
+.pages-projects-styles__projectsStyles {
   padding: 6rem 2rem 4rem 2rem; }
 
 .components-DisappearingText-styles__disappearingTextStyles {
@@ -7370,14 +7370,14 @@ a.text-dark:focus, a.text-dark:hover {
 .components-DisappearingText-styles__disappearingTextBlankStyles {
   color: black; }
 
-.pages-IrenePage-styles__ireneBackgroundStyles {
+.pages-irene-1-styles__irene1BackgroundStyles {
   width: 100wh;
   height: 100vh;
   color: #FFF;
   background: #000;
   background-size: 400% 400%; }
 
-.pages-IrenePage-styles__ireneTextContainerStyles {
+.pages-irene-1-styles__irene1TextContainerStyles {
   display: flex;
   align-items: center;
   height: 100%;
@@ -7467,26 +7467,26 @@ a.text-dark:focus, a.text-dark:hover {
     bottom: 90%;
     left: 0; } }
 
-.pages-Irene2Page-styles__irene2BackgroundStyles {
+.pages-irene-2-styles__irene2BackgroundStyles {
   width: 100wh;
   height: 100vh;
   color: #FFF;
   background: #000;
   background-size: 400% 400%; }
 
-.pages-Irene2Page-styles__irene2ContainerStyles {
+.pages-irene-2-styles__irene2ContainerStyles {
   position: relative;
   height: 100%;
   width: 100%; }
 
-.pages-Irene3Page-styles__irene3BackgroundStyles {
+.pages-irene-3-styles__irene3BackgroundStyles {
   width: 100wh;
   height: 100vh;
   color: #FFF;
   background: #000;
   background-size: 400% 400%; }
 
-.pages-Irene3Page-styles__irene3ContainerStyles {
+.pages-irene-3-styles__irene3ContainerStyles {
   position: relative;
   height: 100%;
   width: 100%; }
@@ -8383,13 +8383,13 @@ a.text-dark:focus, a.text-dark:hover {
   padding: 0 5px;
   color: #de0000; }
 
-.pages-Irene4Page-styles__irene4BackgroundStyles {
+.pages-irene-4-styles__irene4BackgroundStyles {
   width: 100wh;
   height: 100vh;
   background: #eeeeee;
   background-size: 400% 400%; }
 
-.pages-Irene4Page-styles__irene4ContainerStyles {
+.pages-irene-4-styles__irene4ContainerStyles {
   width: 100%;
   height: 100%;
   display: flex;
@@ -8397,14 +8397,14 @@ a.text-dark:focus, a.text-dark:hover {
   justify-content: center;
   margin-left: -100px; }
 
-.pages-Irene5Page-styles__irene5BackgroundStyles {
+.pages-irene-5-styles__irene5BackgroundStyles {
   width: 100wh;
   height: 100vh;
   color: #FFF;
   background: #000;
   background-size: 400% 400%; }
 
-.pages-Irene5Page-styles__irene5ContainerStyles {
+.pages-irene-5-styles__irene5ContainerStyles {
   position: relative;
   width: 100%;
   display: flex;
@@ -8412,21 +8412,21 @@ a.text-dark:focus, a.text-dark:hover {
   align-items: center;
   height: 100%; }
 
-.pages-Irene5Page-styles__irene5HeartStyles {
+.pages-irene-5-styles__irene5HeartStyles {
   fill: red;
   position: relative;
   top: 5px;
   width: 100px; }
 
-.pages-Irene5Page-styles__irene5PulseShortStyles {
-  animation: pages-Irene5Page-styles__pulse 1s ease infinite;
+.pages-irene-5-styles__irene5PulseShortStyles {
+  animation: pages-irene-5-styles__pulse 1s ease infinite;
   animation-iteration-count: 1; }
 
-.pages-Irene5Page-styles__irene5PulseLongStyles {
-  animation: pages-Irene5Page-styles__pulse 2s ease infinite;
+.pages-irene-5-styles__irene5PulseLongStyles {
+  animation: pages-irene-5-styles__pulse 2s ease infinite;
   animation-iteration-count: 1; }
 
-@keyframes pages-Irene5Page-styles__pulse {
+@keyframes pages-irene-5-styles__pulse {
   0% {
     transform: scale(1); }
   50% {
@@ -8434,24 +8434,24 @@ a.text-dark:focus, a.text-dark:hover {
   100% {
     transform: scale(1); } }
 
-.pages-IreneCountdownPage-styles__ireneCountdownBackgroundStyles {
+.pages-irene-countdown-styles__ireneCountdownBackgroundStyles {
   width: 100wh;
   height: 100vh;
   background: #e6edf4;
   background-size: 400% 400%; }
 
-.pages-IreneCountdownPage-styles__ireneCountdownContainerStyles {
+.pages-irene-countdown-styles__ireneCountdownContainerStyles {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center; }
 
-.pages-IreneCountdownPage-styles__ireneCountdownDateStyles {
+.pages-irene-countdown-styles__ireneCountdownDateStyles {
   font-size: 12rem;
   font-weight: 600; }
 
-.pages-IreneCountdownPage-styles__ireneCountdownTextStyles {
+.pages-irene-countdown-styles__ireneCountdownTextStyles {
   font-size: 2rem; }
 
 .components-NavBar-styles__navBarContainerStyles {

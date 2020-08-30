@@ -16,31 +16,31 @@ import {
 } from 'actions/MenuActions';
 
 import {
-  ireneBackgroundStyles,
-  ireneTextContainerStyles,
+  irene1BackgroundStyles,
+  irene1TextContainerStyles,
 } from './styles.scss';
 
-const IrenePage = ({ dispatch }) => {
+const Irene1Page = ({ dispatch }) => {
   dispatch(setThemeLight());
   dispatch(setPageThemeLight());
   dispatch(hamburgerClose());
   dispatch(menuClose());
 
   return (
-    <div className={ireneBackgroundStyles}>
-      <div className={ireneTextContainerStyles}>
+    <div className={irene1BackgroundStyles}>
+      <div className={irene1TextContainerStyles}>
         <DisappearingText
-          charset={Config.get('irene.disappearingText.charset')}
-          data={Config.get('irene.disappearingText.data')}
-          length={Config.get('irene.disappearingText.length')}
-          timeDelay={Config.get('irene.disappearingText.timeDelay')}
+          charset={Config.get('irene1.disappearingText.charset')}
+          data={Config.get('irene1.disappearingText.data')}
+          length={Config.get('irene1.disappearingText.length')}
+          timeDelay={Config.get('irene1.disappearingText.timeDelay')}
         />
       </div>
     </div>
   );
 };
 
-IrenePage.propTypes = {
+Irene1Page.propTypes = {
   dispatch: PropTypes.func,
 };
 
@@ -48,4 +48,4 @@ const mapStateToProps = () => ({});
 
 export default compose(
   connect(mapStateToProps),
-)(IrenePage);
+)(Irene1Page);

@@ -6,18 +6,18 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import AboutPage from 'pages/AboutPage';
-import ContactPage from 'pages/ContactPage';
-import HomePage from 'pages/HomePage';
-import ProjectPage from 'pages/ProjectPage';
-import ProjectsPage from 'pages/ProjectsPage';
+import AboutPage from 'pages/about';
+import ContactPage from 'pages/contact';
+import HomePage from 'pages/home';
+import ProjectPage from 'pages/project';
+import ProjectsPage from 'pages/projects';
 
-import IrenePage from 'pages/IrenePage';
-import Irene2Page from 'pages/Irene2Page';
-import Irene3Page from 'pages/Irene3Page';
-import Irene4Page from 'pages/Irene4Page';
-import Irene5Page from 'pages/Irene5Page';
-import IreneCountdownPage from 'pages/IreneCountdownPage';
+import Irene1Page from 'pages/irene/1';
+import Irene2Page from 'pages/irene/2';
+import Irene3Page from 'pages/irene/3';
+import Irene4Page from 'pages/irene/4';
+import Irene5Page from 'pages/irene/5';
+import IreneCountdownPage from 'pages/irene/countdown';
 
 import NavBar from 'components/NavBar';
 import Menu from 'components/Menu';
@@ -64,7 +64,7 @@ const AppRouter = () => (
 
         <Route
           path="/irene/1"
-          component={() => <IrenePage />}
+          component={() => <Irene1Page />}
           exact
         />
 
