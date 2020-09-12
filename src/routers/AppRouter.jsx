@@ -19,6 +19,8 @@ import Irene4Page from 'pages/irene/4';
 import Irene5Page from 'pages/irene/5';
 import IreneCountdownPage from 'pages/irene/countdown';
 
+import WordCountPage from 'pages/utils/wc';
+
 import NavBar from 'components/NavBar';
 import Menu from 'components/Menu';
 
@@ -95,6 +97,12 @@ const AppRouter = () => (
         <Route
           path="/irene/countdown"
           component={() => <IreneCountdownPage />}
+          exact
+        />
+
+        <Route
+          path="/utils/wc"
+          component={() => <WordCountPage />}
           exact
         />
 
