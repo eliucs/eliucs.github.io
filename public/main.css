@@ -8454,6 +8454,25 @@ a.text-dark:focus, a.text-dark:hover {
 .pages-irene-countdown-styles__ireneCountdownTextStyles {
   font-size: 2rem; }
 
+.components-WordCount-styles__wordCountTextContainerStyles {
+  padding-bottom: 1rem; }
+
+.components-WordCount-styles__wordCountTextStyles {
+  font-weight: 700;
+  font-size: 2rem; }
+
+.pages-utils-wc-styles__wordCountBackgroundStyles {
+  position: relative;
+  height: 100vh;
+  width: 100vw; }
+
+.pages-utils-wc-styles__wordCountStyles {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; }
+
 .components-NavBar-styles__navBarContainerStyles {
   position: fixed;
   top: 1rem;
