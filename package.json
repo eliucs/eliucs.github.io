@@ -39,7 +39,7 @@
     "react": "^16.4.2",
     "react-addons-shallow-compare": "15.6.0",
     "react-animated-burgers": "^1.2.6",
-    "react-dom": "^16.4.2",
+    "react-dom": "^16.13.0",
     "react-phone-input-2": "^2.13.7",
     "react-redux": "^6.0.0",
     "react-router": "^4.3.1",
