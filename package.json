@@ -30,7 +30,7 @@
     "compass-mixins": "^0.12.10",
     "express": "^4.16.4",
     "history": "^4.7.2",
-    "lodash": "^4.17.13",
+    "lodash": "^4.17.21",
     "marked": "^0.6.1",
     "moment": "^2.22.2",
     "path": "^0.12.7",
