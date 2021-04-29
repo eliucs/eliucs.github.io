@@ -1,0 +1,17 @@
+:local(.irene1BackgroundStyles) {
+  width: 100wh;
+  height: 100vh;
+  color: #FFF;
+  background: #000;
+  background-size: 400% 400%;
+}
+
+:local(.irene1TextContainerStyles) {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  word-break: break-all;
+  line-height: 1;
+}
