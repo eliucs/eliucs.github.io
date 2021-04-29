@@ -53,6 +53,9 @@ const HomePage = ({ dispatch }) => {
               <p>They just happen to have the same common name. I&apos;ve already graduated in 2020.</p>
               <p>Please do not direct any harassment towards me, my friends or the other students named &quot;Eric Liu&quot; at Waterloo who are not involved.</p>
               <p>Thank you.</p>
+              <center>
+                <img style={{'textAlign': 'center'}} src="https://eliucs.s3.amazonaws.com/img/misc/obama.png"></img>
+              </center>
             </ModalBody>
           </Modal>
         </div>
