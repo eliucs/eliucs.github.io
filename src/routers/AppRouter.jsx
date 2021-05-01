@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from 'react';
 import {
   BrowserRouter,
@@ -23,6 +25,7 @@ import WordCountPage from 'pages/utils/wc';
 
 import NavBar from 'components/NavBar';
 import Menu from 'components/Menu';
+import ImportantModal from 'components/ImportantModal';
 
 /**
  * Renders the AppRouter stateless functional component.
@@ -32,6 +35,22 @@ const AppRouter = () => (
     <div>
       <NavBar />
       <Menu />
+
+      {/*
+
+        IMPORTANT: MAY 1 2021
+
+        This modal displays an important message to all new visitors to my personal website.
+
+        Around Apr 28 2021, another student at Waterloo also with the same name "Eric Liu"
+        became the subject of an online harassment campaign on the r/uwaterloo subreddit.
+
+        Unfortunately, because I have the same name, I was mistakenly targetted with harassment
+        and hate messages, and got caught in the cross-fire. This notice will stay up for the time
+        being until the r/uwaterloo subreddit content is adequately addressed.
+
+      */}
+      <ImportantModal />
 
       <Switch>
         <Route
