@@ -49,8 +49,12 @@ const AppRouter = () => (
         and hate messages, and got caught in the cross-fire. This notice will stay up for the time
         being until the r/uwaterloo subreddit content is adequately addressed.
 
+        IMPORTANT: JUNE 6 2021
+
+        Going to take this notice down now.
+
       */}
-      <ImportantModal />
+      {/* <ImportantModal /> */}
 
       <Switch>
         <Route
